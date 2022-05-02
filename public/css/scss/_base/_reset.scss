@@ -1,0 +1,54 @@
+// - - - - - - - - - - - - - - - - - - - - - 
+// Reset HTML 
+// - - - - - - - - - - - - - - - - - - - - -
+
+/*[Le document en général]*/
+html {
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: left;
+    letter-spacing: .105em;
+    line-height: 1.4em;
+}
+
+html, body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/*[Affecte tous les enfants]*/
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+/*[Reset des liens]*/
+a,a:link,
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*[Reset des listes à l'intérieur d'un nav]*/
+nav{
+    & ul{
+        list-style: none;
+    }
+}
+
+img{
+    display:block;
+}

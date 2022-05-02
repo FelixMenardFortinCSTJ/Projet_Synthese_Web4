@@ -1,0 +1,23 @@
+// Page d'accueil du forfait
+//----------------------------------------------------
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Forfaits
+// - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.Standard, .Solitaire, .Groupe{
+    background-color: var(--bleu);
+    padding: 1em;
+    margin: 1em;
+    width: 800px;
+    & h2 {
+        padding-bottom: 12px;
+    }
+    & div{
+        padding: 16px;
+
+    & h3, & p{
+        display:inline;
+    }
+    }
+}

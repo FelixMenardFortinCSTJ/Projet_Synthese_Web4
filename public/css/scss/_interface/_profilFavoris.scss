@@ -1,0 +1,24 @@
+// Page du profil
+//----------------------------------------------------
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Favoris
+// - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.Favori{
+    background-color: var(--bleu);
+    padding: 1em;
+    margin: 1em;
+    width: 800px;
+    
+    & img{
+        display: inline;
+        width: 100px;
+    }
+
+    & h2{
+        display: inline;
+    }
+
+    
+}

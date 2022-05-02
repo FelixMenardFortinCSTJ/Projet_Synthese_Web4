@@ -1,0 +1,26 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Interface
+// - - - - - - - - - - - - - - - - - - - - - - - - - - -
+.interface{
+    padding: 64px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Boutons
+// - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+button{
+    padding: 5px 20px;
+    background-color: var(--vert-fonce);
+    font-family: var(--typo-texte);
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+li{
+    display: inline;
+    padding: 10px 25px;
+}

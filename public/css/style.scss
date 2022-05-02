@@ -1,0 +1,11 @@
+// Fichier central SCSS
+//----------------------------------------------------
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Importation
+// - - - - - - - - - - - - - - - - - - - - - - - - - - -
+@import '../node_modules/bootstrap/scss/bootstrap.scss'; 
+@import 'scss/_base/base'; 
+@import 'scss/_interface/interface'; 
+@import 'scss/_layout/layout'; 
+@import 'scss/_modules/modules'; 

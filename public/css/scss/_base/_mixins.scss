@@ -1,0 +1,33 @@
+// Mixins 
+//----------------------------------------------------
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Mixins
+// - - - - - - - - - - - - - - - - - - - - - - - - - - -
+@mixin setFlex($direction, $justify, $align){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin debug {
+    border : 1px red solid;
+}
+
+@mixin breakpoint-min($screen){
+    @media (min-width: #{$screen}px){
+        @content;
+    }
+}
+
+@mixin breakpoint-max($screen){
+    @media (max-width: #{$screen}px){
+        @content;
+    }
+}
+
+@mixin resetBox {
+    padding:0;
+    margin:0;
+}
