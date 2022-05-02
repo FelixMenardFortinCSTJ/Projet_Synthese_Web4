@@ -14,7 +14,8 @@ class ForfaitController extends Controller
      */
     public function index()
     {
-        //
+        $forfaits = Forfait::all();
+        return view('forfaits.index', ['forfaits'=>$forfaits]);
     }
 
     /**
@@ -24,7 +25,8 @@ class ForfaitController extends Controller
      */
     public function create()
     {
-        //
+        $forfait = new Forfait();
+        return view('forfaits.create', ['forfait'=>$forfait]);
     }
 
     /**
@@ -35,7 +37,10 @@ class ForfaitController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $forfait = new Forfait();
+        $forfait->fill($request->all());
+        $forfait->save();
+        return redirect()->route('forfaits.show', $forfait);
     }
 
     /**
@@ -57,7 +62,7 @@ class ForfaitController extends Controller
      */
     public function edit(Forfait $forfait)
     {
-        //
+        return view('forfaits.show', ['forfait'=>$forfait]);
     }
 
     /**
@@ -69,7 +74,20 @@ class ForfaitController extends Controller
      */
     public function update(Request $request, Forfait $forfait)
     {
-        //
+        $forfait->fill($request->all());
+        $forfait->save();
+        return redirect()->route('forfaits.show', $forfait);
+    }
+
+        /**
+     * Show the form for deleting the specified resource.
+     *
+     * @param  \App\Models\Forfait  $forfait
+     * @return \Illuminate\Http\Response
+     */
+    public function delete(Forfait $forfait)
+    {
+        return view('forfaits.delete', ['forfait'=>$forfait]);
     }
 
     /**
@@ -80,6 +98,11 @@ class ForfaitController extends Controller
      */
     public function destroy(Forfait $forfait)
     {
-        //
+        if ($request->has('delete')) {
+            $forfait->delete();
+            return redirect()->route('forfaits.index');
+        } else {
+            return redirect()->route('forfaits.show', $forfait);
+        }
     }
 }
