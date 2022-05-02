@@ -14,7 +14,8 @@ class PaiementController extends Controller
      */
     public function index()
     {
-        //
+        $paiements = Paiement::all();
+        return view('paiements.index', ['paiements'=>$paiements]);
     }
 
     /**
@@ -24,7 +25,8 @@ class PaiementController extends Controller
      */
     public function create()
     {
-        //
+        $paiement = new Paiement();
+        return view('paiements.create', ['paiement'=>$paiement]);
     }
 
     /**
@@ -35,7 +37,10 @@ class PaiementController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $paiement = new Paiement();
+        $paiement->fill($request->all());
+        $paiement->save();
+        return redirect()->route('paiements.show', $paiement);
     }
 
     /**
@@ -46,7 +51,7 @@ class PaiementController extends Controller
      */
     public function show(Paiement $paiement)
     {
-        //
+        return view('paiements.show', ['paiement'=>$paiement]);
     }
 
     /**
@@ -57,7 +62,7 @@ class PaiementController extends Controller
      */
     public function edit(Paiement $paiement)
     {
-        //
+        return view('paiements.edit', ['paiement'=>$paiement]);
     }
 
     /**
@@ -69,7 +74,9 @@ class PaiementController extends Controller
      */
     public function update(Request $request, Paiement $paiement)
     {
-        //
+        $paiement->fill($request->all());
+        $paiement->save();
+        return redirect()->route('paiements.show', $paiement);
     }
 
     /**
