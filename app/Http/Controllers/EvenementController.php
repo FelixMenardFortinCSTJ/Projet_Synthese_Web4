@@ -14,7 +14,8 @@ class EvenementController extends Controller
      */
     public function index()
     {
-        //
+        $evenements = Evenement::all();
+        return view('evenements.index', ['evenements'=>$evenements]);
     }
 
     /**
@@ -24,7 +25,8 @@ class EvenementController extends Controller
      */
     public function create()
     {
-        //
+        $evenement = new Evenement();
+        return view('evenements.create', ['evenement'=>$evenement]);
     }
 
     /**
@@ -35,7 +37,10 @@ class EvenementController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $evenement = new Evenement();
+        $evenement->fill($request->all());
+        $evenement->save();
+        return redirect()->route('evenements.store', $evenement);
     }
 
     /**
@@ -46,7 +51,7 @@ class EvenementController extends Controller
      */
     public function show(Evenement $evenement)
     {
-        //
+        return view('evenements.show', ['evenement'=>$evenement]);
     }
 
     /**
@@ -57,7 +62,7 @@ class EvenementController extends Controller
      */
     public function edit(Evenement $evenement)
     {
-        //
+        return view('evenements.edit', ['evenement'=>$evenement]);
     }
 
     /**
@@ -69,7 +74,9 @@ class EvenementController extends Controller
      */
     public function update(Request $request, Evenement $evenement)
     {
-        //
+        $evenement->fill($request->all());
+        $evenement->save();
+        return redirect()->route('evenements.show', $evenement);
     }
 
     /**
@@ -80,6 +87,7 @@ class EvenementController extends Controller
      */
     public function destroy(Evenement $evenement)
     {
-        //
+        $evenement->delete();
+        return redirect()->route('evenements.index');
     }
 }

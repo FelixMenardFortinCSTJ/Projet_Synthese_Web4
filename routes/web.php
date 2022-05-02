@@ -34,3 +34,12 @@ Route::group(['prefix'=>'/elements', 'as'=>'elements.', 'controller'=>ElementCon
     Route::get('/{element}/delete', 'delete')->name('delete');
     Route::post('/{element}/delete', 'destroy')->name('destroy');
 });
+
+// Routes relatif au pages des événements, certaines routes seront probablement enlever plus tard car inutile.
+Route::get('/evenements', [EvenementController::class, 'index'])->name("evenements.index");
+Route::get('/evenements/{evenement}', [EvenementController::class, 'show'])->name("evenements.show")->where(['evenement'=>'[0-9]+']);
+Route::get('/evenements/{evenement}/edit', [EvenementController::class, 'edit'])->name("evenements.edit");
+Route::post('/evenements/{evenement}/edit', [EvenementController::class, 'update'])->name("evenements.update");
+Route::get('/evenements/create', [EvenementController::class, 'create'])->name("evenements.create");
+Route::post('/evenements/create', [EvenementController::class, 'store'])->name("evenements.store");
+Route::get('/evenements/{evenement}/delete', [EvenementController::class, 'destroy'])->name("evenements.delete");
