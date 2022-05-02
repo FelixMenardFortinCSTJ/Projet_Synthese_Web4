@@ -7,7 +7,7 @@
 
 .Fiche{
     background-color: var(--bleu);
-    padding: 1em;
+    padding: 5em 10em;
     margin: 1em;
     width: 800px;
     & h2 {
@@ -15,9 +15,5 @@
     }
     & div{
         padding: 16px;
-
-    & h3, & p{
-        display:inline;
-    }
     }
 }

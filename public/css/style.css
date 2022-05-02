@@ -11341,27 +11341,11 @@ img {
   --typo-titre:"M PLUS Rounded 1c", sans-serif;
 }
 
-h1, .h1 {
+h1, .h1, h2, .h2, h3, .h3 {
   font-family: var(--typo-titre);
 }
 
-h2, .h2 {
-  font-family: var(--typo-titre);
-}
-
-h3, .h3 {
-  font-family: var(--typo-titre);
-}
-
-p {
-  font-family: var(--typo-texte);
-}
-
-button {
-  font-family: var(--typo-texte);
-}
-
-input {
+p, button, input {
   font-family: var(--typo-texte);
 }
 
@@ -11394,31 +11378,34 @@ input {
   display: inline;
 }
 
-.Favori {
+.Favoris {
   background-color: var(--bleu);
   padding: 1em;
   margin: 1em;
   width: 800px;
 }
-.Favori img {
+.Favoris img {
   display: inline;
   width: 100px;
 }
-.Favori h2, .Favori .h2 {
+.Favoris h2, .Favoris .h2 {
   display: inline;
 }
 
-.Transaction {
+.Transactions {
   background-color: var(--bleu);
   padding: 1em;
   margin: 1em;
   width: 800px;
 }
-.Transaction img {
+.Transactions img {
   display: inline;
   width: 100px;
 }
-.Transaction h2, .Transaction .h2 {
+.Transactions h2, .Transactions .h2 {
+  display: inline;
+}
+.Transactions .prix {
   display: inline;
 }
 
@@ -11430,13 +11417,6 @@ input {
 }
 
 .GestionActivitées {
-  background-color: var(--bleu);
-  padding: 1em;
-  margin: 1em;
-  width: 800px;
-}
-
-.ActionsRapides {
   background-color: var(--bleu);
   padding: 1em;
   margin: 1em;
@@ -11477,10 +11457,11 @@ input, h3, .h3 {
 }
 
 .Escapade, .Decouverte, .Detente, .Famille {
-  background-color: var(--bleu);
-  padding: 1em;
+  background-color: rgb(255, 255, 255);
+  padding: 10em 8em;
   margin: 1em;
   width: 50vw;
+  height: 25vw;
 }
 .Escapade h2, .Escapade .h2, .Decouverte h2, .Decouverte .h2, .Detente h2, .Detente .h2, .Famille h2, .Famille .h2 {
   padding-bottom: 12px;
@@ -11492,9 +11473,41 @@ input, h3, .h3 {
   display: inline;
 }
 
+.Escapade {
+  position: absolute;
+  margin-top: 200px;
+  margin-left: 0;
+  top: 0;
+  left: 0;
+}
+
+.Decouverte {
+  position: absolute;
+  margin-top: 200px;
+  margin-right: 0;
+  top: 0;
+  right: 0;
+  background-color: var(--bleu);
+}
+
+.Detente {
+  position: absolute;
+  margin-left: 0;
+  top: 664px;
+  left: 0;
+  background-color: var(--bleu);
+}
+
+.Famille {
+  position: absolute;
+  margin-right: 0;
+  top: 664px;
+  right: 0;
+}
+
 .Standard, .Solitaire, .Groupe {
   background-color: var(--bleu);
-  padding: 1em;
+  padding: 5em 10em;
   margin: 1em;
   width: 800px;
 }
@@ -11510,7 +11523,7 @@ input, h3, .h3 {
 
 .Fiche {
   background-color: var(--bleu);
-  padding: 1em;
+  padding: 5em 10em;
   margin: 1em;
   width: 800px;
 }
@@ -11520,13 +11533,10 @@ input, h3, .h3 {
 .Fiche div {
   padding: 16px;
 }
-.Fiche div h3, .Fiche div .h3, .Fiche div p {
-  display: inline;
-}
 
 .Panier {
   background-color: var(--bleu);
-  padding: 1em;
+  padding: 5em;
   margin: 1em;
   width: 800px;
 }
@@ -11536,11 +11546,15 @@ input, h3, .h3 {
 .Panier div {
   padding: 16px;
 }
-.Panier div h3, .Panier div .h3, .Panier div p {
+.Panier div .InfosCarte h3, .Panier div .InfosCarte .h3, .Panier div .InfosCarte p {
   display: inline;
 }
 
 .interface {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 64px;
   max-width: 1200px;
   margin: 0 auto;
