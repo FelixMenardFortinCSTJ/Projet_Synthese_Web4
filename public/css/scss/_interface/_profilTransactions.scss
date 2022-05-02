@@ -5,7 +5,7 @@
 // Transactions
 // - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-.Transaction{
+.Transactions{
     background-color: var(--bleu);
     padding: 1em;
     margin: 1em;
@@ -17,6 +17,10 @@
     }
 
     & h2{
+        display: inline;
+    }
+
+    & .prix{
         display: inline;
     }
 
