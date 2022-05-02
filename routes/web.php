@@ -1,7 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\EvenementController;
+use App\Http\Controllers\ForfaitControllerController;
+use App\Http\Controllers\MembreControllerController;
+use App\Http\Controllers\PaiementControllerController;
+use App\Http\Controllers\UsagerControllerController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
