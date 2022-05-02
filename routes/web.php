@@ -43,3 +43,18 @@ Route::post('/evenements/{evenement}/edit', [EvenementController::class, 'update
 Route::get('/evenements/create', [EvenementController::class, 'create'])->name("evenements.create");
 Route::post('/evenements/create', [EvenementController::class, 'store'])->name("evenements.store");
 Route::get('/evenements/{evenement}/delete', [EvenementController::class, 'destroy'])->name("evenements.delete");
+
+//Route Forfait
+Route::group(['prefix'=>'/forfaits', 'as'=>'forfaits.', 'controller'=>ForfaitController::class, 'where'=>['forfait'=>'[0-9]+']], function () {
+    Route::get('/', 'index')->name('index');
+    Route::get('/{forfait}', 'show')->name('show');
+
+    Route::get('/create', 'create')->name('create');
+    Route::post('/create', 'store')->name('store');
+
+    Route::get('/{forfait}/edit', 'edit')->name('edit');
+    Route::post('/{forfait}/edit', 'update')->name('update');
+
+    Route::get('/{forfait}/delete', 'delete')->name('delete');
+    Route::post('/{forfait}/delete', 'destroy')->name('destroy');
+});
