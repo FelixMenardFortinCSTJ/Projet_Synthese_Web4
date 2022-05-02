@@ -14,5 +14,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('lesACP');
+    return view('welcome');
+});
+
+Route::group(['prefix'=>'/elements', 'as'=>'elements.', 'controller'=>ElementController::class, 'where'=>['element'=>'[0-9]+']], function () {
+    Route::get('/', 'index')->name('index');
+    Route::get('/{element}', 'show')->name('show');
+
+    Route::get('/create', 'create')->name('create');
+    Route::post('/create', 'store')->name('store');
+
+    Route::get('/{element}/edit', 'edit')->name('edit');
+    Route::post('/{element}/edit', 'update')->name('update');
+
+    Route::get('/{element}/delete', 'delete')->name('delete');
+    Route::post('/{element}/delete', 'destroy')->name('destroy');
 });
