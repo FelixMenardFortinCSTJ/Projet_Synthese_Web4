@@ -14,7 +14,8 @@ class MembreController extends Controller
      */
     public function index()
     {
-        //
+        $membres = Membre::all();
+        return view('membres.index', ['membres'=>$membres]);
     }
 
     /**
@@ -24,7 +25,8 @@ class MembreController extends Controller
      */
     public function create()
     {
-        //
+        $membre = new Membre();
+        return view('membres.create', ['membre'=>$membre]);
     }
 
     /**
@@ -35,7 +37,10 @@ class MembreController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $membre = new Membre();
+        $membre->fill($request->all());
+        $membre->save();
+        return redirect()->route('membres.show', $membre);
     }
 
     /**
@@ -46,7 +51,7 @@ class MembreController extends Controller
      */
     public function show(Membre $membre)
     {
-        //
+        return view('membres.show', ['membre'=>$membre]);
     }
 
     /**
@@ -57,7 +62,7 @@ class MembreController extends Controller
      */
     public function edit(Membre $membre)
     {
-        //
+        return view('membres.edit', ['membre'=>$membre]);
     }
 
     /**
@@ -69,7 +74,20 @@ class MembreController extends Controller
      */
     public function update(Request $request, Membre $membre)
     {
-        //
+        $membre->fill($request->all());
+        $membre->save();
+        return redirect()->route('membres.show', $membre);
+    }
+
+    /**
+     * Show the form for deleting the specified resource.
+     *
+     * @param  \App\Models\Element  $element
+     * @return \Illuminate\Http\Response
+     */
+    public function delete(Membre $membre)
+    {
+        return view('membres.delete', ['membre'=>$membre]);
     }
 
     /**
@@ -78,8 +96,13 @@ class MembreController extends Controller
      * @param  \App\Models\Membre  $membre
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Membre $membre)
+    public function destroy(Request $request, Membre $membre)
     {
-        //
+        if ($request->has('delete')) {
+            $membre->delete();
+            return redirect()->route('membres.index');
+        } else {
+            return redirect()->route('membres.show', $membre);
+        }
     }
 }
