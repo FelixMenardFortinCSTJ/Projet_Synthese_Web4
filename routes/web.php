@@ -58,3 +58,33 @@ Route::group(['prefix'=>'/forfaits', 'as'=>'forfaits.', 'controller'=>ForfaitCon
     Route::get('/{forfait}/delete', 'delete')->name('delete');
     Route::post('/{forfait}/delete', 'destroy')->name('destroy');
 });
+
+//Route membres
+Route::group(['prefix'=>'/membres', 'as'=>'membres.', 'controller'=>MembreController::class, 'where'=>['membre'=>'[0-9]+']], function () {
+    Route::get('/', 'index')->name('index');
+    Route::get('/{membre}', 'show')->name('show');
+
+    Route::get('/create', 'create')->name('create');
+    Route::post('/create', 'store')->name('store');
+
+    Route::get('/{membre}/edit', 'edit')->name('edit');
+    Route::post('/{membre}/edit', 'update')->name('update');
+
+    Route::get('/{membre}/delete', 'delete')->name('delete');
+    Route::post('/{membre}/delete', 'destroy')->name('destroy');
+});
+
+//Route Paiements
+Route::group(['prefix'=>'/paiements', 'as'=>'paiements.', 'controller'=>PaiementController::class, 'where'=>['paiement'=>'[0-9]+']], function () {
+    Route::get('/', 'index')->name('index');
+    Route::get('/{paiement}', 'show')->name('show');
+
+    Route::get('/create', 'create')->name('create');
+    Route::post('/create', 'store')->name('store');
+
+    Route::get('/{paiement}/edit', 'edit')->name('edit');
+    Route::post('/{paiement}/edit', 'update')->name('update');
+
+    Route::get('/{paiement}/delete', 'delete')->name('delete');
+    Route::post('/{paiement}/delete', 'destroy')->name('destroy');
+});
