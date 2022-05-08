@@ -6,20 +6,44 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 .Panier{
-    background-color: var(--bleu);
-    padding: 5em;
-    margin: 1em;
-    width: 800px;
+    position : absolute;
+    right: 0;
+    bottom: 0;
+    background-color: var(--vert-pale);
+    padding: 2em;
+    width: 550px;
+    height: 100vh;
+
+    & .ProduitsPanier{
+        margin: 16px 0;
+        background-color: var(--vert);
+
+        & .prixPanier{
+            display: inline;
+        }
+    }
+
+        & img {
+            position: absolute;
+            width: 50px;
+            right: 30px;
+            top: 30px;
+        }
 
         & h2 {
             padding-bottom: 12px;
             }
 
         & div{
-            padding: 16px;
+            padding: 8px;
 
         & .InfosCarte h3, & .InfosCarte p{
-            display:inline;
+            display:block;
+        }
+
+        & input, .SeRappeler{
+            display: inline;
+            margin-top: 22px;
         }
 
     }
