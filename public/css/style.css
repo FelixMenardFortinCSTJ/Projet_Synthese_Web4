@@ -11674,6 +11674,59 @@ input, h3, .h3 {
   font-weight: bold;
 }
 
+.logement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+  width: 900px;
+  margin: 0 auto;
+}
+.logement h2, .logement .h2 {
+  margin-top: 200px;
+  margin-bottom: 100px;
+  font-weight: bold;
+  text-align: center;
+}
+.logement .option1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 450px;
+}
+.logement .option1 img {
+  width: 200px;
+}
+.logement .option1 p {
+  width: 200px;
+}
+.logement .option1 p span {
+  font-size: 20px;
+  font-weight: bold;
+}
+.logement .option2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 450px;
+  margin-top: 30px;
+}
+.logement .option2 img {
+  width: 200px;
+}
+.logement .option2 p {
+  width: 200px;
+}
+.logement .option2 p span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .interface {
   padding: 64px;
   max-width: 1200px;
