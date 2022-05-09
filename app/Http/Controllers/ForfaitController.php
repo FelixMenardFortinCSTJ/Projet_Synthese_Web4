@@ -51,7 +51,7 @@ class ForfaitController extends Controller
      */
     public function show(Forfait $forfait)
     {
-        //
+        return view('forfaits.show', ['forfait'=>$forfait]);
     }
 
     /**
