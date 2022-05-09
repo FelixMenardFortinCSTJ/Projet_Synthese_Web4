@@ -17,7 +17,4 @@
         </div>
         @endforeach
     </div>
-    <div class="options">
-        <a data-icon="add_circle" href="{{route('paiements.create', $paiement)}}">Créer une molécule</a>
-    </div>
 <body>

@@ -2,10 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EvenementController;
-use App\Http\Controllers\ForfaitControllerController;
-use App\Http\Controllers\MembreControllerController;
-use App\Http\Controllers\PaiementControllerController;
-use App\Http\Controllers\UsagerControllerController;
+use App\Http\Controllers\ForfaitController;
+use App\Http\Controllers\MembreController;
+use App\Http\Controllers\PaiementController;
+use App\Http\Controllers\UsagerController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -70,7 +70,7 @@ Route::group(['prefix'=>'/membres', 'as'=>'membres.', 'controller'=>MembreContro
 
     Route::get('/{membre}/edit', 'edit')->name('edit');
     Route::post('/{membre}/edit', 'update')->name('update');
-    
+
     Route::get('/{membre}/delete', 'delete')->name('delete');
     Route::post('/{membre}/delete', 'destroy')->name('destroy');
 });

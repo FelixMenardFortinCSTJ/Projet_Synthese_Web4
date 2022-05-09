@@ -9,15 +9,12 @@
 <h1>Les membres</h1>
     <div class="tableau membres">
         @foreach($membres as $membre)
-        <div class="membre">
-            <a href="{{route('membres.show', $membre)}}">
+        <div class="membres">
+            <a href="{{route('membres.show', $membre['id'])}}">
                 <span class="logo"><img src="{{$membre->logo_etablissement}}" alt=""></span>
                 <span class="nom_evenement">{{$membre->nom_evenement}}</span>
             </a>
         </div>
         @endforeach
-    </div>
-    <div class="options">
-        <a data-icon="add_circle" href="{{route('membres.create', $membre)}}">Créer une molécule</a>
     </div>
 <body>
