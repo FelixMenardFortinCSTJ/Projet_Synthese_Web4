@@ -3,7 +3,9 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - -
 .interface{
     @include setFlex(column, center, center);
+    @extend .container-fluid;
     padding: 64px;
+    padding-bottom:0 ;
     max-width: 1200px;
     margin: 0 auto;
 }

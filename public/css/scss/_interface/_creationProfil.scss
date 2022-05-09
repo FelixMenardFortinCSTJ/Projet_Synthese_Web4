@@ -23,3 +23,8 @@ input, h3{
 h1{
     margin-bottom: 16px;
 }
+
+form.infos{
+    @include setFlex(column, center, start);
+    margin: 0 auto;
+}

@@ -623,6 +623,7 @@ progress {
 
 .container,
 .container-fluid,
+.interface,
 .container-xxl,
 .container-xl,
 .container-lg,
@@ -4033,6 +4034,7 @@ textarea.form-control-lg {
 }
 .navbar > .container,
 .navbar > .container-fluid,
+.navbar > .interface,
 .navbar > .container-sm,
 .navbar > .container-md,
 .navbar > .container-lg,
@@ -11474,6 +11476,19 @@ p, button, input {
   width: 800px;
 }
 
+form.EditionMembre {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bleu);
+  padding: 20px 50px;
+  margin: 0 auto;
+}
+form.EditionMembre label, form.EditionMembre span {
+  display: block;
+}
+
 .IntroRegion {
   margin: 32px;
 }
@@ -11482,9 +11497,29 @@ p, button, input {
   width: 500px;
   margin: 0 auto;
 }
-.MapLaurentides h3, .MapLaurentides .h3 {
+.MapLaurentides a {
+  padding: 10px;
   display: block;
   cursor: pointer;
+}
+
+.DescriptionMRC {
+  padding: 32px;
+}
+.DescriptionMRC span {
+  font-weight: bold;
+}
+
+img.mapMRC {
+  width: 900px;
+}
+
+div.Reconnue {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 button, .connection {
@@ -11505,12 +11540,25 @@ h1, .h1 {
   margin-bottom: 16px;
 }
 
+form.infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin: 0 auto;
+}
+
 .Escapade, .Decouverte, .Detente, .Famille {
   background-color: rgb(255, 255, 255);
   padding: 10em 8em;
   margin: 1em;
   width: 50vw;
   height: 480px;
+}
+@media (max-width: 1200px) {
+  .Escapade, .Decouverte, .Detente, .Famille {
+    padding: 5em 4em;
+  }
 }
 .Escapade h2, .Escapade .h2, .Decouverte h2, .Decouverte .h2, .Detente h2, .Detente .h2, .Famille h2, .Famille .h2 {
   padding-bottom: 12px;
@@ -11561,8 +11609,8 @@ h1, .h1 {
 }
 .Standard div.InfosForfaits, .Solitaire div.InfosForfaits, .Groupe div.InfosForfaits {
   margin: 0 auto;
-  width: 800px;
   padding: 50px 0;
+  width: 40vw;
 }
 .Standard h2, .Standard .h2, .Solitaire h2, .Solitaire .h2, .Groupe h2, .Groupe .h2 {
   padding-bottom: 12px;
@@ -11649,6 +11697,7 @@ h1, .h1 {
   justify-content: center;
   align-items: center;
   padding: 64px;
+  padding-bottom: 0;
   max-width: 1200px;
   margin: 0 auto;
 }

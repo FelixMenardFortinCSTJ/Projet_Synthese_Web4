@@ -1,0 +1,17 @@
+// Page de l'administration
+//----------------------------------------------------
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Options Avancées
+// - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+form.EditionMembre{
+    @include setFlex(column, center, center);
+    background-color: var(--bleu);
+    padding: 20px 50px;
+    margin: 0 auto;
+
+    label, span{ 
+        display: block;
+    }
+}

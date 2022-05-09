@@ -11,6 +11,11 @@
     margin: 1em;
     width: 50vw;
     height: 480px;
+    
+    @include breakpoint-max(1200){
+        padding: 5em 4em;
+    }
+
     & h2 {
         padding-bottom: 12px;
     }

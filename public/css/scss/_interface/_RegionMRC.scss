@@ -1,0 +1,16 @@
+.DescriptionMRC{
+    padding: 32px;
+
+    & span{
+        font-weight: bold;
+    }
+}
+
+img.mapMRC{
+    width: 900px
+}
+
+div.Reconnue{
+    @include setFlex(column, center, center);
+    padding: 20px;
+}

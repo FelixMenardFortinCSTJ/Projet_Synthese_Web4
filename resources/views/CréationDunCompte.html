@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="node_modules/animate.css/animate.css">
+    <link rel="stylesheet" href="/public/node_modules/animate.css/animate.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;700&family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
@@ -24,7 +24,7 @@
     </header>
     <div class="interface">
         <h1>Création de compte</h1>
-        <div class="infos">
+        <form class="infos">
             <div class="prenom">
                 <h3>Prénom</h3>
                 <input type="text" placeholder="Prénom">
@@ -57,9 +57,13 @@
                 <h3>Mot de passe</h3>
                 <input type="text" placeholder="Mot de passe">
             </div>
+            <div class="VerifierMotDePasse">
+                <h3>Vérifier le Mot de passe</h3>
+                <input type="text" placeholder="Vérifier le Mot de passe">
+            </div>
             <button>Créer le compte</button>
             <a class="connection"href="">vous avez déjà un compte ? connectez-vous <span>ici</span></a>
-        </div>
+        </form>
     </div>
 </body>
 </html>
