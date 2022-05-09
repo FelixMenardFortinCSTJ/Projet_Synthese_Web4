@@ -96,7 +96,7 @@ class ForfaitController extends Controller
      * @param  \App\Models\Forfait  $forfait
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Forfait $forfait)
+    public function destroy(Request $request, Forfait $forfait)
     {
         if ($request->has('delete')) {
             $forfait->delete();
