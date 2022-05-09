@@ -10,15 +10,29 @@
     padding: 1em;
     margin: 1em;
     width: 800px;
-    
-    & img{
-        display: inline;
-        width: 100px;
+    @include breakpoint-max(992){
+        width: 600px;
     }
 
-    & h2{
-        display: inline;
+    .Favori{
+        margin-top: 32px;
+        padding: 16px;
+        background-color: rgb(177, 220, 231);
+        
+        & img{
+            display: inline;
+            width: 100px;
+        }
+    
+        & h2{
+            display: inline;
+        }
+
+        & p{
+            margin-top: 8px;
+        }
     }
+    
 
     
 }

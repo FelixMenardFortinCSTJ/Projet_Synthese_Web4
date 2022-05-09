@@ -25,9 +25,10 @@
 
         & img {
             position: absolute;
-            width: 50px;
+            width: 30px;
             right: 30px;
             top: 30px;
+            cursor: pointer;
         }
 
         & h2 {
@@ -39,12 +40,21 @@
 
         & .InfosCarte h3, & .InfosCarte p{
             display:block;
-        }
+        }  
 
         & input, .SeRappeler{
             display: inline;
             margin-top: 22px;
-        }
+        }    
+    }
 
+    & .AcheterPanier{
+        margin-left: 16px;
+        margin-top: 0;
     }
 }
+
+    .PanierClose{
+        width: 0;
+        overflow: hidden;
+    }
