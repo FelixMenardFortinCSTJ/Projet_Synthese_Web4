@@ -6,6 +6,11 @@ use App\Http\Controllers\ForfaitController;
 use App\Http\Controllers\MembreController;
 use App\Http\Controllers\PaiementController;
 use App\Http\Controllers\UsagerController;
+use App\Http\Controllers\CategorieController;
+use App\Http\Controllers\EntrepriseController;
+use App\Http\Controllers\GroupeController;
+use App\Models\Entreprise;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -60,19 +65,20 @@ Route::group(['prefix'=>'/usagers', 'as'=>'usagers.', 'controller'=>UsagerContro
     Route::get('/{usager}/delete', 'delete')->name('delete');
     Route::post('/{usager}/delete', 'destroy')->name('destroy');
 });
-//Route membres
-Route::group(['prefix'=>'/membres', 'as'=>'membres.', 'controller'=>MembreController::class, 'where'=>['membre'=>'[0-9]+']], function () {
+
+//Route entreprises
+Route::group(['prefix'=>'/entreprises', 'as'=>'entreprises.', 'controller'=>EntrepriseController::class, 'where'=>['entreprise'=>'[0-9]+']], function () {
     Route::get('/', 'index')->name('index');
-    Route::get('/{membre}', 'show')->name('show');
+    Route::get('/{entreprise}', 'show')->name('show');
 
     Route::get('/create', 'create')->name('create');
     Route::post('/create', 'store')->name('store');
 
-    Route::get('/{membre}/edit', 'edit')->name('edit');
-    Route::post('/{membre}/edit', 'update')->name('update');
+    Route::get('/{entreprise}/edit', 'edit')->name('edit');
+    Route::post('/{entreprise}/edit', 'update')->name('update');
 
-    Route::get('/{membre}/delete', 'delete')->name('delete');
-    Route::post('/{membre}/delete', 'destroy')->name('destroy');
+    Route::get('/{entreprise}/delete', 'delete')->name('delete');
+    Route::post('/{entreprise}/delete', 'destroy')->name('destroy');
 });
 
 //Route Paiements

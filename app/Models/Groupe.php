@@ -5,12 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Forfait extends Model
+class Groupe extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        "nom_forfait",
-        "description",
-		"prix",
-    ];
+    public function categories()
+    {
+        return $this->hasMany(Categorie::class);
+    }
 }

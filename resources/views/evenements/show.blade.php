@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+@extends('meslayouts.base')
+
+@section('titre')
+Evenement
+@endsection
+
+@section('contenu')
 <h1>Détails de l'événement : {{$evenement->nom}}</h1>
 <div>
-    <label for="nom">Nom de l'événement</label>
+    <label for="nom">Nom de l'événement:</label>
     <span>{{$evenement->nom_evenements}}</span>
 </div>
 <div>
@@ -28,4 +26,6 @@
 <div>
     <a data-icon="edit" href="/evenements/{{$evenement->id}}/edit">Modifier l'événement</a>
 </div>
-</html>
+@endsection
+
+
