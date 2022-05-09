@@ -7,7 +7,7 @@
 
 .introAgrotourisme{
     @include setFlex(column,start,start);
-
+    background-color: lightgray;
     & p{
         align-self: end;
         width: 400px;
@@ -20,5 +20,6 @@
     & h2{
         margin-left: 80px;
         margin-top: 60px;
+        margin-bottom: 80px;
     }
 }

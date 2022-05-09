@@ -11577,6 +11577,7 @@ input, h3, .h3 {
   flex-direction: column;
   justify-content: start;
   align-items: start;
+  background-color: lightgray;
 }
 .introAgrotourisme p {
   align-self: end;
@@ -11589,6 +11590,7 @@ input, h3, .h3 {
 .introAgrotourisme h2, .introAgrotourisme .h2 {
   margin-left: 80px;
   margin-top: 60px;
+  margin-bottom: 80px;
 }
 
 .attractionsPopulaires {
