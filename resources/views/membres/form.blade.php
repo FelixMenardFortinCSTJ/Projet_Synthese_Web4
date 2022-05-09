@@ -32,7 +32,7 @@
         <span><input type="text" name="telephone" id="telephone" value="{{$membre->telephone}}"></span>
     </div>
     <div>
-        <label for="logo_etablissement">Le logo de votre établissement</label>
+        <label for="logo">Le logo de votre établissement</label>
         <span><input type="text" name="logo_etablissement" id="logo_etablissement" value="{{$membre->logo_etablissement}}"></span>
     </div>
     <div>
