@@ -11572,6 +11572,25 @@ input, h3, .h3 {
   opacity: 0.5;
 }
 
+.introAgrotourisme {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+.introAgrotourisme p {
+  align-self: end;
+  width: 400px;
+  text-align: left;
+  margin-bottom: 60px;
+  margin-top: 90px;
+  margin-right: 80px;
+}
+.introAgrotourisme h2, .introAgrotourisme .h2 {
+  margin-left: 80px;
+  margin-top: 60px;
+}
+
 .interface {
   padding: 64px;
   max-width: 1200px;
@@ -11605,7 +11624,6 @@ header.Main {
   font-size: 0.8em;
 }
 header.Main img.Logo {
-  border: 1px red solid;
   align-self: center;
   width: 120px;
   height: 120px;

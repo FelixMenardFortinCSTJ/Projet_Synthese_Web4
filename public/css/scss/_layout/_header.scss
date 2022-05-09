@@ -10,7 +10,6 @@ header.Main{
     font-size: 0.8em;
     
     & img.Logo{
-        @include debug;
         align-self: center;
         width: 120px;
         height: 120px;
