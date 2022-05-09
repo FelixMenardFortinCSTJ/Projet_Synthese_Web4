@@ -1,0 +1,29 @@
+// Footer
+//----------------------------------------------------
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Infolettre
+// - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.infolettre{
+    @include setFlex(column,center,center);
+    margin: 0 auto;
+
+    h2{
+        margin-top: 50px;
+        font-weight: bold;
+    }
+
+    p{
+        padding: 20px;
+    }
+    & .email{
+        margin: 20px;
+        a{
+            background-color: gray;
+            padding: 5px;
+            border: 1px solid black ;
+            border-radius: 10%;
+        }
+    }
+}

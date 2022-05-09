@@ -11727,6 +11727,30 @@ input, h3, .h3 {
   font-weight: bold;
 }
 
+.infolettre {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.infolettre h2, .infolettre .h2 {
+  margin-top: 50px;
+  font-weight: bold;
+}
+.infolettre p {
+  padding: 20px;
+}
+.infolettre .email {
+  margin: 20px;
+}
+.infolettre .email a {
+  background-color: gray;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 10%;
+}
+
 .interface {
   padding: 64px;
   max-width: 1200px;
@@ -11776,4 +11800,18 @@ header.Main .nav a {
   margin-right: 10px;
   font-size: 1em;
   color: var(--vert-fonce);
+}
+
+footer {
+  margin-top: 300px;
+  background-color: darkgray;
+  border-top-left-radius: 20%;
+  border-top-right-radius: 20%;
+}
+footer .navFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,14 @@
+// Footer
+//----------------------------------------------------
+
+footer{
+    margin-top: 300px;
+    background-color: darkgray;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+
+    & .navFooter{
+        @include setFlex(column,center,center);
+        padding: 10px;
+    }
+}
