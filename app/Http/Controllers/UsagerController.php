@@ -14,7 +14,8 @@ class UsagerController extends Controller
      */
     public function index()
     {
-        //
+        $usagers = usager::all();
+        return view('usagers.index', ['usagers'=>$usagers]);
     }
 
     /**
@@ -24,7 +25,8 @@ class UsagerController extends Controller
      */
     public function create()
     {
-        //
+        $usager = new usager();
+        return view('usagers.create', ['usager'=>$usager]);
     }
 
     /**
@@ -35,7 +37,10 @@ class UsagerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $usager = new usager();
+        $usager->fill($request->all());
+        $usager->save();
+        return redirect()->route('usagers.show', $usager);
     }
 
     /**
@@ -46,7 +51,7 @@ class UsagerController extends Controller
      */
     public function show(Usager $usager)
     {
-        //
+        return view('usagers.show', ['usager'=>$usager]);
     }
 
     /**
@@ -57,7 +62,7 @@ class UsagerController extends Controller
      */
     public function edit(Usager $usager)
     {
-        //
+        return view('usagers.show', ['usager'=>$usager]);
     }
 
     /**
@@ -69,7 +74,20 @@ class UsagerController extends Controller
      */
     public function update(Request $request, Usager $usager)
     {
-        //
+        $usager->fill($request->all());
+        $usager->save();
+        return redirect()->route('usagers.show', $usager);
+    }
+
+            /**
+     * Show the form for deleting the specified resource.
+     *
+     * @param  \App\Models\Usager  $usager
+     * @return \Illuminate\Http\Response
+     */
+    public function delete(Usager $usager)
+    {
+        return view('usagers.delete', ['usager'=>$usager]);
     }
 
     /**
@@ -78,8 +96,13 @@ class UsagerController extends Controller
      * @param  \App\Models\Usager  $usager
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Usager $usager)
+    public function destroy(Request $request, Usager $usager)
     {
-        //
+        if ($request->has('delete')) {
+            $usager->delete();
+            return redirect()->route('usagers.index');
+        } else {
+            return redirect()->route('usagers.show', $usager);
+        }
     }
 }
