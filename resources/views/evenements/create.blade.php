@@ -6,14 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    
+<body>   
     <form action="{{route('evenements.store')}}" method="post">
         @include('evenements.form')
             <div>
                 <button type="submit">Ajouter</button>
             </div>    
     </form>
-    
 </body>
 </html>
