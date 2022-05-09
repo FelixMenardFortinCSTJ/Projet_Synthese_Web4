@@ -9,7 +9,7 @@
 <body>
 <h1>Détails de l'événement : {{$evenement->nom}}</h1>
 <div>
-    <label for="nom">Nom de l'événement</label>
+    <label for="nom">Nom de l'événement:</label>
     <span>{{$evenement->nom_evenements}}</span>
 </div>
 <div>
