@@ -26,6 +26,8 @@ li{
     padding: 10px 25px;
 }
 
-.TableauDeBord button{
-    display: inline;
+.TableauDeBord{
+    & button{
+        display: inline;
+    }
 }

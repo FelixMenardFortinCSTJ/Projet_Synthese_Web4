@@ -2,7 +2,7 @@
 //----------------------------------------------------
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// Forfaits
+// Panier
 // - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 .Panier{
@@ -56,5 +56,10 @@
 
     .PanierClose{
         width: 0;
+        overflow: hidden;
+    }
+
+    .PanierOpen{
+        width: 550px;
         overflow: hidden;
     }

@@ -11474,9 +11474,17 @@ p, button, input {
   width: 800px;
 }
 
-img {
-  width: 900px;
+.IntroRegion {
+  margin: 32px;
+}
+
+.MapLaurentides img {
+  width: 500px;
   margin: 0 auto;
+}
+.MapLaurentides h3, .MapLaurentides .h3 {
+  display: block;
+  cursor: pointer;
 }
 
 button, .connection {
@@ -11548,18 +11556,20 @@ h1, .h1 {
 
 .Standard, .Solitaire, .Groupe {
   background-color: var(--bleu);
-  padding: 5em 10em;
-  margin-top: 5em;
+  margin-top: 32px;
+  width: 100vw;
+}
+.Standard div.InfosForfaits, .Solitaire div.InfosForfaits, .Groupe div.InfosForfaits {
+  margin: 0 auto;
   width: 800px;
+  padding: 50px 0;
 }
 .Standard h2, .Standard .h2, .Solitaire h2, .Solitaire .h2, .Groupe h2, .Groupe .h2 {
   padding-bottom: 12px;
 }
-.Standard div, .Solitaire div, .Groupe div {
-  padding: 16px;
-}
-.Standard div h3, .Standard div .h3, .Standard div p, .Solitaire div h3, .Solitaire div .h3, .Solitaire div p, .Groupe div h3, .Groupe div .h3, .Groupe div p {
-  display: inline;
+
+.Standard {
+  background-color: var(--blanc);
 }
 
 .Fiche {
@@ -11625,6 +11635,11 @@ h1, .h1 {
 
 .PanierClose {
   width: 0;
+  overflow: hidden;
+}
+
+.PanierOpen {
+  width: 550px;
   overflow: hidden;
 }
 
