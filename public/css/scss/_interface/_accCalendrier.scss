@@ -1,0 +1,57 @@
+// Page d'Acceuil
+//----------------------------------------------------
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Calendrier
+// - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.calendrier{
+    @include setFlex(column, start,start);
+    margin: 0 auto;
+    margin-top: 250px;
+    width: 700px;
+    
+    .annee{
+        padding: 10px 25px;
+    }
+    .mois{
+        padding: 10px 25px;
+        font-weight: bold;
+    }
+    .jourSemaine{
+        margin: 0;
+        padding: 10px 25px;
+        text-align: center;
+    }
+
+    .jours{
+        align-self: center;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-gap: 10px 25px;
+        font-weight: lighter;
+        
+    }
+
+    .bientot{
+        align-self: center;
+        height: 420px;
+        width: 700px;
+        margin-top: 30px;
+        text-align: center;
+        background-color: grey;
+        border-top-left-radius: 25%;
+        border-top-right-radius: 25%;
+
+        & h2{
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    }
+    
+
+
+ 
+
+    
+}

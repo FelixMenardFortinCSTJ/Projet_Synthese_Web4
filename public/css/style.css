@@ -11631,6 +11631,49 @@ input, h3, .h3 {
   font-size: 1em;
 }
 
+.calendrier {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  margin: 0 auto;
+  margin-top: 250px;
+  width: 700px;
+}
+.calendrier .annee {
+  padding: 10px 25px;
+}
+.calendrier .mois {
+  padding: 10px 25px;
+  font-weight: bold;
+}
+.calendrier .jourSemaine {
+  margin: 0;
+  padding: 10px 25px;
+  text-align: center;
+}
+.calendrier .jours {
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 10px 25px;
+  font-weight: lighter;
+}
+.calendrier .bientot {
+  align-self: center;
+  height: 420px;
+  width: 700px;
+  margin-top: 30px;
+  text-align: center;
+  background-color: grey;
+  border-top-left-radius: 25%;
+  border-top-right-radius: 25%;
+}
+.calendrier .bientot h2, .calendrier .bientot .h2 {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
 .interface {
   padding: 64px;
   max-width: 1200px;
