@@ -7,11 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-<form action="{{route('membres.update', $membre)}}" method="post">
-    @include('membres.form')
+<form action="{{route('entreprises.update', $entreprise)}}" method="post">
+    @include('entreprises.form')
     <div>
         <button type="submit">Modifier</button>
-        <button><a href="{{route('membres.index')}}">Annuler</a> </button>
+        <button><a href="{{route('entreprises.index')}}">Annuler</a> </button>
     </div>
 </form>
 </body>

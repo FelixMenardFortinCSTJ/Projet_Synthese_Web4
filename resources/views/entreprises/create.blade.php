@@ -7,8 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-<form action="{{route(membres.store)}}" method="post">
-    @include('membres.form')
+<form action="{{route('entreprises.store')}}" method="post">
+    @include('entreprises.form')
     <div>
         <button type="submit">Ajouter</button>
     </div>
