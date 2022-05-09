@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+@extends('meslayouts.base')
+
+@section('titre')
+Paiement
+@endsection
+
+@section('contenu')
 <h1>Détails du paiement : {{$paiement->titulaire}}</h1>
 <div class="detail">
     <div class="paiement">
@@ -26,7 +25,7 @@
 </div>
 <div class="options">
     <a data-icon="calendar_view_month" href="{{route('paiements.index')}}">Retour à la liste</a>
-    <a data-icon="edit" href="{{route('paiements.edit', $paiement)}}">Modifier la molécule</a>
-    <a data-icon="delete" href="{{route('paiements.delete', $paiement)}}">Supprimer la molécule</a>
+    <a data-icon="edit" href="{{route('paiements.edit', $paiement)}}">Modifier le mode de paiement</a>
+    <a data-icon="delete" href="{{route('paiements.delete', $paiement)}}">Supprimer le mode de paiement</a>
 </div>
-<body>
+@endsection
