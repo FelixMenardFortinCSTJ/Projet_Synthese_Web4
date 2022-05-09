@@ -1,4 +1,4 @@
-@extends('meslayouts.usager')
+@extends('meslayouts.base')
 
 @section('titre')
 Profil
