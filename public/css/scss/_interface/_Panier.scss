@@ -8,19 +8,31 @@
 .Panier{
     position : absolute;
     right: 0;
-    bottom: 0;
-    background-color: var(--vert-pale);
+    top: 0;
     padding: 2em;
     width: 550px;
     height: 100vh;
+    border-left: 1px solid rgb(207, 207, 207);
+    box-shadow: rgba(0, 0, 0, 0.30) 0px 5px 15px;
+    background-color: var(--blanc);
 
     & .ProduitsPanier{
         margin: 16px 0;
-        background-color: var(--vert);
+        padding: 15px;
+        box-shadow: rgba(44, 44, 44, 0.27) 0px 0px 0.25em;
+        border-radius: 5px;
 
-        & .prixPanier{
-            display: inline;
+        &.PrixPaniers{
+        
+            & .prixPanier{
+                display: inline;
+            }
         }
+        
+        & button{
+            margin: 0;
+        }
+
     }
 
         & img {
@@ -38,19 +50,24 @@
         & div{
             padding: 8px;
 
-        & .InfosCarte h3, & .InfosCarte p{
+        & .InfosCarte h3, .InfosCarte p{
             display:block;
         }  
 
-        & input, .SeRappeler{
+        & input, .SeRappeler, button{
             display: inline;
             margin-top: 22px;
         }    
+
+        & .SeRappeler{
+            margin-left: 40px;
+        }
     }
 
     & .AcheterPanier{
         margin-left: 16px;
-        margin-top: 0;
+        margin-top: 10px;
+        padding: 8px 210px;
     }
 }
 

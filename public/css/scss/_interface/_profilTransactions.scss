@@ -6,13 +6,13 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 .Transactions{
-    background-color: var(--bleu);
+    position: absolute;
+    top: 600px;
+    right: 30px;
     padding: 1em;
     margin: 1em;
-    width: 800px;
-    @include breakpoint-max(992){
-        width: 600px;
-    }
+    width: 45vw;
+    background-color: var(--bleu);
 
     & .Transaction{
             margin-top: 32px;

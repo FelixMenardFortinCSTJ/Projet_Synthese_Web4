@@ -15,12 +15,18 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 button{
+    display: block;
     padding: 5px 20px;
+    margin: 10px 0;
     background-color: var(--vert-fonce);
     font-family: var(--typo-texte);
     border: none;
     border-radius: 5px;
     color: white;
+}
+
+button:hover{
+    background-color: var(--vert);  
 }
 
 li{

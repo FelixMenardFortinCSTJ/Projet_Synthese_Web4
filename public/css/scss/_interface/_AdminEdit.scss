@@ -5,13 +5,20 @@
 // Options Avancées
 // - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-form.EditionMembre{
-    @include setFlex(column, center, center);
-    background-color: var(--bleu);
-    padding: 20px 50px;
-    margin: 0 auto;
+form.Edition{
+    
+    & div{
+        @include setFlex(column, center, center);
+        padding: 8px 0;
+        margin: 0 auto;
+    }
 
-    label, span{ 
+    & label, span{ 
         display: block;
     }
+
+    & button.ConfirmEdit{
+        margin: 20px;
+    }
+    
 }
