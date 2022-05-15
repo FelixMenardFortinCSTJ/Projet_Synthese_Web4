@@ -18,7 +18,19 @@ form.Edition{
     }
 
     & button.ConfirmEdit{
-        margin: 20px;
+        margin: 0 auto;
+        margin-top: 500px;
+        padding: 5px 112px;
+    }
+
+    div.edit1{
+        position: absolute;
+        right: 710px;
+    }
+
+    div.edit2{
+        position: absolute;
+        left: 710px;
     }
     
 }

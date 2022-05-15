@@ -12,8 +12,13 @@
     background-color: var(--bleu);
     padding: 1em;
     margin: 1em;
-    height: 42vh;
+    height: 400px;
     width: 45vw;
+    @include breakpoint-max(1230){
+        position: inherit;
+        display: block;
+        width: 80vw;
+    }
 
     & h2 {
         padding-bottom: 12px;

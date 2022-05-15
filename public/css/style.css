@@ -12035,13 +12035,27 @@ p, button, input {
   top: 160px;
   padding: 1em;
   margin: 1em;
-  height: 42vh;
+  height: 400px;
   width: 45vw;
   background-color: var(--bleu);
 }
 
+@media (max-width: 1230px) {
+  .Infos {
+    position: inherit;
+    display: block;
+    width: 80vw;
+  }
+}
+
 .Infos button {
   margin-top: 75px;
+}
+
+@media (max-width: 1230px) {
+  .Infos button {
+    margin-top: 50px;
+  }
 }
 
 .Infos div {
@@ -12059,8 +12073,16 @@ p, button, input {
   background-color: var(--bleu);
   padding: 1em;
   margin: 1em;
-  height: 42vh;
+  height: 400px;
   width: 45vw;
+}
+
+@media (max-width: 1230px) {
+  .Carte {
+    position: inherit;
+    display: block;
+    width: 80vw;
+  }
 }
 
 .Carte h2, .Carte .h2 {
@@ -12083,6 +12105,14 @@ p, button, input {
   margin: 1em;
   width: 45vw;
   background-color: var(--bleu);
+}
+
+@media (max-width: 1230px) {
+  .Favoris {
+    position: inherit;
+    display: block;
+    width: 80vw;
+  }
 }
 
 .Favoris .Favori {
@@ -12112,6 +12142,14 @@ p, button, input {
   margin: 1em;
   width: 45vw;
   background-color: var(--bleu);
+}
+
+@media (max-width: 1230px) {
+  .Transactions {
+    position: inherit;
+    display: block;
+    width: 80vw;
+  }
 }
 
 .Transactions .Transaction {
@@ -12189,7 +12227,19 @@ form.Edition label, form.Edition span {
 }
 
 form.Edition button.ConfirmEdit {
-  margin: 20px;
+  margin: 0 auto;
+  margin-top: 500px;
+  padding: 5px 112px;
+}
+
+form.Edition div.edit1 {
+  position: absolute;
+  right: 710px;
+}
+
+form.Edition div.edit2 {
+  position: absolute;
+  left: 710px;
 }
 
 .IntroRegion {
