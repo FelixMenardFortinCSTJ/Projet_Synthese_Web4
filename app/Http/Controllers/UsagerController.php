@@ -62,7 +62,7 @@ class UsagerController extends Controller
      */
     public function edit(Usager $usager)
     {
-        return view('usagers.show', ['usager'=>$usager]);
+        return view('usagers.edit', ['usager'=>$usager]);
     }
 
     /**

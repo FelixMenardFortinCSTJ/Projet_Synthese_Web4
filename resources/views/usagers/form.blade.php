@@ -29,5 +29,5 @@
 </div>
 <div>
     <label for="mot_de_passe">Mot de passe</label>
-    <span><input type="email" name="mot_de_passe" id="mot_de_passe" value="{{$usager->mot_de_passe}}"></span>
+    <span><input type="password" name="mot_de_passe" id="mot_de_passe" value="{{$usager->mot_de_passe}}"></span>
 </div>

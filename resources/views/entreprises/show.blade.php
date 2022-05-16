@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<h1>Détails du membre : {{$entreprise->nom}}</h1>
+@extends('meslayouts.base')
+
+@section('titre')
+Entreprise
+@endsection
+
+@section('contenu')
+<h1>Détails de l'entreprise : {{$entreprise->nom}}</h1>
 <div class="detail">
-    <div class="membre">
+    <div class="entreprise">
         <div class="logo"><img src="{{$entreprise->logo_etablissement}}" alt=""></div>
         <div class="nom">
             <span class="label">nom: </span>
@@ -48,4 +47,4 @@
         </div>
     </div>
 </div>
-<body>
+@endsection
