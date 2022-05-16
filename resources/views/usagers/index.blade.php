@@ -6,11 +6,9 @@ Profil
 
 @section('contenu')
 <h1>Profil</h1>
-<div class="options">
-    <a data-icon="add_circle" href="{{route('usagers.edit')}}">Modifier le Profil</a>
-</div>
+@foreach($usagers as $usager)
 <div class="usager">
-    <a href="{{route('usagers.show', $usager)}}">
+    <a href="{{route('usagers.show', $usager['id'])}}">
         <span class="prenom">{{$usager->prenom_usager}}</span>
         <span class="nom">{{$usager->nom_usager}}</span>
         <span class="courriel">{{$usager->courriel}}</span>
@@ -21,6 +19,6 @@ Profil
         <span class="mot_de_passe">{{$usager->mot_de_passe}}</span>
     </a>
 </div>
+@endforeach
 @endsection
-
 

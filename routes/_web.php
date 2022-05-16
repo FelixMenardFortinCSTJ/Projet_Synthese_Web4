@@ -43,6 +43,7 @@ Route::get('/evenements/create', [EvenementController::class, 'create'])->name("
 Route::post('/evenements/create', [EvenementController::class, 'store'])->name("evenements.store");
 Route::get('/evenements/{evenement}/delete', [EvenementController::class, 'destroy'])->name("evenements.delete");
 
+
 //Route Forfait
 Route::group(['prefix'=>'/forfaits', 'as'=>'forfaits.', 'controller'=>ForfaitController::class, 'where'=>['forfait'=>'[0-9]+']], function () {
     Route::get('/', 'index')->name('index');
@@ -101,4 +102,8 @@ Route::group(['prefix'=>'/paiements', 'as'=>'paiements.', 'controller'=>Paiement
 
     Route::get('/{paiement}/delete', 'delete')->name('delete');
     Route::post('/{paiement}/delete', 'destroy')->name('destroy');
+});
+
+Route::get('/accueil', function () {
+    return view('Accueil.html');
 });

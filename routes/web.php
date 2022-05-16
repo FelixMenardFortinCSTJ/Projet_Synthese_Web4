@@ -100,3 +100,9 @@ Route::group(['prefix'=>'/paiements', 'as'=>'paiements.', 'controller'=>Paiement
     Route::get('/{paiement}/delete', 'delete')->name('delete');
     Route::post('/{paiement}/delete', 'destroy')->name('destroy');
 });
+
+
+Route::get('/accueil', function () {
+    return view('Accueil');
+});
+
