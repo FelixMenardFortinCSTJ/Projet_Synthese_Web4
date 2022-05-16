@@ -5,7 +5,7 @@ Evenement
 @endsection
 
 @section('contenu')
-<h1>Détails de l'événement : {{$evenement->nom}}</h1>
+<h1>Les évenements</h1>
 <div class="tableau">
     @foreach($evenements as $evenement)
     <div class="evenements">
