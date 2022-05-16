@@ -12,9 +12,9 @@
         position: absolute;
         right: 700px;
         left: 700px;
-        top: 500px;
+        top: 800px;
         width: 500px;
-        margin:0 auto;
+        margin: 0 auto;
 
         @include breakpoint-max(1500){
             left: 500px;
@@ -47,7 +47,7 @@
 
     & .Argenteuil{
         position: absolute;
-        top: 1220px;
+        top: 1520px;
         left: 950px;
 
         @include breakpoint-max(1500){
@@ -65,7 +65,7 @@
 
     & .PaysDenHaut{
         position: absolute;
-        top: 1150px;
+        top: 1450px;
         left: 1100px;
 
         @include breakpoint-max(1500){
@@ -83,7 +83,7 @@
 
     & .RiviereDuNord{
         position: absolute;
-        top: 1220px;
+        top: 1520px;
         left: 1140px;
 
         @include breakpoint-max(1500){
@@ -101,7 +101,7 @@
 
     & .Laurentides{
         position: absolute;
-        top: 1000px;
+        top: 1300px;
         left: 1000px;
 
         @include breakpoint-max(1500){
@@ -119,7 +119,7 @@
 
     & .Mirabel{
         position: absolute;
-        top: 1270px;
+        top: 1570px;
         left: 1090px;
 
         @include breakpoint-max(1500){
@@ -137,7 +137,7 @@
 
     & .DeuxMontagnes{
         position: absolute;
-        top: 1325px;
+        top: 1625px;
         left: 1090px;
 
         @include breakpoint-max(1500){

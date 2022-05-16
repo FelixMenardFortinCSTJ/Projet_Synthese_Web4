@@ -11530,7 +11530,7 @@ form.Edition label, form.Edition span {
 form.Edition button.ConfirmEdit {
   margin: 0 auto;
   margin-top: 500px;
-  padding: 5px 112px;
+  padding: 5px 10vw;
 }
 form.Edition div.edit1 {
   position: absolute;
@@ -11581,16 +11581,37 @@ form.Edition div.edit2 {
   }
 }
 
-.IntroRegion {
-  padding: 100px 300px;
-  margin: 0;
+div.BackgroundDesc {
+  padding: 100px;
   width: 100vw;
-  text-align: center;
-  background-color: var(--bleu);
+  height: 500px;
+  background-image: url(/public/_assets/jpg/Paysage1-assets/paysage1-2000.jpg);
+  background-size: cover;
+  background-position: 0 600px;
 }
 @media (max-width: 1200px) {
-  .IntroRegion {
+  div.BackgroundDesc {
+    background-image: url(/public/_assets/jpg/Paysage1-assets/paysage1-1200.jpg);
+    background-position: 0 500px;
+  }
+}
+div.BackgroundDesc .IntroRegion {
+  padding: 100px 200px;
+  margin: 0 auto;
+  width: 80vw;
+  z-index: 5;
+  border-radius: 5px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+@media (max-width: 1200px) {
+  div.BackgroundDesc .IntroRegion {
     padding: 50px 200px;
+  }
+}
+@media (max-width: 992px) {
+  div.BackgroundDesc .IntroRegion {
+    padding: 50px 50px;
   }
 }
 
@@ -11598,7 +11619,7 @@ form.Edition div.edit2 {
   position: absolute;
   right: 700px;
   left: 700px;
-  top: 500px;
+  top: 800px;
   width: 500px;
   margin: 0 auto;
 }
@@ -11633,7 +11654,7 @@ form.Edition div.edit2 {
 }
 .MapLaurentides .Argenteuil {
   position: absolute;
-  top: 1220px;
+  top: 1520px;
   left: 950px;
 }
 @media (max-width: 1500px) {
@@ -11653,7 +11674,7 @@ form.Edition div.edit2 {
 }
 .MapLaurentides .PaysDenHaut {
   position: absolute;
-  top: 1150px;
+  top: 1450px;
   left: 1100px;
 }
 @media (max-width: 1500px) {
@@ -11673,7 +11694,7 @@ form.Edition div.edit2 {
 }
 .MapLaurentides .RiviereDuNord {
   position: absolute;
-  top: 1220px;
+  top: 1520px;
   left: 1140px;
 }
 @media (max-width: 1500px) {
@@ -11693,7 +11714,7 @@ form.Edition div.edit2 {
 }
 .MapLaurentides .Laurentides {
   position: absolute;
-  top: 1000px;
+  top: 1300px;
   left: 1000px;
 }
 @media (max-width: 1500px) {
@@ -11713,7 +11734,7 @@ form.Edition div.edit2 {
 }
 .MapLaurentides .Mirabel {
   position: absolute;
-  top: 1270px;
+  top: 1570px;
   left: 1090px;
 }
 @media (max-width: 1500px) {
@@ -11733,7 +11754,7 @@ form.Edition div.edit2 {
 }
 .MapLaurentides .DeuxMontagnes {
   position: absolute;
-  top: 1325px;
+  top: 1625px;
   left: 1090px;
 }
 @media (max-width: 1500px) {
@@ -11773,7 +11794,8 @@ form.Edition div.edit2 {
 }
 
 img.mapMRC {
-  width: 50vw;
+  width: 40vw;
+  margin: 0 auto;
 }
 
 div.Reconnue {

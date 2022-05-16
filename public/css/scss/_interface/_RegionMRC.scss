@@ -1,9 +1,5 @@
-// Page du portrait de la région
+// Page d'une MRC
 //----------------------------------------------------
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// Une MRC de la région
-// - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 .DescriptionMRC{
     width: 100vw;
@@ -25,7 +21,8 @@
 }
 
 img.mapMRC{
-    width: 50vw;
+    width: 40vw;
+    margin:0 auto;
 }
 
 div.Reconnue{
