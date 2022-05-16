@@ -5,20 +5,47 @@
 // Transactions
 // - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-.Transaction{
-    background-color: var(--bleu);
+.Transactions{
+    position: absolute;
+    top: 600px;
+    right: 30px;
     padding: 1em;
     margin: 1em;
-    width: 800px;
-    
-    & img{
-        display: inline;
-        width: 100px;
+    width: 45vw;
+    background-color: var(--bleu);
+    @include breakpoint-max(1230){
+        position: inherit;
+        display: block;
+        width: 80vw;
+    }
+
+    & .Transaction{
+            margin-top: 32px;
+            padding: 16px;
+            background-color: rgb(177, 220, 231);
     }
 
     & h2{
         display: inline;
     }
+
+    & h3{
+        display: block;
+        margin-bottom: 0;
+        margin-top: 8px;
+    }
+
+    & .prix{
+        display: inline;
+    }
+
+    & .commande{
+        display: inline;
+        
+    }
+
+    
+
 
     
 }

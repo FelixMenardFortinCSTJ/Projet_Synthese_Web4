@@ -6,10 +6,27 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 .Infos{
-    background-color: var(--bleu);
+    position: absolute;
+    left: 30px;
+    top: 160px;
     padding: 1em;
     margin: 1em;
-    width: 800px;
+    height: 400px;
+    width: 45vw;
+    background-color: var(--bleu);
+    @include breakpoint-max(1230){
+        position: inherit;
+        display: block;
+        width: 80vw;
+    }
+
+    & button{
+        margin-top: 75px;
+        @include breakpoint-max(1230){
+            margin-top: 50px;
+        }
+    }
+
     & div{
         padding: 16px;
 

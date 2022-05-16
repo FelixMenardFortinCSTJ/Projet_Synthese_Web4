@@ -1,11 +1,21 @@
-// Page de la région
+// Page du portrait de la région
 //----------------------------------------------------
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // Carte des Laurentides
 // - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-img{
-    width: 900px;
-    margin:0 auto;
+
+.MapLaurentides{
+
+    & img{
+        width: 500px;
+        margin:0 auto;
+    }
+
+    & a{
+        padding: 10px;
+        display: block;
+        cursor: pointer;
+    }
 }

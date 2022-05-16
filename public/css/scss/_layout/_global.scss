@@ -2,7 +2,10 @@
 // Interface
 // - - - - - - - - - - - - - - - - - - - - - - - - - - -
 .interface{
+    @include setFlex(column, center, center);
+    @extend .container-fluid;
     padding: 64px;
+    padding-bottom:0 ;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -12,7 +15,9 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 button{
+    display: block;
     padding: 5px 20px;
+    margin: 10px 0;
     background-color: var(--vert-fonce);
     font-family: var(--typo-texte);
     border: none;
@@ -20,7 +25,17 @@ button{
     color: white;
 }
 
+button:hover{
+    background-color: var(--vert);  
+}
+
 li{
     display: inline;
     padding: 10px 25px;
+}
+
+.TableauDeBord{
+    & button{
+        display: inline;
+    }
 }

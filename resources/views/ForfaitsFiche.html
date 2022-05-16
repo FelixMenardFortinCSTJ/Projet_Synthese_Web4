@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="node_modules/animate.css/animate.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;700&family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/public/node_modules/animate.css/animate.css">
+    <link rel="stylesheet" href="../../public/css/style.css">
     <title>Fiche d'un forfait</title>
 </head>
 <body>
     <header>
         <ul>
+            <li><a href="Accueil.html">Accueil</a></li>
             <li><a href="tableauDeBordProfil.html">Profil</a></li>
             <li><a href="tableauDeBordAdmin.html">Admin</a></li>
             <li><a href="PortraitRegion.html">Région</a></li>
             <li><a href="CréationDunCompte.html">Création de compte</a></li>
             <li><a href="ForfaitsAccueil.html">Forfaits</a></li>
+            <li><img class="PanierIcone" src="/public/_assets/svg/Panier.svg" alt="Panier"></li>
         </ul>
     </header>
     <div class="interface">
@@ -32,16 +34,43 @@
         </div>
         <div class="Panier">
             <h1>Panier</h1>
+            <img id="Fermer" class="Fermer" src="/public/_assets/svg/Fermer.svg" alt="Fermer">
             <div class="ProduitsPanier">
                 <h2>Nom du produit ou forfait</h2>
                 <p>Description du produit ou du forfait</p>
-                <h3>prix</h3>
-                <p>prix$</p>
-                <button>Acheter</button>
+                <div class="PrixPaniers">
+                    <h3 class="prixPanier">prix :</h3>
+                    <p class="prixPanier">prix$</p>
+                </div>
                 <button>Supprimer</button>
+            </div class="Paiement">
+                <p>méthode de paiement</p>
+                <input type="text">
+                <div class="InfosCarte">
+                    <div class="NomCarte">
+                        <h3>Nom de la carte : </h3>
+                        <p>Nom de la carte</p>
+                    </div>
+                    <div class="NumeroCarte">
+                        <h3>Numéro de la carte : </h3>
+                        <p>Numéro de la carte</p>
+                    </div>
+                    <div class="Expiration">
+                        <h3>Date d'expiration : </h3>
+                        <p>Date d'expiration</p>
+                    </div>
+                    <div class="Securite">
+                        <h3>Numéro de sécurité : </h3>
+                        <p>Numéro de sécurité</p>
+                        <button>modifier</button>
+                        <p class="SeRappeler">se souvenir des informations</p>
+                        <input type="checkbox">
+                    </div>
+                </div>
+                <button class="AcheterPanier">Acheter</button>
             </div>
         </div>
-        </div>
 </div>
+<script src="/public/js/Panier.js"></script>
 </body>
 </html>

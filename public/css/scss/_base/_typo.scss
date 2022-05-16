@@ -1,21 +1,8 @@
-h1{
-    font-family: var(--typo-titre);
-}
-h2{
-    font-family: var(--typo-titre);
-}
-h3{
+h1, h2, h3{
     font-family: var(--typo-titre);
 }
 
-p{
+p, button, input{
     font-family: var(--typo-texte);
 }
 
-button{
-    font-family: var(--typo-texte);
-}
-
-input{
-    font-family: var(--typo-texte);
-}

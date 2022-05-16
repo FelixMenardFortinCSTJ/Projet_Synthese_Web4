@@ -5,20 +5,39 @@
 // Favoris
 // - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-.Favori{
-    background-color: var(--bleu);
+.Favoris{
+    position: absolute;
+    left: 30px;
+    top: 600px;
     padding: 1em;
     margin: 1em;
-    width: 800px;
-    
-    & img{
-        display: inline;
-        width: 100px;
+    width: 45vw;
+    background-color: var(--bleu);
+    @include breakpoint-max(1230){
+        position: inherit;
+        display: block;
+        width: 80vw;
     }
 
-    & h2{
-        display: inline;
+    .Favori{
+        margin-top: 32px;
+        padding: 16px;
+        background-color: rgb(177, 220, 231);
+        
+        & img{
+            display: inline;
+            width: 100px;
+        }
+    
+        & h2{
+            display: inline;
+        }
+
+        & p{
+            margin-top: 8px;
+        }
     }
+    
 
     
 }

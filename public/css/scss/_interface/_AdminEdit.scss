@@ -1,0 +1,36 @@
+// Page de l'administration
+//----------------------------------------------------
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Options Avancées
+// - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+form.Edition{
+    
+    & div{
+        @include setFlex(column, center, center);
+        padding: 8px 0;
+        margin: 0 auto;
+    }
+
+    & label, span{ 
+        display: block;
+    }
+
+    & button.ConfirmEdit{
+        margin: 0 auto;
+        margin-top: 500px;
+        padding: 5px 112px;
+    }
+
+    div.edit1{
+        position: absolute;
+        right: 710px;
+    }
+
+    div.edit2{
+        position: absolute;
+        left: 710px;
+    }
+    
+}

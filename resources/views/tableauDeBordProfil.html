@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="node_modules/animate.css/animate.css">
+    <link rel="stylesheet" href="/public/node_modules/animate.css/animate.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;700&family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../../public/css/style.css">
     <title>Profil</title>
 </head>
 <body>
     <header>
         <ul>
+            <li><a href="Accueil.html">Accueil</a></li>
             <li><a href="tableauDeBordProfil.html">Profil</a></li>
             <li><a href="tableauDeBordAdmin.html">Admin</a></li>
             <li><a href="PortraitRegion.html">Région</a></li>
@@ -37,8 +38,9 @@
                 <p>Adresse complète</p>
             </div>
             <div class="Telephone">
-                <h3>Numéro de téléphone : </h3>
-                <p>Numéro de téléphone</p>
+                <h3>Téléphone : </h3>
+                <p>123-456-7890</p>
+                <button>modifier</button>
             </div>
         </div>
         <div class="Carte">
@@ -58,12 +60,19 @@
             <div class="Securite">
                 <h3>Numéro de sécurité : </h3>
                 <p>Numéro de sécurité</p>
+                <button>modifier</button>
             </div>
         </div>
         <div class="Favoris">
             <h2>Favoris</h2>
             <div class="Favori">
-                <img src="/_assets/svg/placeholder.svg" alt="commercant">
+                <img src="../../public/_assets/svg/placeholder.svg" alt="ImageCommercant">
+                <h2>Nom du commercant</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quibusdam eaque ullam corporis eos. Deserunt, sit perspiciatis voluptatum, libero, voluptatem ducimus facilis reprehenderit beatae molestiae nihil magni id consequuntur illum?</p>
+                <button>Supprimer</button>
+            </div>
+            <div class="Favori">
+                <img src="../../public/_assets/svg/placeholder.svg" alt="ImageCommercant">
                 <h2>Nom du commercant</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quibusdam eaque ullam corporis eos. Deserunt, sit perspiciatis voluptatum, libero, voluptatem ducimus facilis reprehenderit beatae molestiae nihil magni id consequuntur illum?</p>
                 <button>Supprimer</button>
@@ -73,9 +82,33 @@
         <div class="Transactions">
             <h2>Transactions</h2>
             <div class="Transaction">
-                <p>Forfait acheté</p>
-                <p>prix$</p>
-                <p>numéro de commande</p>
+                <h3>Forfait acheté</h3>
+                <p class="prix">prix :</p>
+                <p class="prix">prix$</p>
+                <div class="Commandes">
+                    <p class="commande">numéro de commande :</p>
+                    <p class="commande">numéro de commande</p>
+                </div>
+                <button>Accéder à la facture</button>
+            </div>
+            <div class="Transaction">
+                <h3>Forfait acheté</h3>
+                <p class="prix">prix :</p>
+                <p class="prix">prix$</p>
+                <div class="Commandes">
+                    <p class="commande">numéro de commande :</p>
+                    <p class="commande">numéro de commande</p>
+                </div>
+                <button>Accéder à la facture</button>
+            </div>
+            <div class="Transaction">
+                <h3>Forfait acheté</h3>
+                <p class="prix">prix :</p>
+                <p class="prix">prix$</p>
+                <div class="Commandes">
+                    <p class="commande">numéro de commande :</p>
+                    <p class="commande">numéro de commande</p>
+                </div>
                 <button>Accéder à la facture</button>
             </div>
             <button>Afficher plus</button>

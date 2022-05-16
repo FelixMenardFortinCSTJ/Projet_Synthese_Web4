@@ -1,5 +1,8 @@
+// Header
+//----------------------------------------------------
+
 header{
-    @include setFlex(center,center,row);
+    @include setFlex(row, center, center);
     position: sticky;
     height: 160px;
     width: 100%;

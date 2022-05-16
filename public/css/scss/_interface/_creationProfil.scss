@@ -5,17 +5,39 @@
 // création du profil
 // - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-button, .connection{
+button.compte, .connection{
     display: block;
-    margin-top: 20px;
+    margin: 0 auto;
 
     span{
         font-weight: bold;
     }
 }
 
-input, h3{
-    display: inline;
-    margin-right: 10px;
-    margin-bottom: 20px;
+form.infos{
+    & div{
+        @include setFlex(column, center,center);
+        margin: 0 auto;
+
+        & input, h3{
+            display: block;
+        }
+
+        & input{
+            margin-bottom: 22px;
+        }
+
+        & h3{
+            font-size: 1.3em;
+        }
+    }
+}
+
+h1{
+    margin-bottom: 16px;
+}
+
+form.infos{
+    @include setFlex(column, center, start);
+    margin: 0 auto;
 }

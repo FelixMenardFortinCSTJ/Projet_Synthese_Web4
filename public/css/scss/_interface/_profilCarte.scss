@@ -6,10 +6,20 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 .Carte{
+    position:absolute;
+    right: 30px;
+    top: 160px;
     background-color: var(--bleu);
     padding: 1em;
     margin: 1em;
-    width: 800px;
+    height: 400px;
+    width: 45vw;
+    @include breakpoint-max(1230){
+        position: inherit;
+        display: block;
+        width: 80vw;
+    }
+
     & h2 {
         padding-bottom: 12px;
     }

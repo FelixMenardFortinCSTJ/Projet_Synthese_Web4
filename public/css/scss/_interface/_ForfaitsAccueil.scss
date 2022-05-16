@@ -6,10 +6,16 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 .Escapade, .Decouverte, .Detente, .Famille{
-    background-color: var(--bleu);
-    padding: 1em;
+    background-color: rgb(255, 255, 255);
+    padding: 10em 8em;
     margin: 1em;
     width: 50vw;
+    height: 480px;
+    
+    @include breakpoint-max(1200){
+        padding: 5em 4em;
+    }
+
     & h2 {
         padding-bottom: 12px;
     }
@@ -20,4 +26,36 @@
         display:inline;
     }
     }
+}
+
+.Escapade{
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 0;
+    top: 0;
+    left: 0;
+}
+
+.Decouverte{
+    position: absolute;
+    margin-top: 200px;
+    margin-right: 0;
+    top: 0;
+    right: 0;
+    background-color: var(--bleu);
+}
+
+.Detente{
+    position: absolute;
+    margin-left: 0;
+    top: 664px;
+    left: 0;
+    background-color: var(--bleu);
+}
+
+.Famille{
+    position: absolute;
+    margin-right: 0;
+    top: 664px;
+    right: 0;
 }
