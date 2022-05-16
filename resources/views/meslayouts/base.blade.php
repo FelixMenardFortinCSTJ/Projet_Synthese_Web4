@@ -12,14 +12,30 @@
     <title>@yield('titre')</title>
 </head>
 <body>
-    <header>
-        <ul>
+    <header class="Main">
+        <img class="Logo" src="{{asset('svg/placeholder.svg')}}" alt="Logo">
+        
+        <input class="navSupp" id="searchbar"  type="text"
+            name="search" placeholder="Vous recherchez...">
+
+        <ul class="navSupp">
+            <li><a href="CréationDunCompte.html">S'inscrire</a></li>
+            <li><a href="">Se connecter</a></li>
             <li><a href="tableauDeBordProfil.html">Profil</a></li>
             <li><a href="tableauDeBordAdmin.html">Admin</a></li>
-            <li><a href="PortraitRegion.html">Région</a></li>
-            <li><a href="CréationDunCompte.html">Création de compte</a></li>
-            <li><a href="ForfaitsAccueil.html">Forfaits</a></li>
         </ul>
+
+        <ul class="nav">
+            <li><a href="sousCategorie.html">Agriculture</a></li>
+            <li><a href="sousCategorie.html">Restauration</a></li>
+            <li><a href="sousCategorie.html">Agroalimentaire</a></li>
+            <li><a href="sousCategorie.html">Activités</a></li>
+            <li><a href="sousCategorie.html">Hébergement</a></li>
+            <li><a href="ForfaitsAccueil.html">Forfaits</a></li>
+            <li><a href="PortraitRegion.html">Portrait de la région</a></li>
+        </ul>
+
+
     </header>
     <div class="interface">
         @yield('contenu')
