@@ -11783,6 +11783,27 @@ div.interface .personnages a .personne h3, div.interface .personnages a .personn
   font-size: 1em;
 }
 
+.laPersonne {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+  padding-top: 200px;
+  width: 700px;
+  margin: 0 auto;
+  flex-wrap: nowrap;
+}
+.laPersonne img {
+  width: 300px;
+}
+.laPersonne .infoPersonne {
+  margin: 60px;
+}
+.laPersonne .infoPersonne h2, .laPersonne .infoPersonne .h2 {
+  font-weight: bold;
+}
+
 .interface {
   padding: 64px;
   max-width: 1200px;
