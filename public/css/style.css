@@ -11804,6 +11804,98 @@ div.interface .personnages a .personne h3, div.interface .personnages a .personn
   font-weight: bold;
 }
 
+.publicites {
+  margin-top: 200px;
+}
+.publicites .publicite1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: 300px;
+  z-index: 10;
+  width: 500px;
+}
+.publicites .publicite1 h2, .publicites .publicite1 .h2 {
+  height: 100%;
+  margin-right: 40px;
+  font-weight: bold;
+}
+.publicites .publicite1 p {
+  margin-left: 150px;
+}
+.publicites .publicite1 p::after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -80px;
+  width: 200px;
+  height: 200px;
+  z-index: 1;
+  border-radius: 50%;
+  opacity: 0.5;
+  background-color: grey;
+}
+.publicites .publicite2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: 300px;
+  z-index: 10;
+  width: 500px;
+}
+.publicites .publicite2 h2, .publicites .publicite2 .h2 {
+  height: 100%;
+  margin-left: 350px;
+  font-weight: bold;
+}
+.publicites .publicite2 p {
+  margin-right: 150px;
+}
+.publicites .publicite2 p::after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: -80px;
+  width: 200px;
+  height: 200px;
+  z-index: 1;
+  border-radius: 50%;
+  opacity: 0.5;
+  background-color: grey;
+}
+
+.activites {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.activites .activite {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  width: 400px;
+}
+.activites .activite img {
+  width: 200px;
+}
+.activites .activite h3, .activites .activite .h3 {
+  margin-top: 20px;
+  text-align: center;
+}
+.activites .activite p {
+  text-align: center;
+}
+
 .interface {
   padding: 64px;
   max-width: 1200px;
