@@ -1,5 +1,23 @@
+// Page du portrait de la région
+//----------------------------------------------------
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Une MRC de la région
+// - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 .DescriptionMRC{
-    padding: 32px;
+    width: 100vw;
+    padding: 50px 300px;
+    text-align: center;
+    background-color: var(--bleu);
+
+    @include breakpoint-max(1400){
+        padding: 50px 200px;
+    }
+
+    @include breakpoint-max(992){
+        padding: 50px 100px;
+    }
 
     & span{
         font-weight: bold;
@@ -7,18 +25,10 @@
 }
 
 img.mapMRC{
-    width: 900px
+    width: 50vw;
 }
 
 div.Reconnue{
     @include setFlex(column, center, center);
     padding: 20px;
-}
-
-.Pin{
-    width: 20px;
-    height: 20px;
-    border: 7px solid var(--bleu);
-    border-radius: 100%;
-
 }

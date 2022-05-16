@@ -6,5 +6,13 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 .IntroRegion{
-    margin: 32px;
+    padding: 100px 300px;
+    margin: 0;
+    width: 100vw;
+    text-align: center;
+    background-color: var(--bleu);
+
+    @include breakpoint-max(1200){
+        padding: 50px 200px;
+    }
 }

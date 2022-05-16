@@ -25,12 +25,44 @@ form.Edition{
 
     div.edit1{
         position: absolute;
-        right: 710px;
-    }
+        right: 610px;
+        
+        @include breakpoint-max(1650){
+            right: 450px;
+        }
 
+        @include breakpoint-max(1320){
+            right: 280px;
+        }
+
+        @include breakpoint-max(992){
+            right: 180px;
+        }
+
+        @include breakpoint-max(780){
+            right: 100px;
+        }
+    }
+    
     div.edit2{
         position: absolute;
-        left: 710px;
+        left: 610px;
+        
+        @include breakpoint-max(1650){
+            left: 450px;
+        }
+        
+        @include breakpoint-max(1320){
+            left: 280px;
+        }
+        
+        @include breakpoint-max(992){
+            left: 180px;
+        }
+
+        @include breakpoint-max(780){
+            left: 100px;
+        }
     }
     
 }

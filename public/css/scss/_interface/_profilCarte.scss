@@ -14,6 +14,8 @@
     margin: 1em;
     height: 400px;
     width: 45vw;
+    border-radius: 5px;
+
     @include breakpoint-max(1230){
         position: inherit;
         display: block;
