@@ -7,13 +7,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;700&family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <title>Synthese Page acceuil</title>
 </head>
 <body> 
     <div class="interface">
         <header class="Main">
-            <img class="Logo" src="/public/_assets/svg/placeholder.svg" alt="Logo">
+            <img class="Logo" src="{{asset('svg/placeholder.svg')}}" alt="Logo">
             
             <div class="nav">
                 <a href="sousCategorie.html">Agriculture</a>
@@ -45,13 +45,12 @@
         </div>
 
         <div class="introAgrotourisme">
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam quia, repellendus odio corrupti consectetur dolores, magnam suscipit tempore laboriosam distinctio corporis laudantium magni. Perferendis vitae unde quae id libero amet.
-            </p>
-
             <h2>
                 Qu'est ce que <br> l'agrotourisme?
             </h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam quia, repellendus odio corrupti consectetur dolores, magnam suscipit tempore laboriosam distinctio corporis laudantium magni. Perferendis vitae unde quae id libero amet.
+            </p>
         </div>
 
 
