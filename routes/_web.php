@@ -26,11 +26,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/admin', function () {
+    return view('tableauDeBordAdmin');
+});
 
-require __DIR__.'/auth.php';
+Route::get('/profil', function () {
+    return view('tableauDeBordProfil');
+});
 
 // Routes relatif au pages des événements, certaines routes seront probablement enlever plus tard car inutile.
 Route::get('/evenements', [EvenementController::class, 'index'])->name("evenements.index");
