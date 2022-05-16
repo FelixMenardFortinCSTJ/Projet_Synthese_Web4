@@ -17,6 +17,13 @@ class ForfaitController extends Controller
         $forfaits = Forfait::all();
         return view('forfaits.index', ['forfaits'=>$forfaits]);
     }
+    
+    public function categorieShow($categorie)
+    {
+        $forfaits = Forfait::where('categorie_forfait', '=', $categorie)->get();
+        dd($forfaits);
+        return view('forfaits.index', ['forfaits'=>$forfaits]);
+    }
 
     /**
      * Show the form for creating a new resource.

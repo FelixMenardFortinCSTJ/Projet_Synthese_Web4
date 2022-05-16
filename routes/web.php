@@ -33,17 +33,26 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 // Routes relatif au pages des événements, certaines routes seront probablement enlever plus tard car inutile.
-Route::get('/evenements', [EvenementController::class, 'index'])->name("evenements.index");
-Route::get('/evenements/{evenement}', [EvenementController::class, 'show'])->name("evenements.show")->where(['evenement'=>'[0-9]+']);
-Route::get('/evenements/{evenement}/edit', [EvenementController::class, 'edit'])->name("evenements.edit");
-Route::post('/evenements/{evenement}/edit', [EvenementController::class, 'update'])->name("evenements.update");
-Route::get('/evenements/create', [EvenementController::class, 'create'])->name("evenements.create");
-Route::post('/evenements/create', [EvenementController::class, 'store'])->name("evenements.store");
-Route::get('/evenements/{evenement}/delete', [EvenementController::class, 'destroy'])->name("evenements.delete");
+Route::group(['prefix'=>'/evenements', 'as'=>'evenements.', 'controller'=>EvenementController::class, 'where'=>['evenement'=>'[0-9]+']], function () {
+    Route::get('/', 'index')->name('index');
+    Route::get('/{evenement}', 'show')->name('show');
+
+    Route::get('/create', 'create')->name('create');
+    Route::post('/create', 'store')->name('store');
+
+    Route::get('/{evenement}/edit', 'edit')->name('edit');
+    Route::post('/{evenement}/edit', 'update')->name('update');
+
+    Route::get('/{evenement}/delete', 'delete')->name('delete');
+    Route::post('/{evenement}/delete', 'destroy')->name('destroy');
+});
 
 //Route Forfait
 Route::group(['prefix'=>'/forfaits', 'as'=>'forfaits.', 'controller'=>ForfaitController::class, 'where'=>['forfait'=>'[0-9]+']], function () {
     Route::get('/', 'index')->name('index');
+    Route::get('/{categorie}', 'categorieShow')
+        ->name('categorie.show')
+        ->where(['categorie' => 'Escapade|Découverte|Détente|Famille']);
     Route::get('/{forfait}', 'show')->name('show');
 
     Route::get('/create', 'create')->name('create');
