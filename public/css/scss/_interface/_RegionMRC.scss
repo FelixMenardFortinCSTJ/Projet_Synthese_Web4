@@ -14,3 +14,11 @@ div.Reconnue{
     @include setFlex(column, center, center);
     padding: 20px;
 }
+
+.Pin{
+    width: 20px;
+    height: 20px;
+    border: 7px solid var(--bleu);
+    border-radius: 100%;
+
+}

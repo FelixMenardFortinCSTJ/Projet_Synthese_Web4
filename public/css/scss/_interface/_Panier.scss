@@ -15,22 +15,16 @@
     border-left: 1px solid rgb(207, 207, 207);
     box-shadow: rgba(0, 0, 0, 0.30) 0px 5px 15px;
     background-color: var(--blanc);
-
+    
     & .ProduitsPanier{
         margin: 16px 0;
         padding: 15px;
         box-shadow: rgba(44, 44, 44, 0.27) 0px 0px 0.25em;
         border-radius: 5px;
 
-        &.PrixPaniers{
-        
-            & .prixPanier{
-                display: inline;
-            }
-        }
-        
         & button{
-            margin: 0;
+            display: block;
+            margin: 10px ;
         }
     }
 
@@ -49,8 +43,9 @@
         & div{
             padding: 8px;
 
-        & .InfosCarte h3, .InfosCarte p{
-            display:block;
+        & .InfosCarte .InfoCarte h3, .InfosCarte .InfoCarte p{
+            display:inline;
+            font-size: 10px;
         }  
 
         & input, .SeRappeler, button{
@@ -70,12 +65,23 @@
     }
 }
 
-    .PanierClose{
-        width: 0;
-        overflow: hidden;
+    .Methode{
+                
+        & p, input{
+            display: inline;
+        }
     }
 
-    .PanierOpen{
-        width: 550px;
-        overflow: hidden;
+    .InfoCarte{
+
+        & h3, p{
+            display: inline;
+        }
+    }
+
+    .PrixPaniers{
+        
+        & .prixPanier{
+            display: inline;
+        }
     }
