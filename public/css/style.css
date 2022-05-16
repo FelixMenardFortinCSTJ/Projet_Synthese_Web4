@@ -11753,6 +11753,36 @@ input, h3, .h3 {
   border-radius: 10%;
 }
 
+div.interface .personnages {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: 150px;
+  width: 800px;
+}
+div.interface .personnages a {
+  margin: 20px;
+}
+div.interface .personnages a .personne {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+div.interface .personnages a .personne img {
+  margin-bottom: 10px;
+  width: 200px;
+}
+div.interface .personnages a .personne h2, div.interface .personnages a .personne .h2 {
+  font-size: 1.6em;
+}
+div.interface .personnages a .personne h3, div.interface .personnages a .personne .h3 {
+  font-size: 1em;
+}
+
 .interface {
   padding: 64px;
   max-width: 1200px;
