@@ -624,6 +624,7 @@ progress {
 .container,
 .container-fluid,
 .interface,
+header.Main,
 .container-xxl,
 .container-xl,
 .container-lg,
@@ -4035,6 +4036,7 @@ textarea.form-control-lg {
 .navbar > .container,
 .navbar > .container-fluid,
 .navbar > .interface,
+.navbar > header.Main,
 .navbar > .container-sm,
 .navbar > .container-md,
 .navbar > .container-lg,
@@ -11512,6 +11514,10 @@ form.Edition div {
   justify-content: center;
   align-items: center;
   padding: 8px 0;
+}
+img {
+  display: inline;
+  width: 100px;
   margin: 0 auto;
 }
 form.Edition label, form.Edition span {
@@ -11769,6 +11775,359 @@ form.infos {
   display: inline;
 }
 
+.interface .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 650px;
+  background-color: grey;
+}
+.interface .header h1, .interface .header .h1 {
+  z-index: 2;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+.interface .header p {
+  z-index: 2;
+  width: 600px;
+  text-align: center;
+}
+.interface .header::after {
+  content: " ";
+  position: absolute;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.5;
+}
+
+.introAgrotourisme {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  background-color: lightgray;
+}
+.introAgrotourisme p {
+  align-self: end;
+  width: 400px;
+  text-align: left;
+  margin-bottom: 60px;
+  margin-top: 200px;
+  margin-right: 80px;
+}
+.introAgrotourisme h2, .introAgrotourisme .h2 {
+  margin-left: 80px;
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+
+.attractionsPopulaires {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 600px;
+}
+.attractionsPopulaires h2, .attractionsPopulaires .h2 {
+  margin-top: 450px;
+  margin-bottom: 100px;
+  font-size: 2.4em;
+  color: var(--vert);
+}
+.attractionsPopulaires h2 span, .attractionsPopulaires .h2 span {
+  font-weight: bold;
+  color: var(--vert-fonce);
+}
+.attractionsPopulaires .Attraction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  margin: 30px;
+}
+.attractionsPopulaires .Attraction img {
+  align-self: center;
+  width: 200px;
+}
+.attractionsPopulaires .Attraction h3, .attractionsPopulaires .Attraction .h3 {
+  font-size: 20px;
+  text-align: center;
+}
+.attractionsPopulaires .Attraction p {
+  text-align: center;
+  font-size: 1em;
+}
+
+.calendrier {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  margin: 0 auto;
+  margin-top: 250px;
+  width: 700px;
+}
+.calendrier .annee {
+  padding: 10px 25px;
+}
+.calendrier .mois {
+  padding: 10px 25px;
+  font-weight: bold;
+}
+.calendrier .jourSemaine {
+  margin: 0;
+  padding: 10px 25px;
+  text-align: center;
+}
+.calendrier .jours {
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 10px 25px;
+  font-weight: lighter;
+}
+.calendrier .bientot {
+  align-self: center;
+  height: 420px;
+  width: 700px;
+  margin-top: 30px;
+  text-align: center;
+  background-color: grey;
+  border-top-left-radius: 25%;
+  border-top-right-radius: 25%;
+}
+.calendrier .bientot h2, .calendrier .bientot .h2 {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.logement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+  width: 900px;
+  margin: 0 auto;
+}
+.logement h2, .logement .h2 {
+  margin-top: 200px;
+  margin-bottom: 100px;
+  font-weight: bold;
+  text-align: center;
+}
+.logement .option1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 450px;
+}
+.logement .option1 img {
+  width: 200px;
+}
+.logement .option1 p {
+  width: 200px;
+}
+.logement .option1 p span {
+  font-size: 20px;
+  font-weight: bold;
+}
+.logement .option2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 450px;
+  margin-top: 30px;
+}
+.logement .option2 img {
+  width: 200px;
+}
+.logement .option2 p {
+  width: 200px;
+}
+.logement .option2 p span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.infolettre {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.infolettre h2, .infolettre .h2 {
+  margin-top: 50px;
+  font-weight: bold;
+}
+.infolettre p {
+  padding: 20px;
+}
+.infolettre .email {
+  margin: 20px;
+}
+.infolettre .email a {
+  background-color: gray;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 10%;
+}
+
+div.interface .personnages {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: 150px;
+  width: 800px;
+}
+div.interface .personnages a {
+  margin: 20px;
+}
+div.interface .personnages a .personne {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+div.interface .personnages a .personne img {
+  margin-bottom: 10px;
+  width: 200px;
+}
+div.interface .personnages a .personne h2, div.interface .personnages a .personne .h2 {
+  font-size: 1.6em;
+}
+div.interface .personnages a .personne h3, div.interface .personnages a .personne .h3 {
+  font-size: 1em;
+}
+
+.laPersonne {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+  padding-top: 200px;
+  width: 700px;
+  margin: 0 auto;
+  flex-wrap: nowrap;
+}
+.laPersonne img {
+  width: 300px;
+}
+.laPersonne .infoPersonne {
+  margin: 60px;
+}
+.laPersonne .infoPersonne h2, .laPersonne .infoPersonne .h2 {
+  font-weight: bold;
+}
+
+.publicites {
+  margin-top: 200px;
+}
+.publicites .publicite1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: 300px;
+  z-index: 10;
+  width: 500px;
+}
+.publicites .publicite1 h2, .publicites .publicite1 .h2 {
+  height: 100%;
+  margin-right: 40px;
+  font-weight: bold;
+}
+.publicites .publicite1 p {
+  margin-left: 150px;
+}
+.publicites .publicite1 p::after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -80px;
+  width: 200px;
+  height: 200px;
+  z-index: 1;
+  border-radius: 50%;
+  opacity: 0.5;
+  background-color: grey;
+}
+.publicites .publicite2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: 300px;
+  z-index: 10;
+  width: 500px;
+}
+.publicites .publicite2 h2, .publicites .publicite2 .h2 {
+  height: 100%;
+  margin-left: 350px;
+  font-weight: bold;
+}
+.publicites .publicite2 p {
+  margin-right: 150px;
+}
+.publicites .publicite2 p::after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: -80px;
+  width: 200px;
+  height: 200px;
+  z-index: 1;
+  border-radius: 50%;
+  opacity: 0.5;
+  background-color: grey;
+}
+
+.activites {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.activites .activite {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  width: 400px;
+}
+.activites .activite img {
+  width: 200px;
+}
+.activites .activite h3, .activites .activite .h3 {
+  margin-top: 20px;
+  text-align: center;
+}
+.activites .activite p {
+  text-align: center;
+}
+
 .interface {
   display: flex;
   flex-direction: column;
@@ -11801,5 +12160,49 @@ li {
 }
 
 .TableauDeBord button {
-  display: inline;
+  display: inline;  
+}
+header.Main {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  flex-wrap: nowrap;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  background-color: var(--blanc);
+  font-size: 0.8em;
+}
+header.Main img.Logo {
+  align-self: center;
+  width: 120px;
+  height: 120px;
+  margin: 0px;
+}
+header.Main .nav {
+  align-self: center;
+  margin-left: 20px;
+}
+header.Main .nav input {
+  margin-left: 70px;
+}
+header.Main .nav a {
+  margin-right: 10px;
+  font-size: 1em;
+  color: var(--vert-fonce);
+}
+
+footer {
+  margin-top: 300px;
+  background-color: darkgray;
+  border-top-left-radius: 20%;
+  border-top-right-radius: 20%;
+}
+footer .navFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }/*# sourceMappingURL=style.css.map */

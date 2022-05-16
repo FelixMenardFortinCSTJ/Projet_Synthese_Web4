@@ -1,0 +1,31 @@
+div.interface{
+    & .personnages{
+        @include setFlex(row,center,center);
+        flex-wrap: wrap;
+        margin: 0 auto;
+        margin-top: 150px;
+        width: 800px;
+
+        & a{
+            margin: 20px;
+
+            & .personne{
+                
+                @include setFlex(column,center,center);
+                
+                & img{
+                    margin-bottom: 10px;
+                    width: 200px;
+                }
+
+                & h2 {
+                    font-size: 1.6em;
+                }
+
+                & h3 {
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+}

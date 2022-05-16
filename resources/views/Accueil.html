@@ -7,34 +7,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;700&family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../public/css/style.css">
+    <link rel="stylesheet" href="/public/css/style.css">
     <title>Synthese Page acceuil</title>
 </head>
 <body> 
     <div class="interface">
-        <header>
-            <img src="/_assets/svg/placeholder.svg" alt="Logo">
-    
-            <a href="sousCategorie.html">Agriculture</a>
-            <a href="sousCategorie.html">Restauration</a>
-            <a href="sousCategorie.html">Agroalimentaire</a>
-            <a href="sousCategorie.html">Activités</a>
-            <a href="sousCategorie.html">Hébergement</a>
-            <a href="sousCategorie.html">Forfaits escapade gourmande</a>
-            <a href="sousCategorie.html">Portrait de la région</a>
-    
-            <input id="searchbar"  type="text"
-            name="search" placeholder="Vous recherchez...">
-    
-            <a href="">S'inscrire</a>
-            <a href="">Se connecter</a>
-
+        <header class="Main">
+            <img class="Logo" src="/public/_assets/svg/placeholder.svg" alt="Logo">
+            
+            <div class="nav">
+                <a href="sousCategorie.html">Agriculture</a>
+                <a href="sousCategorie.html">Restauration</a>
+                <a href="sousCategorie.html">Agroalimentaire</a>
+                <a href="sousCategorie.html">Activités</a>
+                <a href="sousCategorie.html">Hébergement</a>
+                
+                <input id="searchbar"  type="text"
+                name="search" placeholder="Vous recherchez...">
+                
+                <a href="">S'inscrire</a>
+                <a href="">Se connecter</a>
+                
+                <a class="EnDessous" href="sousCategorie.html">Forfaits escapade gourmande</a>
+                <a class="EnDessous" href="sousCategorie.html">Portrait de la région</a>
+            </div>
             
         </header>
 
         <div class="header">
             <h1>
-                Les Laurentides, un territoire gourmand!
+                Les Laurentides, <br> un territoire gourmand!
             </h1>
             <p>
                 Integer ac molestie orci, non maximus orci. Etiam sit amet rhoncus lorem. Phasellus sed commodo nisl. Fusce gravida arcu non dignissim mollis. Integer iaculis ut lectus luctus blandit. Curabitur lacus velit, convallis vitae vehicula eu, luctus id metus. Duis auctor sem justo, et lobortis sem accumsan vitae.
@@ -43,19 +45,23 @@
         </div>
 
         <div class="introAgrotourisme">
-            <h2>
-                Qu'est ce que l'agrotourisme?
-            </h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam quia, repellendus odio corrupti consectetur dolores, magnam suscipit tempore laboriosam distinctio corporis laudantium magni. Perferendis vitae unde quae id libero amet.
             </p>
+
+            <h2>
+                Qu'est ce que <br> l'agrotourisme?
+            </h2>
         </div>
 
 
         <div class="attractionsPopulaires">
 
+            <h2> 
+                Les <span>Attractions</span> les plus <br> <span>populaires</span> de la saison
+            </h2>
             <div class="Attraction">
-                <img src="" alt="Attraction1">
+                <img src="/public/_assets/svg/placeholder.svg" alt="Attraction1">
                 <h3>
                     Nom de l'attraction
                 </h3>
@@ -67,7 +73,7 @@
             
 
             <div class="Attraction">
-                <img src="" alt="Attraction2">
+                <img src="/public/_assets/svg/placeholder.svg" alt="Attraction2">
                 <h3>
                     Nom de l'attraction
                 </h3>
@@ -78,7 +84,7 @@
 
 
             <div class="Attraction">
-                <img src="" alt="Attraction3">
+                <img src="/public/_assets/svg/placeholder.svg" alt="Attraction3">
                 <h3>
                     Nom de l'attraction
                 </h3>
@@ -89,7 +95,7 @@
 
 
             <div class="Attraction">
-                <img src="" alt="Attraction4">
+                <img src="/public/_assets/svg/placeholder.svg" alt="Attraction4">
                 <h3>
                     Nom de l'attraction
                 </h3>
@@ -124,7 +130,7 @@
             </div>
               
             
-              <ul class="weekdays">
+              <ul class="jourSemaine">
                 <li>Dim</li>
                 <li>Lun</li>
                 <li>Mar</li>
@@ -134,7 +140,7 @@
                 <li>Sam</li>
               </ul>
               
-              <ul class="days">
+              <ul class="jours">
                 <li>1</li>
                 <li>2</li>
                 <li>3</li>
@@ -185,28 +191,42 @@
             </h2>
 
             <div class="option1">
-                <img src="" alt="imgLogement">
-                <h3>
-                    option1
-                </h3>
+                <img src="/public/_assets/svg/placeholder.svg" alt="imgLogement">
                 <p>
+                    <span>Option 1 </span><br>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, accusantium!
                 </p>
             </div>
 
             <div class="option2">
-                <img src="" alt="imgLogement">
-                <h3>
-                    option2
-                </h3>
+                
                 <p>
+                    <span>Option 2 </span><br>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, accusantium!
                 </p>
+                <img src="/public/_assets/svg/placeholder.svg" alt="imgLogement">
             </div>
         </div>
 
         <footer>
-            <p>Something.</p>
+
+            <div class="infolettre">
+                <h2>
+                    Infolettre
+                </h2>
+                <p>
+                    inscrivez-vous à l'infolettre pour ne jamais rien manquer!
+                </p>
+
+                <div class="email">
+                    <input id="infolettre"  type="text"
+                    name="email" placeholder="Votre email ici"> 
+                    <a href="#"> S'inscrire</a>
+                </div>
+            </div>
+            <div class="navFooter">
+                <a href="question.html">FAQ</a>
+            </div>
         </footer>
     </div>
 </body>

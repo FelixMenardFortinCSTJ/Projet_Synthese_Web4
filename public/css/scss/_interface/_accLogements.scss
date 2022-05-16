@@ -1,0 +1,56 @@
+// Page d'Acceuil
+//----------------------------------------------------
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Logement
+// - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.logement{
+    @include setFlex(column,center,center);
+    margin-top: 200px;
+    width: 900px;
+    margin: 0 auto;
+
+    h2{
+        margin-top: 200px;
+        margin-bottom: 100px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .option1{
+
+        @include setFlex(row,center,center);
+        flex-wrap: wrap;
+        width: 450px;
+
+        img{
+            width: 200px;
+        }
+        p{
+            & span{
+                font-size: 20px;
+                font-weight: bold;
+            }
+            width: 200px;
+        }
+    }
+
+    .option2{
+        @include setFlex(row,center,center);
+        flex-wrap: wrap;
+        width: 450px;
+        margin-top: 30px;
+
+        img{
+            width: 200px;
+        }
+        p{
+            & span{
+                font-size: 20px;
+                font-weight: bold;
+            }
+            width: 200px;
+        }
+    }
+}

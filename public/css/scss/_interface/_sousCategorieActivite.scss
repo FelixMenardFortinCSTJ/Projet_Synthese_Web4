@@ -1,0 +1,22 @@
+.activites{
+    @include setFlex(row,center,center);
+    flex-wrap: wrap;
+    
+
+    .activite{
+        @include setFlex(column,center,center);
+        padding: 40px;
+        width: 400px;
+        
+        & img{
+            width: 200px;
+        }
+        & h3 {
+            margin-top: 20px;
+            text-align: center;
+        }
+        & p {
+            text-align: center;
+        }
+    }
+}

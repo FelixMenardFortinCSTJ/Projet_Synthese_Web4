@@ -1,0 +1,25 @@
+// Page d'Acceuil
+//----------------------------------------------------
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Section d'intro
+// - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.introAgrotourisme{
+    @include setFlex(column,start,start);
+    background-color: lightgray;
+    & p{
+        align-self: end;
+        width: 400px;
+        text-align: left;
+        margin-bottom: 60px;
+        margin-top: 200px;
+        margin-right: 80px;
+    }
+
+    & h2{
+        margin-left: 80px;
+        margin-top: 60px;
+        margin-bottom: 80px;
+    }
+}
