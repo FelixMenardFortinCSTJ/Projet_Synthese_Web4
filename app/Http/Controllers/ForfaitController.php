@@ -21,8 +21,8 @@ class ForfaitController extends Controller
     public function categorieShow($categorie)
     {
         $forfaits = Forfait::where('categorie_forfait', '=', $categorie)->get();
-        dd($forfaits);
-        return view('forfaits.index', ['forfaits'=>$forfaits]);
+        // dd($forfaits);
+        return view('forfaits.categorie.show', ['forfaits'=>$forfaits]);
     }
 
     /**

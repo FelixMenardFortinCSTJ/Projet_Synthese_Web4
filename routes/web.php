@@ -50,9 +50,11 @@ Route::group(['prefix'=>'/evenements', 'as'=>'evenements.', 'controller'=>Evenem
 //Route Forfait
 Route::group(['prefix'=>'/forfaits', 'as'=>'forfaits.', 'controller'=>ForfaitController::class, 'where'=>['forfait'=>'[0-9]+']], function () {
     Route::get('/', 'index')->name('index');
+
     Route::get('/{categorie}', 'categorieShow')
         ->name('categorie.show')
         ->where(['categorie' => 'Escapade|Découverte|Détente|Famille']);
+        
     Route::get('/{forfait}', 'show')->name('show');
 
     Route::get('/create', 'create')->name('create');
