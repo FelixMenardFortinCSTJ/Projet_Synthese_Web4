@@ -31,7 +31,7 @@
             <li><a href="sousCategorie.html">Agroalimentaire</a></li>
             <li><a href="sousCategorie.html">Activités</a></li>
             <li><a href="sousCategorie.html">Hébergement</a></li>
-            <li><a href="ForfaitsAccueil.html">Forfaits</a></li>
+            <li><a href="{{route('forfaits.index')}}">Forfaits</a></li>
             <li><a href="PortraitRegion.html">Portrait de la région</a></li>
         </ul>
 
