@@ -16,7 +16,7 @@
             <img class="Logo" src="{{asset('svg/placeholder.svg')}}" alt="Logo">
             
             <div class="nav">
-                <a href="sousCategorie.html">Agriculture</a>
+                <a href="{{route('groupes.index')}}">Agriculture</a>
                 <a href="sousCategorie.html">Restauration</a>
                 <a href="sousCategorie.html">Agroalimentaire</a>
                 <a href="sousCategorie.html">Activités</a>

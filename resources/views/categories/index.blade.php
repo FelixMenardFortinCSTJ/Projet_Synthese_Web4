@@ -3,7 +3,7 @@
 <ul>
     <li>
         <!-- {{$categorie->nom}} -->
-        @include("categories.liste", ['entreprises'=>$categorie->entreprises])
+        @include("categories.listeCategorie", ['entreprises'=>$categorie->entreprises])
     </li>
 </ul>
 @endforeach

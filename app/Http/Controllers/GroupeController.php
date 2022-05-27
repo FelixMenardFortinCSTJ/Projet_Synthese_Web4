@@ -18,11 +18,11 @@ class GroupeController extends Controller
         return view("groupes.index", ['groupes'=>$groupes]);
     }
 
-    public function categorieShow($categories)
+    public function groupeShow($groupe)
     {
-        $categories = Categorie::where('groupe_id', '=', $categories)-get();
+        $groupe = Categorie::where('groupe_id', '=', $groupe)-get();
        
-        return view('groupes.categorie.show', ['categories'=>$categories]);
+        return view('groupes.show', ['groupe'=>$groupe]);
     }
 
     /**
@@ -54,7 +54,7 @@ class GroupeController extends Controller
      */
     public function show(Groupe $groupe)
     {
-        //
+        return view('groupes.show', ['groupe'=>$groupe]);
     }
 
     /**

@@ -10,7 +10,7 @@ Entreprise
 <ul>
     <li>
         {{$groupe->nom}}
-        @include("categories.liste", ['categories'=>$groupe->categories])
+        @include("categories.listeCategorie", ['categories'=>$groupe->categories])
     </li>
 </ul>
 @endforeach

@@ -5,11 +5,11 @@ Entreprise
 @endsection
 
 @section('contenu')
-<h1>Détails de la categorie : {{$categorie->nom}}</h1>
+<h1>Détails du groupe : {{$groupe->nom}}</h1>
 <div class="detail">
     <div class="categorie">
         <div class="nom">
-            @include("entreprises.liste", ['entreprises'=>$categorie->entreprises])
+            @include("categories.listeCategorie", ['categories'=>$groupe->categories])
         </div>
     </div>
 </div>

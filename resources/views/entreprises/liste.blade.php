@@ -1,7 +1,7 @@
 @foreach($entreprises as $entreprise)
 <ul>
     <li>
-        <a href="{{route('entreprises.edit', $entreprise)}}">
+        <a href="{{route('entreprises.show', $entreprise)}}">
             {{$entreprise->nom}}
         </a>
             
