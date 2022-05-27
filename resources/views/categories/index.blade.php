@@ -2,7 +2,7 @@
 @foreach($categories as $categorie)
 <ul>
     <li>
-        {{$categorie->nom}}
+        <!-- {{$categorie->nom}} -->
         @include("categories.liste", ['entreprises'=>$categorie->entreprises])
     </li>
 </ul>
