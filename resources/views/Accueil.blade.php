@@ -16,11 +16,11 @@
             <img class="Logo" src="{{asset('svg/placeholder.svg')}}" alt="Logo">
             
             <div class="nav">
-                <a href="{{route('groupes.index')}}">Agriculture</a>
-                <a href="sousCategorie.html">Restauration</a>
-                <a href="sousCategorie.html">Agroalimentaire</a>
-                <a href="sousCategorie.html">Activités</a>
-                <a href="sousCategorie.html">Hébergement</a>
+            <li><a href="{{route('groupes.show', 1)}}">Agriculture</a></li>
+            <li><a href="{{route('groupes.show', 2)}}">Activités</a></li>
+            <li><a href="{{route('groupes.show', 3)}}">Agroalimentaire</a></li>
+            <li><a href="{{route('groupes.show', 4)}}">Restauration</a></li>
+            <li><a href="{{route('groupes.show', 5)}}">Hébergement</a></li>
                 
                 <input id="searchbar"  type="text"
                 name="search" placeholder="Vous recherchez...">
