@@ -1,10 +1,6 @@
 // Page d'accueil du forfait
 //----------------------------------------------------
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// Forfaits
-// - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
 .Escapade, .Decouverte, .Detente, .Famille{
     background-color: rgb(255, 255, 255);
     padding: 10em 8em;
@@ -19,12 +15,13 @@
     & h2 {
         padding-bottom: 12px;
     }
+
     & div{
         padding: 16px;
 
-    & h3, & p{
-        display:inline;
-    }
+        & h3, & p{
+            display:inline;
+        }
     }
 }
 

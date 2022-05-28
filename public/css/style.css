@@ -11359,6 +11359,7 @@ p, button, input {
   margin: 1em;
   height: 400px;
   width: 45vw;
+  border-radius: 5px;
   background-color: var(--bleu);
 }
 @media (max-width: 1230px) {
@@ -11392,6 +11393,7 @@ p, button, input {
   margin: 1em;
   height: 400px;
   width: 45vw;
+  border-radius: 5px;
 }
 @media (max-width: 1230px) {
   .Carte {
@@ -11417,6 +11419,7 @@ p, button, input {
   padding: 1em;
   margin: 1em;
   width: 45vw;
+  border-radius: 5px;
   background-color: var(--bleu);
 }
 @media (max-width: 1230px) {
@@ -11429,7 +11432,8 @@ p, button, input {
 .Favoris .Favori {
   margin-top: 32px;
   padding: 16px;
-  background-color: rgb(177, 220, 231);
+  border-radius: 5px;
+  background-color: rgb(186, 226, 236);
 }
 .Favoris .Favori img {
   display: inline;
@@ -11449,6 +11453,7 @@ p, button, input {
   padding: 1em;
   margin: 1em;
   width: 45vw;
+  border-radius: 5px;
   background-color: var(--bleu);
 }
 @media (max-width: 1230px) {
@@ -11461,7 +11466,8 @@ p, button, input {
 .Transactions .Transaction {
   margin-top: 32px;
   padding: 16px;
-  background-color: rgb(177, 220, 231);
+  border-radius: 5px;
+  background-color: rgb(186, 226, 236);
 }
 .Transactions h2, .Transactions .h2 {
   display: inline;
@@ -11479,31 +11485,35 @@ p, button, input {
 }
 
 .GestionDeMembre {
-  background-color: var(--bleu);
   padding: 1em;
   margin: 1em;
   width: 800px;
+  border-radius: 5px;
+  background-color: var(--bleu);
 }
 
 .GestionActivitées {
-  background-color: var(--bleu);
   padding: 1em;
   margin: 1em;
   width: 800px;
+  border-radius: 5px;
+  background-color: var(--bleu);
 }
 
 .GestionEvenements {
-  background-color: var(--bleu);
   padding: 1em;
   margin: 1em;
   width: 800px;
+  border-radius: 5px;
+  background-color: var(--bleu);
 }
 
 .GestionForfaits {
-  background-color: var(--bleu);
   padding: 1em;
   margin: 1em;
   width: 800px;
+  border-radius: 5px;
+  background-color: var(--bleu);
 }
 
 form.Edition div {
@@ -11520,29 +11530,247 @@ form.Edition label, form.Edition span {
 form.Edition button.ConfirmEdit {
   margin: 0 auto;
   margin-top: 500px;
-  padding: 5px 112px;
+  padding: 5px 10vw;
 }
 form.Edition div.edit1 {
   position: absolute;
-  right: 710px;
+  right: 610px;
+}
+@media (max-width: 1650px) {
+  form.Edition div.edit1 {
+    right: 450px;
+  }
+}
+@media (max-width: 1320px) {
+  form.Edition div.edit1 {
+    right: 280px;
+  }
+}
+@media (max-width: 992px) {
+  form.Edition div.edit1 {
+    right: 180px;
+  }
+}
+@media (max-width: 780px) {
+  form.Edition div.edit1 {
+    right: 100px;
+  }
 }
 form.Edition div.edit2 {
   position: absolute;
-  left: 710px;
+  left: 610px;
+}
+@media (max-width: 1650px) {
+  form.Edition div.edit2 {
+    left: 450px;
+  }
+}
+@media (max-width: 1320px) {
+  form.Edition div.edit2 {
+    left: 280px;
+  }
+}
+@media (max-width: 992px) {
+  form.Edition div.edit2 {
+    left: 180px;
+  }
+}
+@media (max-width: 780px) {
+  form.Edition div.edit2 {
+    left: 100px;
+  }
 }
 
-.IntroRegion {
-  margin: 32px;
+div.BackgroundDesc {
+  padding: 100px;
+  width: 100vw;
+  height: 500px;
+  background-image: url(/public/_assets/jpg/Paysage1-assets/paysage1-2000.jpg);
+  background-size: cover;
+  background-position: 0 600px;
+}
+@media (max-width: 1200px) {
+  div.BackgroundDesc {
+    background-image: url(/public/_assets/jpg/Paysage1-assets/paysage1-1200.jpg);
+    background-position: 0 500px;
+  }
+}
+div.BackgroundDesc .IntroRegion {
+  padding: 100px 200px;
+  margin: 0 auto;
+  width: 80vw;
+  z-index: 5;
+  border-radius: 5px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+@media (max-width: 1200px) {
+  div.BackgroundDesc .IntroRegion {
+    padding: 50px 200px;
+  }
+}
+@media (max-width: 992px) {
+  div.BackgroundDesc .IntroRegion {
+    padding: 50px 50px;
+  }
 }
 
 .MapLaurentides img {
+  position: absolute;
+  right: 700px;
+  left: 700px;
+  top: 800px;
   width: 500px;
   margin: 0 auto;
+}
+@media (max-width: 1500px) {
+  .MapLaurentides img {
+    left: 500px;
+  }
+}
+@media (max-width: 1200px) {
+  .MapLaurentides img {
+    left: 300px;
+  }
+}
+@media (max-width: 992px) {
+  .MapLaurentides img {
+    left: 150px;
+  }
 }
 .MapLaurentides a {
   padding: 10px;
   display: block;
   cursor: pointer;
+  color: var(--noir);
+}
+.MapLaurentides .Pin {
+  width: 20px;
+  height: 20px;
+  border: 6px solid var(--bleu);
+  border-radius: 100%;
+  cursor: pointer;
+  background-color: var(--blanc);
+}
+.MapLaurentides .Argenteuil {
+  position: absolute;
+  top: 1520px;
+  left: 950px;
+}
+@media (max-width: 1500px) {
+  .MapLaurentides .Argenteuil {
+    left: 750px;
+  }
+}
+@media (max-width: 1200px) {
+  .MapLaurentides .Argenteuil {
+    left: 550px;
+  }
+}
+@media (max-width: 992px) {
+  .MapLaurentides .Argenteuil {
+    left: 400px;
+  }
+}
+.MapLaurentides .PaysDenHaut {
+  position: absolute;
+  top: 1450px;
+  left: 1100px;
+}
+@media (max-width: 1500px) {
+  .MapLaurentides .PaysDenHaut {
+    left: 900px;
+  }
+}
+@media (max-width: 1200px) {
+  .MapLaurentides .PaysDenHaut {
+    left: 700px;
+  }
+}
+@media (max-width: 992px) {
+  .MapLaurentides .PaysDenHaut {
+    left: 550px;
+  }
+}
+.MapLaurentides .RiviereDuNord {
+  position: absolute;
+  top: 1520px;
+  left: 1140px;
+}
+@media (max-width: 1500px) {
+  .MapLaurentides .RiviereDuNord {
+    left: 940px;
+  }
+}
+@media (max-width: 1200px) {
+  .MapLaurentides .RiviereDuNord {
+    left: 740px;
+  }
+}
+@media (max-width: 992px) {
+  .MapLaurentides .RiviereDuNord {
+    left: 590px;
+  }
+}
+.MapLaurentides .Laurentides {
+  position: absolute;
+  top: 1300px;
+  left: 1000px;
+}
+@media (max-width: 1500px) {
+  .MapLaurentides .Laurentides {
+    left: 900px;
+  }
+}
+@media (max-width: 1200px) {
+  .MapLaurentides .Laurentides {
+    left: 700px;
+  }
+}
+@media (max-width: 992px) {
+  .MapLaurentides .Laurentides {
+    left: 550px;
+  }
+}
+.MapLaurentides .Mirabel {
+  position: absolute;
+  top: 1570px;
+  left: 1090px;
+}
+@media (max-width: 1500px) {
+  .MapLaurentides .Mirabel {
+    left: 890px;
+  }
+}
+@media (max-width: 1200px) {
+  .MapLaurentides .Mirabel {
+    left: 690px;
+  }
+}
+@media (max-width: 992px) {
+  .MapLaurentides .Mirabel {
+    left: 540px;
+  }
+}
+.MapLaurentides .DeuxMontagnes {
+  position: absolute;
+  top: 1625px;
+  left: 1090px;
+}
+@media (max-width: 1500px) {
+  .MapLaurentides .DeuxMontagnes {
+    left: 890px;
+  }
+}
+@media (max-width: 1200px) {
+  .MapLaurentides .DeuxMontagnes {
+    left: 690px;
+  }
+}
+@media (max-width: 992px) {
+  .MapLaurentides .DeuxMontagnes {
+    left: 540px;
+  }
 }
 
 img {
@@ -11552,14 +11780,28 @@ img {
 }
 
 .DescriptionMRC {
-  padding: 32px;
+  width: 100vw;
+  padding: 50px 300px;
+  text-align: center;
+  background-color: var(--bleu);
+}
+@media (max-width: 1400px) {
+  .DescriptionMRC {
+    padding: 50px 200px;
+  }
+}
+@media (max-width: 992px) {
+  .DescriptionMRC {
+    padding: 50px 100px;
+  }
 }
 .DescriptionMRC span {
   font-weight: bold;
 }
 
 img.mapMRC {
-  width: 900px;
+  width: 40vw;
+  margin: 0 auto;
 }
 
 div.Reconnue {
@@ -11568,13 +11810,6 @@ div.Reconnue {
   justify-content: center;
   align-items: center;
   padding: 20px;
-}
-
-.Pin {
-  width: 20px;
-  height: 20px;
-  border: 7px solid var(--bleu);
-  border-radius: 100%;
 }
 
 button.compte, .connection {
@@ -11684,6 +11919,11 @@ form.infos {
 .Standard div.InfosForfaits button, .Solitaire div.InfosForfaits button, .Groupe div.InfosForfaits button {
   margin-left: 15.5vw;
 }
+@media (max-width: 992px) {
+  .Standard div.InfosForfaits button, .Solitaire div.InfosForfaits button, .Groupe div.InfosForfaits button {
+    margin-left: 14vw;
+  }
+}
 .Standard h2, .Standard .h2, .Solitaire h2, .Solitaire .h2, .Groupe h2, .Groupe .h2 {
   padding-bottom: 12px;
 }
@@ -11693,10 +11933,11 @@ form.infos {
 }
 
 .Fiche {
-  background-color: var(--bleu);
   padding: 5em 10em;
   margin: 1em;
   width: 800px;
+  border-radius: 5px;
+  background-color: var(--bleu);
 }
 .Fiche h2, .Fiche .h2 {
   padding-bottom: 12px;
