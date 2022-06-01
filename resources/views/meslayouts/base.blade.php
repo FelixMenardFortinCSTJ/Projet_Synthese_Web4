@@ -19,18 +19,17 @@
             name="search" placeholder="Vous recherchez...">
 
         <ul class="navSupp">
-            <li><a href="CréationDunCompte.html">S'inscrire</a></li>
-            <li><a href="">Se connecter</a></li>
+            <li><a href="{{route('register')}}">S'inscrire</a></li>
+            <li><a href="{{route('login')}}">Se connecter</a></li>
             <li><a href="tableauDeBordProfil.html">Profil</a></li>
             <li><a href="tableauDeBordAdmin.html">Admin</a></li>
         </ul>
-
         <ul class="nav">
-            <li><a href="sousCategorie.html">Agriculture</a></li>
-            <li><a href="sousCategorie.html">Restauration</a></li>
-            <li><a href="sousCategorie.html">Agroalimentaire</a></li>
-            <li><a href="sousCategorie.html">Activités</a></li>
-            <li><a href="sousCategorie.html">Hébergement</a></li>
+            <li><a href="{{route('groupes.show', 1)}}">Agriculture</a></li>
+            <li><a href="{{route('groupes.show', 2)}}">Activités</a></li>
+            <li><a href="{{route('groupes.show', 3)}}">Agroalimentaire</a></li>
+            <li><a href="{{route('groupes.show', 4)}}">Restauration</a></li>
+            <li><a href="{{route('groupes.show', 5)}}">Hébergement</a></li>
             <li><a href="{{route('forfaits.index')}}">Forfaits</a></li>
             <li><a href="PortraitRegion.html">Portrait de la région</a></li>
         </ul>

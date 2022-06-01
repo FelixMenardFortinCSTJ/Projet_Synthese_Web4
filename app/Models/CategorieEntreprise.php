@@ -8,4 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class CategorieEntreprise extends Model
 {
     use HasFactory;
+
+    public function entreprises()
+    {
+        return $this->belongsToMany(Entreprise::class);
+    }
+
+    public function categories()
+    {
+        return $this->belongsToMany(Categorie::class);
+    }
 }
+
+

@@ -117,3 +117,31 @@ Route::get('/accueil', function () {
     return view('Accueil');
 });
 
+Route::group(['prefix'=>'/groupes', 'as'=>'groupes.', 'controller'=>GroupeController::class, 'where'=>['groupe'=>'[0-9]+']], function () {
+    Route::get('/', 'index')->name('index');
+    Route::get('/{groupe}', 'show')->name('show');
+
+    Route::get('/create', 'create')->name('create');
+    Route::post('/create', 'store')->name('store');
+
+    Route::get('/{groupe}/edit', 'edit')->name('edit');
+    Route::post('/{groupe}/edit', 'update')->name('update');
+
+    Route::get('/{groupe}/delete', 'delete')->name('delete');
+    Route::post('/{groupe}/delete', 'destroy')->name('destroy');
+});
+
+Route::group(['prefix'=>'/categories', 'as'=>'categories.', 'controller'=>CategorieController::class, 'where'=>['categorie'=>'[0-9]+']], function () {
+    Route::get('/', 'index')->name('index');
+    Route::get('/{categorie}', 'show')->name('show');
+
+    Route::get('/create', 'create')->name('create');
+    Route::post('/create', 'store')->name('store');
+
+    Route::get('/{categorie}/edit', 'edit')->name('edit');
+    Route::post('/{categorie}/edit', 'update')->name('update');
+
+    Route::get('/{categorie}/delete', 'delete')->name('delete');
+    Route::post('/{categorie}/delete', 'destroy')->name('destroy');
+});
+
