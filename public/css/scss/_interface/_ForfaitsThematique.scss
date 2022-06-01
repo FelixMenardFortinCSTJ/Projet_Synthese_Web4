@@ -1,9 +1,5 @@
-// Page d'accueil du forfait
+// Page de la thématique du forfait
 //----------------------------------------------------
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// Forfaits
-// - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 .Standard, .Solitaire, .Groupe{
     background-color: var(--bleu);
@@ -21,6 +17,10 @@
 
         & button{
             margin-left: 15.5vw;
+
+            @include breakpoint-max(992){
+                margin-left: 14vw;
+            }
         }
     }
 

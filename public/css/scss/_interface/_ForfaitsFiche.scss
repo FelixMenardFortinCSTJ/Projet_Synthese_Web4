@@ -1,18 +1,17 @@
-// Page d'accueil du forfait
+// Page de Fiche du forfait
 //----------------------------------------------------
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// Forfaits
-// - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
 .Fiche{
-    background-color: var(--bleu);
     padding: 5em 10em;
     margin: 1em;
     width: 800px;
+    border-radius: 5px;
+    background-color: var(--bleu);
+
     & h2 {
         padding-bottom: 12px;
     }
+    
     & div{
         padding: 16px;
     }
