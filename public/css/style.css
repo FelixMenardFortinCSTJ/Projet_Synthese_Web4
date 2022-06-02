@@ -11966,23 +11966,34 @@ form.infos {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  width: 100%;
 }
 .infolettre h2, .infolettre .h2 {
   margin-top: 50px;
   font-weight: bold;
+  color: #fff;
 }
 .infolettre p {
   padding: 20px;
+  color: #fff;
 }
 .infolettre .email {
   margin: 20px;
 }
+.infolettre .email input {
+  background-color: var(--bleu);
+  border: 2px solid #fff;
+  color: #fff;
+}
 .infolettre .email a {
-  background-color: gray;
+  background-color: var(--vert-fonce);
   padding: 5px;
-  border: 1px solid black;
+  border: 1px solid var(--vert-fonce);
   border-radius: 10%;
+  color: #fff;
+}
+.infolettre .email a:hover {
+  background-color: var(--vert-pale);
 }
 
 div.interface .personnages {
@@ -12210,7 +12221,7 @@ header.Main::before {
 
 footer {
   margin-top: 300px;
-  background-color: darkgray;
+  background-color: var(--vert);
   border-top-left-radius: 20%;
   border-top-right-radius: 20%;
 }
@@ -12220,4 +12231,8 @@ footer .navFooter {
   justify-content: center;
   align-items: center;
   padding: 10px;
+  background-color: var(--vert-fonce);
+}
+footer .navFooter a {
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */

@@ -3,12 +3,17 @@
 
 footer{
     margin-top: 300px;
-    background-color: darkgray;
+    background-color: var(--vert);
     border-top-left-radius: 20%;
     border-top-right-radius: 20%;
 
     & .navFooter{
         @include setFlex(column,center,center);
         padding: 10px;
+        background-color: var(--vert-fonce);
+
+        & a{
+            color: #fff;
+        }
     }
 }
