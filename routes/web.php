@@ -25,7 +25,9 @@ use App\Models\Entreprise;
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/', function () {
+    return view('accueil');
+});
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

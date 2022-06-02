@@ -16,6 +16,7 @@
         margin-bottom: 100px;
         font-weight: bold;
         text-align: center;
+        color: var(--vert-fonce);
     }
 
     .option1{
@@ -31,8 +32,10 @@
             & span{
                 font-size: 20px;
                 font-weight: bold;
+                color: var(--vert);
             }
             width: 200px;
+            color: var(--vert-pale);
         }
     }
 
@@ -49,8 +52,10 @@
             & span{
                 font-size: 20px;
                 font-weight: bold;
+                color: var(--vert);
             }
             width: 200px;
+            color: var(--vert-pale);
         }
     }
 }

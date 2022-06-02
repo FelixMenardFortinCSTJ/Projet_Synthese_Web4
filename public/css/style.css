@@ -11781,6 +11781,7 @@ form.infos {
   justify-content: center;
   align-items: center;
   height: 650px;
+  width: 1200px;
   background-color: grey;
 }
 .interface .header h1, .interface .header .h1 {
@@ -11788,11 +11789,13 @@ form.infos {
   text-align: center;
   font-size: 50px;
   font-weight: bold;
+  color: #fff;
 }
 .interface .header p {
   z-index: 2;
   width: 600px;
   text-align: center;
+  color: #fff;
 }
 .interface .header::after {
   content: " ";
@@ -11800,7 +11803,7 @@ form.infos {
   height: 500px;
   width: 500px;
   border-radius: 50%;
-  background-color: white;
+  background-color: var(--vert-pale);
   opacity: 0.5;
 }
 
@@ -11809,20 +11812,34 @@ form.infos {
   flex-direction: column;
   justify-content: start;
   align-items: start;
-  background-color: lightgray;
+  width: 1200px;
 }
 .introAgrotourisme p {
+  position: relative;
   align-self: end;
   width: 400px;
-  text-align: left;
+  text-align: bottom left;
   margin-bottom: 60px;
-  margin-top: 200px;
-  margin-right: 80px;
+  margin-right: 150px;
+  color: var(--vert);
+}
+.introAgrotourisme p::after {
+  content: " ";
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  right: -50px;
+  top: -100px;
+  border-radius: 50%;
+  background-color: var(--vert-pale);
+  opacity: 0.2;
 }
 .introAgrotourisme h2, .introAgrotourisme .h2 {
-  margin-left: 80px;
+  margin-left: 200px;
   margin-top: 60px;
-  margin-bottom: 80px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: var(--vert);
 }
 
 .attractionsPopulaires {
@@ -11859,10 +11876,13 @@ form.infos {
 .attractionsPopulaires .Attraction h3, .attractionsPopulaires .Attraction .h3 {
   font-size: 20px;
   text-align: center;
+  font-weight: bold;
+  color: var(--vert-fonce);
 }
 .attractionsPopulaires .Attraction p {
   text-align: center;
   font-size: 1em;
+  color: var(--vert);
 }
 
 .calendrier {
@@ -11876,15 +11896,22 @@ form.infos {
 }
 .calendrier .annee {
   padding: 10px 25px;
+  color: var(--vert-fonce);
 }
 .calendrier .mois {
   padding: 10px 25px;
   font-weight: bold;
 }
+.calendrier .mois ul li a {
+  color: var(--vert-fonce);
+}
 .calendrier .jourSemaine {
+  align-self: center;
   margin: 0;
-  padding: 10px 25px;
   text-align: center;
+  color: var(--vert);
+  margin-bottom: 20px;
+  margin-right: 30px;
 }
 .calendrier .jours {
   align-self: center;
@@ -11892,6 +11919,7 @@ form.infos {
   grid-template-columns: repeat(7, 1fr);
   grid-gap: 10px 25px;
   font-weight: lighter;
+  color: var(--vert-fonce);
 }
 .calendrier .bientot {
   align-self: center;
@@ -11899,13 +11927,14 @@ form.infos {
   width: 700px;
   margin-top: 30px;
   text-align: center;
-  background-color: grey;
+  background-color: var(--vert);
   border-top-left-radius: 25%;
   border-top-right-radius: 25%;
 }
 .calendrier .bientot h2, .calendrier .bientot .h2 {
   margin-top: 20px;
   font-weight: bold;
+  color: #fff;
 }
 
 .logement {
@@ -11922,6 +11951,7 @@ form.infos {
   margin-bottom: 100px;
   font-weight: bold;
   text-align: center;
+  color: var(--vert-fonce);
 }
 .logement .option1 {
   display: flex;
@@ -11936,10 +11966,12 @@ form.infos {
 }
 .logement .option1 p {
   width: 200px;
+  color: var(--vert-pale);
 }
 .logement .option1 p span {
   font-size: 20px;
   font-weight: bold;
+  color: var(--vert);
 }
 .logement .option2 {
   display: flex;
@@ -11955,10 +11987,12 @@ form.infos {
 }
 .logement .option2 p {
   width: 200px;
+  color: var(--vert-pale);
 }
 .logement .option2 p span {
   font-size: 20px;
   font-weight: bold;
+  color: var(--vert);
 }
 
 .infolettre {

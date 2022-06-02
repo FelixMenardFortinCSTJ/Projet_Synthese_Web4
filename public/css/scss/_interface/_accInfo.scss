@@ -7,19 +7,37 @@
 
 .introAgrotourisme{
     @include setFlex(column,start,start);
-    background-color: lightgray;
+    width: 1200px;
     & p{
+        position: relative;
         align-self: end;
         width: 400px;
-        text-align: left;
+        text-align: bottom left;
         margin-bottom: 60px;
-        margin-top: 200px;
-        margin-right: 80px;
+        margin-right: 150px;
+        color: var(--vert);
+
+        &::after{
+            content: " ";
+            position: absolute;
+            height: 400px;
+            width: 400px;
+            right: -50px;
+            top: -100px;
+            border-radius: 50%;
+            background-color: var(--vert-pale);
+            opacity: 0.2;
+        }
+        
     }
 
     & h2{
-        margin-left: 80px;
+        margin-left: 200px;
         margin-top: 60px;
-        margin-bottom: 80px;
-    }
+        margin-bottom: 20px;
+        font-weight: bold;
+        color: var(--vert);
+
+        }
+    
 }

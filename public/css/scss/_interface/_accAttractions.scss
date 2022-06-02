@@ -36,11 +36,14 @@
         & h3{
             font-size: 20px;
             text-align: center;
+            font-weight: bold;
+            color: var(--vert-fonce);
         }
 
         p{
             text-align: center;
             font-size: 1em;
+            color: var(--vert);
         }
     }
 }
