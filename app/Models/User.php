@@ -44,4 +44,8 @@ class User extends Authenticatable
     {
         return $this->hasOne(Usager::class);
     }
+    public function transaction()
+    {
+        return $this->hasOne(Transaction::class);
+    }
 }
