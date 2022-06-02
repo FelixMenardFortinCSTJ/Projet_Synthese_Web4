@@ -33,18 +33,24 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 // Routes relatif au pages des événements, certaines routes seront probablement enlever plus tard car inutile.
+Route::group(['prefix'=>'/admin', 'as'=>'admin.','middleware'=>['auth','admin']], function () {
+    Route::group(['prefix'=>'/evenements', 'as'=>'evenements.', 'controller'=>EvenementController::class, 'where'=>['evenement'=>'[0-9]+']], function () {
+        Route::get('/', 'index')->name('index');
+        Route::get('/{evenement}', 'show')->name('show');
+
+        Route::get('/create', 'create')->name('create');
+        Route::post('/create', 'store')->name('store');
+
+        Route::get('/{evenement}/edit', 'edit')->name('edit');
+        Route::post('/{evenement}/edit', 'update')->name('update');
+
+        Route::get('/{evenement}/delete', 'delete')->name('delete');
+        Route::post('/{evenement}/delete', 'destroy')->name('destroy');
+    });
+});
 Route::group(['prefix'=>'/evenements', 'as'=>'evenements.', 'controller'=>EvenementController::class, 'where'=>['evenement'=>'[0-9]+']], function () {
     Route::get('/', 'index')->name('index');
     Route::get('/{evenement}', 'show')->name('show');
-
-    Route::get('/create', 'create')->name('create');
-    Route::post('/create', 'store')->name('store');
-
-    Route::get('/{evenement}/edit', 'edit')->name('edit');
-    Route::post('/{evenement}/edit', 'update')->name('update');
-
-    Route::get('/{evenement}/delete', 'delete')->name('delete');
-    Route::post('/{evenement}/delete', 'destroy')->name('destroy');
 });
 
 //Route Forfait
