@@ -9,13 +9,19 @@ class Usager extends Model
 {
     use HasFactory;
     protected $fillable = [
-        "prenom_usager",
-        "nom_usager",
+        "prenom",
+        "nom",
 		"adresse_civique",
 		"ville",
 		"code_postal",
         "telephone",
-        "courriel",
-        "mot_de_passe",
     ];
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+    public function getCourrielAttribute()
+    {
+        return $this->user->email;
+    }
 }
