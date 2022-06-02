@@ -20,7 +20,7 @@ class GroupeController extends Controller
 
     public function groupeShow($groupe)
     {
-        $groupe = Categorie::where('groupe_id', '=', $groupe)-get();
+        $groupe = Groupe::where('groupe_id', '=', $groupe)->get();
        
         return view('groupes.show', ['groupe'=>$groupe]);
     }

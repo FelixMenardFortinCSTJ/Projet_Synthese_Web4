@@ -72,6 +72,25 @@ Route::group(['prefix'=>'/forfaits', 'as'=>'forfaits.', 'controller'=>ForfaitCon
     Route::get('/{forfait}/delete', 'delete')->name('delete');
     Route::post('/{forfait}/delete', 'destroy')->name('destroy');
 });
+//mrc
+Route::group(['prefix'=>'/mrcs', 'as'=>'mrcs.', 'controller'=>mrcController::class, 'where'=>['mrc'=>'[0-9]+']], function () {
+    Route::get('/', 'index')->name('index');
+
+    Route::get('/{categorie}', 'categorieShow')
+        ->name('categorie.show')
+        ->where(['categorie' => 'Les Laurentides|Antoine-Labelle|Thérèse-De Blainville|ArgenteuilLes|Deux-Montagne|Hors MRC(autochtones)|Les Pays-den-Haut|Hors MRC|La Rivière-du-Nord']);
+        
+    Route::get('/{mrc}', 'show')->name('show');
+
+    Route::get('/create', 'create')->name('create');
+    Route::post('/create', 'store')->name('store');
+
+    Route::get('/{mrc}/edit', 'edit')->name('edit');
+    Route::post('/{mrc}/edit', 'update')->name('update');
+
+    Route::get('/{mrc}/delete', 'delete')->name('delete');
+    Route::post('/{mrc}/delete', 'destroy')->name('destroy');
+});
 
 //Route Usager
 Route::group(['prefix'=>'/usagers', 'as'=>'usagers.', 'controller'=>UsagerController::class, 'where'=>['usager'=>'[0-9]+']], function () {
