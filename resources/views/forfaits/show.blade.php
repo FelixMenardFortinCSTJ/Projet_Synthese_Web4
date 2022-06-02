@@ -13,10 +13,11 @@ Forfait
             <h3 class="PrixForfait">prix :</h3>
             <p class="PrixForfait">{{$forfait->prix}}$</p>
             <button>Ajouter au panier</button>
+            <button id="OpenPanier">Accéder au panier</button>
         </div>
-        <div class="Panier">
+        <div  class="Panier-close" id="Panier" >
             <h1>Panier</h1>
-            <img id="Fermer" class="Fermer" src="public/_assets/svg/Fermer.svg" alt="Fermer">
+            <img id="Fermer" class="Fermer" src="{{asset('_assets/svg/Fermer.svg')}}" alt="Fermer">
             <div class="ProduitsPanier">
                 <h2>{{$forfait->nom_forfait}}</h2>
                 <p>{{$forfait->description}}</p>
@@ -58,6 +59,6 @@ Forfait
         </div>
 </div>
 @endsection
-<script src="/public/js/Panier.js"></script>
+<script src={{asset('js/Panier.js')}}></script>
 </body>
 </html>

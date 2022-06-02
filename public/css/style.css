@@ -12696,6 +12696,10 @@ form.infos {
   right: 0;
 }
 
+.pad {
+  height: 800px;
+}
+
 .Standard, .Solitaire, .Groupe {
   background-color: var(--bleu);
   margin-top: 32px;
@@ -12772,7 +12776,8 @@ form.infos {
   padding: 2em;
   width: 550px;
   height: 110vh;
-  border-left: 1px solid #cfcfcf;
+  -webkit-box-shadow: 5px 0 4px -4px #646464, -5px 0 4px -4px #646464;
+          box-shadow: 5px 0 4px -4px #646464, -5px 0 4px -4px #646464;
   background-color: var(--blanc);
 }
 
@@ -12837,16 +12842,8 @@ form.infos {
   display: inline;
 }
 
-.Panier-close > .Panier {
-  width: 0px;
-}
-
-.Panier-open > .Panier {
-  width: 5500px;
-  -webkit-box-shadow: 6px 0px 15px 6px rgba(0, 0, 0, 0.4);
-          box-shadow: 6px 0px 15px 6px rgba(0, 0, 0, 0.4);
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 15px;
-          box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 15px;
+.Panier-close {
+  display: none;
 }
 
 .interface .header {
@@ -13519,10 +13516,12 @@ header.Main::before {
 }
 
 footer {
-  margin-top: 300px;
-  background-color: darkgray;
+  margin-top: 200px;
+  background-color: #ebebeb;
   border-top-left-radius: 20%;
   border-top-right-radius: 20%;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
 }
 
 footer .navFooter {
@@ -13540,5 +13539,27 @@ footer .navFooter {
       -ms-flex-align: center;
           align-items: center;
   padding: 10px;
+}
+
+footer .navFooter .contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 16px;
+}
+
+footer .Logo {
+  width: 250px;
+  margin-top: 30px;
 }
 /*# sourceMappingURL=style.css.map */

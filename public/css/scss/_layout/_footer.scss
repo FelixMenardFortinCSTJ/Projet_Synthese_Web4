@@ -2,13 +2,25 @@
 //----------------------------------------------------
 
 footer{
-    margin-top: 300px;
-    background-color: darkgray;
+    margin-top: 200px;
+    background-color: rgb(235, 235, 235);
     border-top-left-radius: 20%;
     border-top-right-radius: 20%;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
 
     & .navFooter{
         @include setFlex(column,center,center);
         padding: 10px;
+
+        & .contacts{
+            @include setFlex(column,center,center);
+            padding: 16px;
+        }
     }
+
+    & .Logo {
+        width: 250px;
+        margin-top: 30px;
+    }
+
 }

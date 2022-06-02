@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="node_modules/animate.css/animate.css">
+    <link rel="stylesheet" href="{{asset('node_modules/animate.css/animate.css')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;700&family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
 </head>
 <body>
     <header class="Main">
-        <img class="Logo" src="{{asset('svg/placeholder.svg')}}" alt="Logo">
+        <img class="Logo" src="{{asset('_assets/svg/Logo.svg')}}" alt="Logo">
         
         <input class="navSupp" id="searchbar"  type="text"
             name="search" placeholder="Vous recherchez...">
@@ -22,7 +22,6 @@
             <li><a href="CréationDunCompte.html">S'inscrire</a></li>
             <li><a href="">Se connecter</a></li>
             <li><a href="tableauDeBordProfil.html">Profil</a></li>
-            <li><a href="tableauDeBordAdmin.html">Admin</a></li>
         </ul>
 
         <ul class="nav">
@@ -41,7 +40,7 @@
     </div>
     <footer>
         <div class="infolettre">
-                <img class="Logo" src="{{asset('svg/logo.svg')}}" alt="Logo">
+                <img class="Logo" src="{{asset('_assets/svg/Logo.svg')}}" alt="Logo">
                 <h2>
                     Infolettre
                 </h2>
@@ -57,9 +56,11 @@
             <div class="navFooter">
                 <a href="question.html">FAQ</a>
                 <a href="question.html">Politique de confidentialité</a>
-                <h3>Nous contacter</h3>
-                <p>1234 boulevard de Montigny Saint-Jérôme (Québec) A1B2C3</p>
-                <p>450-436-1234 / 1-866-436-5678</p>
+                <div class="contacts">
+                    <h3>Nous contacter</h3>
+                    <p>1234 boulevard de Montigny Saint-Jérôme (Québec) A1B2C3</p>
+                    <p>450-436-1234 / 1-866-436-5678</p>
+                </div>
             </div>
         </footer>
 </body>

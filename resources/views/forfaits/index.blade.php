@@ -7,6 +7,7 @@ Forfait
 @section('contenu')
 <div class="interface">
     <h1>Forfaits</h1>
+    <div class="pad"></div>
     <div class="Escapade">
         <h2>Escapade</h2>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In inventore tempore eveniet nam quibusdam nobis et placeat iure magni quia repellat, fuga dolorum, error odio debitis sit. Odit, et dolor?</p>

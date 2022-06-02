@@ -16,44 +16,21 @@
     static Panier(){
 
         var Fermer = document.getElementById("Fermer");
+        var OpenPanier = document.getElementById("OpenPanier");
+        var Panier = document.getElementById("Panier");
+		
 
         Fermer.addEventListener("click", e=>{
             console.log("ferme le panier");
+			Panier.classList.remove("Panier");
+			Panier.classList.add("Panier-close");
         });
 
-/////////////////////////////////////////////////////////////////////////////
-
-        if (panneau.classList.contains("isPanneau")) {
-			panneau.addEventListener("focus", (e) => {
-				this.togglePanneau(panneau, true);
-				
-				panneau.addEventListener('transitionend', e=>{
-					console.log(e);
-				}, {once:true});
-
-				bouton.style.opacity = '0.2';
-				bouton.style.cursor = 'default';
-			});
-
-			panneau.addEventListener("blur", (e) => {
-				if(e.relatedTarget && e.relatedTarget.tagName === 'A') return;
-				this.togglePanneau(panneau, false);
-				bouton.style.removeProperty('opacity');
-				bouton.style.removeProperty('cursor');
-			});
-
-			panneau.querySelector('.Panier-Open').addEventListener('click', e =>{
-				panneau.blur();
-			});
-
-			panneau.querySelector('.Panier-Close').addEventListener('mousedown', e =>{
-				if(panneau.classList.contains('.Panier-Open')){
-					e.preventDefault(); 
-					e.stopPropagation();
-					panneau.blur();
-				}
-			});
-		}
+        OpenPanier.addEventListener("click", e=>{
+            console.log("Ouvre le panier");
+			Panier.classList.remove("Panier-close");
+			Panier.classList.add("Panier");
+        });
     }
 
     /** * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -61,10 +38,10 @@
      */
 	static init() {
         window.addEventListener("load", () => {
-            this.btn_toggle = document.querySelector(".Panier-Open");
-            this.navPan = document.querySelector('.Panier');
-            
-            this.Panier(this.navPan, this.btn_toggle);
+            // this.btn_toggle = document.querySelector(".Panier-Open");
+            // this.navPan = document.querySelector('.Panier');
+            this.Panier();
         });
 	}
 }
+Panier.init();
