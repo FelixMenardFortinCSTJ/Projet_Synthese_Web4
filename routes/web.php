@@ -89,18 +89,24 @@ Route::group(['prefix'=>'/usagers', 'as'=>'usagers.', 'controller'=>UsagerContro
 });
 
 //Route entreprises
+Route::group(['prefix'=>'/admin', 'as'=>'admin.','middleware'=>['auth','admin']], function () {
+    Route::group(['prefix'=>'/entreprises', 'as'=>'entreprises.', 'controller'=>EntrepriseController::class, 'where'=>['entreprise'=>'[0-9]+']], function () {
+        Route::get('/', 'index')->name('index');
+        Route::get('/{entreprise}', 'show')->name('show');
+
+        Route::get('/create', 'create')->name('create');
+        Route::post('/create', 'store')->name('store');
+
+        Route::get('/{entreprise}/edit', 'edit')->name('edit');
+        Route::post('/{entreprise}/edit', 'update')->name('update');
+
+        Route::get('/{entreprise}/delete', 'delete')->name('delete');
+        Route::post('/{entreprise}/delete', 'destroy')->name('destroy');
+    });
+});
 Route::group(['prefix'=>'/entreprises', 'as'=>'entreprises.', 'controller'=>EntrepriseController::class, 'where'=>['entreprise'=>'[0-9]+']], function () {
     Route::get('/', 'index')->name('index');
     Route::get('/{entreprise}', 'show')->name('show');
-
-    Route::get('/create', 'create')->name('create');
-    Route::post('/create', 'store')->name('store');
-
-    Route::get('/{entreprise}/edit', 'edit')->name('edit');
-    Route::post('/{entreprise}/edit', 'update')->name('update');
-
-    Route::get('/{entreprise}/delete', 'delete')->name('delete');
-    Route::post('/{entreprise}/delete', 'destroy')->name('destroy');
 });
 
 //Route Paiements
