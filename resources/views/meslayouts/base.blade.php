@@ -40,5 +40,25 @@
     <div class="interface">
         @yield('contenu')
     </div>
+    <footer>
+
+            <div class="infolettre">
+                <h2>
+                    Infolettre
+                </h2>
+                <p>
+                    inscrivez-vous à l'infolettre pour ne jamais rien manquer!
+                </p>
+
+                <div class="email">
+                    <input id="infolettre"  type="text"
+                    name="email" placeholder="Votre email ici"> 
+                    <a href="#"> S'inscrire</a>
+                </div>
+            </div>
+            <div class="navFooter">
+                <a href="question.html">FAQ</a>
+            </div>
+        </footer>
 </body>
 </html>

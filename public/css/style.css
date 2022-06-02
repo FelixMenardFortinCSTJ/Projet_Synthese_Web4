@@ -12663,16 +12663,18 @@ form.infos {
 
 .Escapade {
   position: absolute;
-  margin-top: 200px;
+  margin-top: 250px;
   margin-left: 0;
+  width: 50vw;
   top: 0;
   left: 0;
 }
 
 .Decouverte {
   position: absolute;
-  margin-top: 200px;
+  margin-top: 250px;
   margin-right: 0;
+  width: 50vw;
   top: 0;
   right: 0;
   background-color: var(--bleu);
@@ -12681,7 +12683,8 @@ form.infos {
 .Detente {
   position: absolute;
   margin-left: 0;
-  top: 664px;
+  width: 50vw;
+  top: 714px;
   left: 0;
   background-color: var(--bleu);
 }
@@ -12689,7 +12692,7 @@ form.infos {
 .Famille {
   position: absolute;
   margin-right: 0;
-  top: 664px;
+  top: 714px;
   right: 0;
 }
 
@@ -12756,7 +12759,7 @@ form.infos {
   top: 0;
   padding: 2em;
   width: 550px;
-  height: 100vh;
+  height: 110vh;
   border-left: 1px solid #cfcfcf;
   background-color: var(--blanc);
 }
