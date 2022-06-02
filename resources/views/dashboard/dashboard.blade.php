@@ -1,18 +1,11 @@
 @extends('meslayouts.base')
 
 @section('titre')
-<<<<<<< HEAD
-Forfait
-@endsection
-
-@section('contenu')
-=======
 Tableau de bord admin
 @endsection
 
 @section('contenu')
 
->>>>>>> 610f4dae6e4098b94c9d0b4c59762303cd7eee99
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
