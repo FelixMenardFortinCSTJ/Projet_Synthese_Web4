@@ -12674,7 +12674,6 @@ form.infos {
   position: absolute;
   margin-top: 250px;
   margin-right: 0;
-  width: 50vw;
   top: 0;
   right: 0;
   background-color: var(--bleu);
@@ -12692,6 +12691,7 @@ form.infos {
 .Famille {
   position: absolute;
   margin-right: 0;
+  z-index: 10;
   top: 714px;
   right: 0;
 }
@@ -12710,6 +12710,14 @@ form.infos {
 
 .Standard div.InfosForfaits p, .Standard div.InfosForfaits h2, .Standard div.InfosForfaits .h2, .Solitaire div.InfosForfaits p, .Solitaire div.InfosForfaits h2, .Solitaire div.InfosForfaits .h2, .Groupe div.InfosForfaits p, .Groupe div.InfosForfaits h2, .Groupe div.InfosForfaits .h2 {
   text-align: center;
+}
+
+.Standard div.InfosForfaits .prix, .Solitaire div.InfosForfaits .prix, .Groupe div.InfosForfaits .prix {
+  position: absolute;
+  right: 15vw;
+  padding: 16px;
+  background-color: var(--bleu);
+  border-radius: 0 10px 0 0;
 }
 
 .Standard div.InfosForfaits button, .Solitaire div.InfosForfaits button, .Groupe div.InfosForfaits button {
@@ -12736,6 +12744,10 @@ form.infos {
   width: 800px;
   border-radius: 5px;
   background-color: var(--bleu);
+}
+
+.Fiche .PrixForfait {
+  display: inline;
 }
 
 .Fiche h2, .Fiche .h2 {

@@ -13,12 +13,12 @@ Forfait
     <a href="{{route('forfaits.categorie.show', 'Détente')}}">Détente</a>
     @foreach($forfaits as $forfait)
     <div class="forfait">
-        <div class="Solitaire">
+        <div class="Standard">
             <div class="InfosForfaits">
                 <a href="{{route('forfaits.show', $forfait['id'])}}"></a>
+                <span class="prix">{{$forfait->prix}}$</span>
                 <h2><span class="nom_forfait">{{$forfait->nom_forfait}}</span></h2>
                 <p><span class="description">{{$forfait->description}}</span></p>
-                <span class="prix">{{$forfait->prix}}$</span>
                 <a href="{{route('forfaits.show', $forfait['id'])}}"><button>En savoir plus</button></a>
             </div>
         </div>

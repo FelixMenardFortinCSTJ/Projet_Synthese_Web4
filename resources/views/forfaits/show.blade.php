@@ -10,8 +10,8 @@ Forfait
         <div class="Fiche">
             <h2>{{$forfait->nom_forfait}}</h2>
             <p>{{$forfait->description}}</p>
-            <h3>prix :</h3>
-            <p>{{$forfait->prix}}$</p>
+            <h3 class="PrixForfait">prix :</h3>
+            <p class="PrixForfait">{{$forfait->prix}}$</p>
             <button>Ajouter au panier</button>
         </div>
         <div class="Panier">

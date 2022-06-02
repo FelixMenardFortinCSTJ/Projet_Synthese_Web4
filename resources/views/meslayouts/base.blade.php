@@ -35,21 +35,19 @@
             <li><a href="PortraitRegion.html">Portrait de la région</a></li>
         </ul>
 
-
     </header>
     <div class="interface">
         @yield('contenu')
     </div>
     <footer>
-
-            <div class="infolettre">
+        <div class="infolettre">
+                <img class="Logo" src="{{asset('svg/logo.svg')}}" alt="Logo">
                 <h2>
                     Infolettre
                 </h2>
                 <p>
                     inscrivez-vous à l'infolettre pour ne jamais rien manquer!
                 </p>
-
                 <div class="email">
                     <input id="infolettre"  type="text"
                     name="email" placeholder="Votre email ici"> 
@@ -58,6 +56,10 @@
             </div>
             <div class="navFooter">
                 <a href="question.html">FAQ</a>
+                <a href="question.html">Politique de confidentialité</a>
+                <h3>Nous contacter</h3>
+                <p>1234 boulevard de Montigny Saint-Jérôme (Québec) A1B2C3</p>
+                <p>450-436-1234 / 1-866-436-5678</p>
             </div>
         </footer>
 </body>
