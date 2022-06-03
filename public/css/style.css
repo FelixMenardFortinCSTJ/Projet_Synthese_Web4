@@ -12748,6 +12748,11 @@ nav.open > .nav .navSupp {
   padding-bottom: 0;
   max-width: 1200px;
   margin: 0 auto;
+  background-color: #fff;
+}
+
+body {
+  background-color: var(--bleu);
 }
 
 button {
@@ -12782,6 +12787,7 @@ header.Main {
   height: 160px;
   margin: 0 auto;
   width: 1200px;
+  background-color: #fff;
 }
 @media (max-width: 992px) {
   header.Main {

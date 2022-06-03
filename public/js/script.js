@@ -65,6 +65,54 @@ static calendrier() {
     });
 }
 
+
+/** * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	 * Vérification si l'élément ciblé est visible dans la page
+	 * @param {HTMLElement} element - target de l'élément à vérifier
+	 * @returns 
+	 */
+
+
+ static isVisible(element) {
+    const { top, bottom } = element.getBoundingClientRect();
+    const vHeight = (window.innerHeight || document.documentElement.clientHeight);
+
+    return ((top > 0 || bottom > 0) && top < vHeight);
+}
+
+static animationCssAll(element,animation){
+    const targets = document.querySelectorAll(element);
+
+    targets.forEach(animTarget => {
+        if(this.isVisible(animTarget)){
+            animTarget.classList.add('animate__animated', 'animate__' + animation);
+        }
+    });
+}
+
+static animeShowCard(){
+    this.animationCssAll("div", "fadeIn");
+
+    // setTimeout(() => {
+    //     this.animationCssAll("p.prix", "fadeIn");
+    // }, 1000);
+    // setTimeout(() => {
+    //     this.animationCssAll("p.date", "fadeIn");
+    // }, 1400);
+}
+
+static scrollOnAnime(){
+    window.addEventListener('scroll', () => {
+        this.animeShowCard();
+    });
+}
+
+static animeOnResize(){
+    window.addEventListener("resize", e =>{
+        this.animeShowCard();
+    });
+}
+
 /** * * * * * * * * * * * * * * * * * * * * * * * * * * *
      * Initialisation du code au chargement de la page
      */
@@ -72,6 +120,8 @@ static calendrier() {
     window.addEventListener("load", () => {
         this.menuBurger();
         this.calendrier();
+        this.scrollOnAnime();
+        this.animeOnResize();
     });
 }
 }
