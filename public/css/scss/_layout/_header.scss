@@ -8,8 +8,12 @@ header.Main{
     width: 100%;
     flex-wrap: wrap;
 
+    & p{
+        cursor: pointer;
+        display: inline;
+    }
+
     & .Logo{
-        @include debug;
         margin-left: 0;
         margin-right: 100px;
         padding: 0;
@@ -49,4 +53,6 @@ header.Main{
         background-color: var(--vert);
     }
 }
+
+
     

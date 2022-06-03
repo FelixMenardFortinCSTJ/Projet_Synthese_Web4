@@ -13,7 +13,7 @@
     margin: 1em;
     height: 400px;
     width: 45vw;
-    z-index: -10;
+    z-index: 10;
     border-radius: 5px;
     background-color: var(--bleu);
 
@@ -37,5 +37,15 @@
             display:inline;
         }
     }
+}
+
+
+
+.HideLaravel{
+    position:absolute;
+    top: 270px;
+    width: 800px;
+    height: 800px;
+    background-color: var(--blanc);
 }
 

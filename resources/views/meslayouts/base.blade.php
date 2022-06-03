@@ -33,7 +33,6 @@
             <li><a href="{{route('forfaits.index')}}">Forfaits</a></li>
             <li><a href="{{route('mrcs.index')}}">Portrait de la région</a></li>
         </ul>
-
     </header>
     <div class="interface">
         @yield('contenu')

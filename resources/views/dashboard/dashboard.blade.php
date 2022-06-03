@@ -5,13 +5,13 @@ Tableau de bord admin
 @endsection
 
 @section('contenu')
+<div class="HideLaravel"></div>
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Profil') }}
         </h2>
     </x-slot>
-
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
@@ -65,7 +65,7 @@ Tableau de bord admin
                             @foreach ($favoris as $favori)
                             @if (Auth::user()->id == $favori->user_id)
                             <div class="favori">
-                                <h2>{{ $favori->entreprise->nom }}</h2>- 
+                                <h2>{{ $favori->entreprise->nom }}</h2> 
                                 <p>{{ $favori->entreprise->ville }} {{ $favori->entreprise->adresse }}</p>
                             </div>
                             @endif
@@ -73,8 +73,8 @@ Tableau de bord admin
                             <button>Afficher plus</button>
                     </div>
                 </div>
-                <h2>Transactions</h2>
                 <div class="Transactions">
+                    <h2>Transactions</h2>
                     <!-- <div class="Transaction">
                         <p>Forfait acheté</p>
                         <p>prix$</p>

@@ -12037,7 +12037,7 @@ p, button, input {
   margin: 1em;
   height: 400px;
   width: 45vw;
-  z-index: -10;
+  z-index: 10;
   border-radius: 5px;
   background-color: var(--bleu);
 }
@@ -12068,8 +12068,15 @@ p, button, input {
   display: inline;
 }
 
+.HideLaravel {
+  position: absolute;
+  top: 270px;
+  width: 800px;
+  height: 800px;
+  background-color: var(--blanc);
+}
+
 .Carte {
-  z-index: -10;
   position: absolute;
   right: 30px;
   top: 360px;
@@ -12078,6 +12085,7 @@ p, button, input {
   margin: 1em;
   height: 400px;
   width: 45vw;
+  z-index: 10;
   border-radius: 5px;
 }
 
@@ -12132,12 +12140,8 @@ p, button, input {
   width: 100px;
 }
 
-.Favoris .Favori h2, .Favoris .Favori .h2 {
-  display: inline;
-}
-
 .Favoris .Favori p {
-  margin-top: 8px;
+  margin-bottom: 24px;
 }
 
 .Transactions {
@@ -12344,8 +12348,8 @@ div.BackgroundDesc .IntroRegion {
   position: absolute;
   right: 700px;
   left: 700px;
-  top: 800px;
-  width: 500px;
+  top: 530px;
+  width: 300px;
   margin: 0 auto;
 }
 
@@ -12531,6 +12535,10 @@ img {
   display: inline;
   width: 100px;
   margin: 0 auto;
+}
+
+.padRegion {
+  height: 500px;
 }
 
 .DescriptionMRC {
@@ -13475,8 +13483,12 @@ header.Main {
       flex-wrap: wrap;
 }
 
+header.Main p {
+  cursor: pointer;
+  display: inline;
+}
+
 header.Main .Logo {
-  border: 1px red solid;
   margin-left: 0;
   margin-right: 100px;
   padding: 0;
