@@ -79,7 +79,7 @@ class UsagerController extends Controller
         return redirect()->route('usagers.show', $usager);
     }
 
-            /**
+    /**
      * Show the form for deleting the specified resource.
      *
      * @param  \App\Models\Usager  $usager
