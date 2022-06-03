@@ -6,9 +6,10 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 .Carte{
+    z-index: -10;
     position:absolute;
     right: 30px;
-    top: 160px;
+    top: 360px;
     background-color: var(--bleu);
     padding: 1em;
     margin: 1em;

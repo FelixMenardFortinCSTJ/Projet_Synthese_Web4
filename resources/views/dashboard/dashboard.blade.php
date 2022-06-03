@@ -8,7 +8,7 @@ Tableau de bord admin
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
+            {{ __('Profil') }}
         </h2>
     </x-slot>
 
@@ -41,58 +41,54 @@ Tableau de bord admin
                         </div>
                     </div>
                     <div class="Carte">
-                    <h2>Carte</h2>
-                    <div class="NomCarte">
-                        <h3>Nom de la carte : </h3>
-                        <p>titulaire</p>
-                    </div>
-                    <div class="NumeroCarte">
-                        <h3>Numéro de la carte : </h3>
-                        <p>numero_carte</p>
-                    </div>
-                    <div class="Expiration">
-                        <h3>Date d'expiration : </h3>
-                        <p>date_expiration</p>
-                    </div>
-                    <div class="Securite">
-                        <h3>Numéro de sécurité : </h3>
-                        <p>code_securite</p>
+                        <h2>Carte</h2>
+                        <div class="NomCarte">
+                            <h3>Nom de la carte : </h3>
+                            <p>titulaire</p>
+                        </div>
+                        <div class="NumeroCarte">
+                            <h3>Numéro de la carte : </h3>
+                            <p>numero_carte</p>
+                        </div>
+                        <div class="Expiration">
+                            <h3>Date d'expiration : </h3>
+                            <p>date_expiration</p>
+                        </div>
+                        <div class="Securite">
+                            <h3>Numéro de sécurité : </h3>
+                            <p>code_securite</p>
+                        </div>
                     </div>
                     <div class="Favoris">
-                    <h2>Favoris</h2>
-                    <div class="Favori">
-                        <img src="/_assets/svg/placeholder.svg" alt="commercant">
-                        <h2>Nom du commercant</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quibusdam eaque ullam corporis eos. Deserunt, sit perspiciatis voluptatum, libero, voluptatem ducimus facilis reprehenderit beatae molestiae nihil magni id consequuntur illum?</p>
-                        <button>Supprimer</button>
-                        @foreach ($favoris as $favori)
-                        @if (Auth::user()->id == $favori->user_id)
+                        <h2>Favoris</h2>
+                        <div class="Favori">
+                            @foreach ($favoris as $favori)
+                            @if (Auth::user()->id == $favori->user_id)
                             <div class="favori">
-                                <h2></h2>
-                                <p>{{ $favori->entreprise->nom }}</p>- {{ $favori->entreprise->ville }}
-                                {{ $favori->entreprise->adresse }}
+                                <h2>{{ $favori->entreprise->nom }}</h2>- 
+                                <p>{{ $favori->entreprise->ville }} {{ $favori->entreprise->adresse }}</p>
                             </div>
-                        @endif
-                    @endforeach
+                            @endif
+                            @endforeach
+                            <button>Afficher plus</button>
                     </div>
-                    <button>Afficher plus</button>
-                    </div>
-                    <div class="Transactions">
-                    <h2>Transactions</h2>
-                    <div class="Transaction">
+                </div>
+                <h2>Transactions</h2>
+                <div class="Transactions">
+                    <!-- <div class="Transaction">
                         <p>Forfait acheté</p>
                         <p>prix$</p>
                         <p>numéro de commande</p>
                         <button>Accéder à la facture</button>
                     </div>
-                    <button>Afficher plus</button>
-                    </div>
-                    <!-- ////////ADMIN//////// -->
-                    @if(Auth::user()->role >5)
-                    <a href="{{route('admin.evenements.index')}}">Les évènements</a>
-                    <a href="{{route('admin.entreprises.index')}}">Voir les entreprises</a>
-                    <!-- Route activité manquante -->
-                    @endif
+                    <button>Afficher plus</button> -->
+                </div>
+                <!-- ////////ADMIN//////// -->
+                @if(Auth::user()->role >5)
+                <a href="{{route('admin.evenements.index')}}">Les évènements</a>
+                <a href="{{route('admin.entreprises.index')}}">Voir les entreprises</a>
+                <!-- Route activité manquante -->
+                @endif
                     <!-- //////////////////////// -->
                 </div>
             </div>
@@ -102,7 +98,7 @@ Tableau de bord admin
                     @if (Auth::user()->id == $panier->user_id)
                         <p>
                             {{-- @dd($panier) --}}
-                            {{ $panier->forfait->nom_forfait }} - {{ $panier->forfait->categorie_forfait }}
+                            <h2>{{ $panier->forfait->nom_forfait }}</h2> - {{ $panier->forfait->categorie_forfait }}
                             {{ $panier->forfait->prix }}$
                         </p>
                     @endif

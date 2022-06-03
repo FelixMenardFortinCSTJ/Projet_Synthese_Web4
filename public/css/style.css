@@ -12032,11 +12032,12 @@ p, button, input {
 .Infos {
   position: absolute;
   left: 30px;
-  top: 160px;
+  top: 360px;
   padding: 1em;
   margin: 1em;
   height: 400px;
   width: 45vw;
+  z-index: -10;
   border-radius: 5px;
   background-color: var(--bleu);
 }
@@ -12068,9 +12069,10 @@ p, button, input {
 }
 
 .Carte {
+  z-index: -10;
   position: absolute;
   right: 30px;
-  top: 160px;
+  top: 360px;
   background-color: var(--bleu);
   padding: 1em;
   margin: 1em;
@@ -12102,7 +12104,7 @@ p, button, input {
 .Favoris {
   position: absolute;
   left: 30px;
-  top: 600px;
+  top: 800px;
   padding: 1em;
   margin: 1em;
   width: 45vw;
@@ -12140,7 +12142,7 @@ p, button, input {
 
 .Transactions {
   position: absolute;
-  top: 600px;
+  top: 800px;
   right: 30px;
   padding: 1em;
   margin: 1em;
