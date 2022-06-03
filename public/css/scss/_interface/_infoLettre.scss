@@ -12,18 +12,18 @@
     h2{
         margin-top: 50px;
         font-weight: bold;
-        color: #fff;
+        color: #000;
     }
 
     p{
         padding: 20px;
-        color: #fff;
+        color: #000;
     }
 
     & .email{
         margin: 20px;
         & input{
-            background-color: var(--bleu);
+            // background-color: var(--bleu);
             border: 2px solid #fff;
             color: #fff;
         }
