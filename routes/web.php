@@ -34,6 +34,9 @@ Route::get('/lesacp', function () {
 Route::get('/unacp', function () {
     return view('unacp');
 });
+Route::get('/souscategorie', function () {
+    return view('souscategorie');
+});
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

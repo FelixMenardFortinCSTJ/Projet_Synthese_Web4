@@ -1,6 +1,10 @@
 .activites{
     @include setFlex(row,center,center);
     flex-wrap: wrap;
+
+    @include breakpoint-max(992){
+        @include setFlex(column,center,center);
+    }
     
 
     .activite{
@@ -14,9 +18,13 @@
         & h3 {
             margin-top: 20px;
             text-align: center;
+            color: var(--vert-fonce);
         }
         & p {
             text-align: center;
+            color: var(--vert);
         }
+
+      
     }
 }

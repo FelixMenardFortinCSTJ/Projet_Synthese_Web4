@@ -12114,9 +12114,11 @@ div.interface .personnages a .personne h3, div.interface .personnages a .personn
   height: 100%;
   margin-right: 40px;
   font-weight: bold;
+  color: var(--vert-fonce);
 }
 .publicites .publicite1 p {
   margin-left: 150px;
+  color: var(--vert-fonce);
 }
 .publicites .publicite1 p::after {
   content: "";
@@ -12127,8 +12129,8 @@ div.interface .personnages a .personne h3, div.interface .personnages a .personn
   height: 200px;
   z-index: 1;
   border-radius: 50%;
-  opacity: 0.5;
-  background-color: grey;
+  opacity: 0.3;
+  background-color: var(--vert);
 }
 .publicites .publicite2 {
   display: flex;
@@ -12145,9 +12147,11 @@ div.interface .personnages a .personne h3, div.interface .personnages a .personn
   height: 100%;
   margin-left: 350px;
   font-weight: bold;
+  color: var(--vert-fonce);
 }
 .publicites .publicite2 p {
   margin-right: 150px;
+  color: var(--vert-fonce);
 }
 .publicites .publicite2 p::after {
   content: "";
@@ -12158,8 +12162,8 @@ div.interface .personnages a .personne h3, div.interface .personnages a .personn
   height: 200px;
   z-index: 1;
   border-radius: 50%;
-  opacity: 0.5;
-  background-color: grey;
+  opacity: 0.3;
+  background-color: var(--vert);
 }
 
 .activites {
@@ -12168,6 +12172,14 @@ div.interface .personnages a .personne h3, div.interface .personnages a .personn
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+@media (max-width: 992px) {
+  .activites {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .activites .activite {
   display: flex;
@@ -12183,9 +12195,11 @@ div.interface .personnages a .personne h3, div.interface .personnages a .personn
 .activites .activite h3, .activites .activite .h3 {
   margin-top: 20px;
   text-align: center;
+  color: var(--vert-fonce);
 }
 .activites .activite p {
   text-align: center;
+  color: var(--vert);
 }
 
 .interface {
