@@ -23,6 +23,11 @@ header.Main{
 
         & li{
             margin: 10px 10px;
+            color: var(--vert);
+
+            &:hover{
+                color: var(--vert-fonce);
+            }
         }
     }
     & input.navSupp{
@@ -31,6 +36,7 @@ header.Main{
         height: 30px;
         width: 300px;
         font-size: 0.8em;
+        
     }
 
     & .nav{
@@ -39,6 +45,11 @@ header.Main{
 
         & li{
             margin: 10px 10px;
+            color: var(--vert);
+
+            &:hover{
+                color: var(--vert-fonce);
+            }
         }
     }
 

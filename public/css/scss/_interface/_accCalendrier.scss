@@ -24,7 +24,13 @@
             & li {
 
                 & a{
+                    margin-right: 20px;
+                    margin-bottom: 20px;
                     color: var(--vert-fonce);
+
+                    &:hover{
+                        color: var(--vert-pale);
+                    }
                 }
             }
         }
@@ -45,6 +51,13 @@
         grid-gap: 10px 25px;
         font-weight: lighter;
         color: var(--vert-fonce);
+
+        & li{
+             &:hover{
+                color: var(--noir);
+            }   
+        }
+       
         
     }
 

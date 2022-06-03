@@ -11903,7 +11903,12 @@ form.infos {
   font-weight: bold;
 }
 .calendrier .mois ul li a {
+  margin-right: 20px;
+  margin-bottom: 20px;
   color: var(--vert-fonce);
+}
+.calendrier .mois ul li a:hover {
+  color: var(--vert-pale);
 }
 .calendrier .jourSemaine {
   align-self: center;
@@ -11920,6 +11925,9 @@ form.infos {
   grid-gap: 10px 25px;
   font-weight: lighter;
   color: var(--vert-fonce);
+}
+.calendrier .jours li:hover {
+  color: var(--noir);
 }
 .calendrier .bientot {
   align-self: center;
@@ -12231,6 +12239,10 @@ header.Main ul.navSupp {
 }
 header.Main ul.navSupp li {
   margin: 10px 10px;
+  color: var(--vert);
+}
+header.Main ul.navSupp li:hover {
+  color: var(--vert-fonce);
 }
 header.Main input.navSupp {
   margin-right: 20px;
@@ -12245,6 +12257,10 @@ header.Main .nav {
 }
 header.Main .nav li {
   margin: 10px 10px;
+  color: var(--vert);
+}
+header.Main .nav li:hover {
+  color: var(--vert-fonce);
 }
 header.Main::before {
   content: " ";
