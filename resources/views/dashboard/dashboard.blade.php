@@ -87,6 +87,18 @@ Tableau de bord admin
                     <!-- //////////////////////// -->
                 </div>
             </div>
+            {{-- Section panier --}}
+            <div class="Transactions">
+                @foreach ($paniers as $panier)
+                    @if (Auth::user()->id == $panier->user_id)
+                        <p>
+                            {{-- @dd($panier) --}}
+                            {{ $panier->forfait->nom_forfait }} - {{ $panier->forfait->categorie_forfait }}
+                            {{ $panier->forfait->prix }}$
+                        </p>
+                    @endif
+                @endforeach
+            </div>
         </div>
     </div>
 </x-app-layout>

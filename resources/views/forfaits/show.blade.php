@@ -12,7 +12,13 @@ Forfait
             <p>{{$forfait->description}}</p>
             <h3>prix</h3>
             <p>{{$forfait->prix}}</p>
-            <button>Ajouter au panier</button>
+            <form action="/savepanier" method="POST">
+                @csrf
+                <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+                <input type="hidden" name="forfait_id" value="{{$forfait->id}}">
+                <button>Ajouter au panier</button>
+            </form>
+
         </div>
         <div class="Panier">
             <h1>Panier</h1>

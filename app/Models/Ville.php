@@ -8,8 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Ville extends Model
 {
     use HasFactory;
-    public function mrc()
-    {
-        return $this->belongsToMany(Mrc::class);
-    }
+    // public function mrc()
+    // {
+    //     return $this->belongsToMany(Mrc::class);
+    // }
 }

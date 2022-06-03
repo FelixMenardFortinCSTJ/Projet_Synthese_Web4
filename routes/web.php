@@ -7,9 +7,11 @@ use App\Http\Controllers\MembreController;
 use App\Http\Controllers\PaiementController;
 use App\Http\Controllers\UsagerController;
 use App\Http\Controllers\CategorieController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EntrepriseController;
 use App\Http\Controllers\GroupeController;
 use App\Http\Controllers\MrcController;
+use App\Http\Controllers\PanierController;
 use App\Models\Entreprise;
 
 /*
@@ -27,9 +29,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard.dashboard');
-})->middleware(['auth'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard.dashboard');
+// })->middleware(['auth'])->name('dashboard');
+
+Route::get('/dashboard', [DashboardController::class,'dashboard'])->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
 
@@ -61,7 +65,7 @@ Route::group(['prefix'=>'/forfaits', 'as'=>'forfaits.', 'controller'=>ForfaitCon
     Route::get('/{categorie}', 'categorieShow')
         ->name('categorie.show')
         ->where(['categorie' => 'Escapade|Découverte|Détente|Famille']);
-        
+
     Route::get('/{forfait}', 'show')->name('show');
 
     Route::get('/create', 'create')->name('create');
@@ -74,23 +78,27 @@ Route::group(['prefix'=>'/forfaits', 'as'=>'forfaits.', 'controller'=>ForfaitCon
     Route::post('/{forfait}/delete', 'destroy')->name('destroy');
 });
 //mrc
-Route::group(['prefix'=>'/mrcs', 'as'=>'mrcs.', 'controller'=>MrcController::class, 'where'=>['mrc'=>'[0-9]+']], function () {
+// Route::group(['prefix'=>'/mrcs', 'as'=>'mrcs.', 'controller'=>MrcController::class, 'where'=>['mrc'=>'[0-9]+']], function () {
+//     Route::get('/', 'index')->name('index');
+
+//     Route::get('/{categorie}', 'regionShow')
+//         ->name('show')
+//         ->where(['categorie' => 'Les Laurentides|Antoine-Labelle|Thérèse-De Blainville|ArgenteuilLes|Deux-Montagne|Les Pays-den-Haut|La Rivière-du-Nord']);
+
+//     Route::get('/{mrc}', 'show')->name('show');
+
+//     Route::get('/create', 'create')->name('create');
+//     Route::post('/create', 'store')->name('store');
+
+//     Route::get('/{mrc}/edit', 'edit')->name('edit');
+//     Route::post('/{mrc}/edit', 'update')->name('update');
+
+//     Route::get('/{mrc}/delete', 'delete')->name('delete');
+//     Route::post('/{mrc}/delete', 'destroy')->name('destroy');
+// });
+Route::group(['prefix' => '/mrcs', 'as' => 'mrcs.', 'controller' => MrcController::class, 'where' => ['mrc' => '[0-9]+']], function () {
     Route::get('/', 'index')->name('index');
-
-    Route::get('/{categorie}', 'regionShow')
-        ->name('show')
-        ->where(['categorie' => 'Les Laurentides|Antoine-Labelle|Thérèse-De Blainville|ArgenteuilLes|Deux-Montagne|Les Pays-den-Haut|La Rivière-du-Nord']);
-        
     Route::get('/{mrc}', 'show')->name('show');
-
-    Route::get('/create', 'create')->name('create');
-    Route::post('/create', 'store')->name('store');
-
-    Route::get('/{mrc}/edit', 'edit')->name('edit');
-    Route::post('/{mrc}/edit', 'update')->name('update');
-
-    Route::get('/{mrc}/delete', 'delete')->name('delete');
-    Route::post('/{mrc}/delete', 'destroy')->name('destroy');
 });
 
 //Route Usager
@@ -176,4 +184,17 @@ Route::group(['prefix'=>'/categories', 'as'=>'categories.', 'controller'=>Catego
     Route::get('/{categorie}/delete', 'delete')->name('delete');
     Route::post('/{categorie}/delete', 'destroy')->name('destroy');
 });
+// Route::group(['prefix'=>'/paniers', 'as'=>'paniers.', 'controller'=>PanierController::class, 'where'=>['panier'=>'[0-9]+']], function () {
+//     Route::get('/', 'index')->name('index');
+//     Route::get('/{panier}', 'show')->name('show');
 
+//     Route::get('/create', 'create')->name('create');
+//     Route::post('/create', 'store')->name('store');
+
+//     Route::get('/{panier}/edit', 'edit')->name('edit');
+//     Route::post('/{panier}/edit', 'update')->name('update');
+
+//     Route::get('/{panier}/delete', 'delete')->name('delete');
+//     Route::post('/{panier}/delete', 'destroy')->name('destroy');
+// });
+Route::post('/savepanier',[PanierController::class, 'store'])->middleware('auth');
