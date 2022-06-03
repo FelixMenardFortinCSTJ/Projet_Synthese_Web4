@@ -10,19 +10,20 @@ Forfait
         <div class="Fiche">
             <h2>{{$forfait->nom_forfait}}</h2>
             <p>{{$forfait->description}}</p>
-            <h3>prix</h3>
-            <p>{{$forfait->prix}}</p>
+            <h3 class="PrixForfait">prix :</h3>
+            <p class="PrixForfait">{{$forfait->prix}}$</p>
             <button>Ajouter au panier</button>
+            <button id="OpenPanier">Accéder au panier</button>
         </div>
-        <div class="Panier">
+        <div  class="Panier-close" id="Panier" >
             <h1>Panier</h1>
-            <img id="Fermer" class="Fermer" src="/public/_assets/svg/Fermer.svg" alt="Fermer">
+            <img id="Fermer" class="Fermer" src="{{asset('_assets/svg/Fermer.svg')}}" alt="Fermer">
             <div class="ProduitsPanier">
                 <h2>{{$forfait->nom_forfait}}</h2>
                 <p>{{$forfait->description}}</p>
                 <div class="PrixPaniers">
                     <h3 class="prixPanier">prix :</h3>
-                    <p class="prixPanier">{{$forfait->prix}}</p>
+                    <p class="prixPanier">{{$forfait->prix}}$</p>
                     <button>Supprimer</button>
                 </div>
                 </div class="Paiement">
@@ -36,15 +37,15 @@ Forfait
                             <p>Nom</p>
                         </div>
                         <div class="NumeroCarte InfoCarte">
-                            <h3>Numéro: </h3>
+                            <h3>Numéro :</h3>
                             <p>Numéro</p>
                         </div>
                         <div class="Expiration InfoCarte">
-                            <h3>Date d'expiration : </h3>
+                            <h3>Date d'expiration :</h3>
                             <p>Date d'expiration</p>
                         </div>
                         <div class="Securite InfoCarte">
-                            <h3>Sécurité : </h3>
+                            <h3>Sécurité :</h3>
                             <p>Sécurité</p>
                             <div class="Rappelers">
                                 <button>modifier</button>
@@ -58,6 +59,6 @@ Forfait
         </div>
 </div>
 @endsection
-<script src="/public/js/Panier.js"></script>
+<script src={{asset('js/Panier.js')}}></script>
 </body>
 </html>
