@@ -12022,18 +12022,27 @@ form.infos {
   justify-content: center;
   align-items: center;
   height: 650px;
+  width: 1200px;
   background-color: grey;
+  margin-top: 30px;
+}
+@media (max-width: 992px) {
+  .interface .header {
+    width: 800px;
+  }
 }
 .interface .header h1, .interface .header .h1 {
   z-index: 2;
   text-align: center;
   font-size: 50px;
   font-weight: bold;
+  color: #fff;
 }
 .interface .header p {
   z-index: 2;
   width: 600px;
   text-align: center;
+  color: #fff;
 }
 .interface .header::after {
   content: " ";
@@ -12041,7 +12050,7 @@ form.infos {
   height: 500px;
   width: 500px;
   border-radius: 50%;
-  background-color: white;
+  background-color: var(--vert-pale);
   opacity: 0.5;
 }
 
@@ -12050,22 +12059,41 @@ form.infos {
   flex-direction: column;
   justify-content: start;
   align-items: start;
-  background-color: lightgray;
+  width: 1200px;
 }
 .introAgrotourisme p {
+  position: relative;
   align-self: end;
   width: 400px;
-  text-align: left;
+  text-align: bottom left;
   margin-bottom: 60px;
-  margin-top: 200px;
-  margin-right: 80px;
+  margin-right: 150px;
+  color: var(--vert);
+}
+.introAgrotourisme p::after {
+  content: " ";
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  right: -30px;
+  top: -100px;
+  border-radius: 50%;
+  background-color: var(--vert-pale);
+  opacity: 0.2;
+}
+@media (max-width: 992px) {
+  .introAgrotourisme p::after {
+    height: 300px;
+    width: 300px;
+  }
 }
 .introAgrotourisme h2, .introAgrotourisme .h2 {
-  margin-left: 80px;
+  margin-left: 200px;
   margin-top: 60px;
-  margin-bottom: 80px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: var(--vert);
 }
-
 .attractionsPopulaires {
   display: flex;
   flex-direction: row;
@@ -12075,8 +12103,16 @@ form.infos {
   margin: 0 auto;
   width: 600px;
 }
+@media (max-width: 992px) {
+  .attractionsPopulaires {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .attractionsPopulaires h2, .attractionsPopulaires .h2 {
-  margin-top: 450px;
+  margin-top: 300px;
   margin-bottom: 100px;
   font-size: 2.4em;
   color: var(--vert);
@@ -12100,10 +12136,13 @@ form.infos {
 .attractionsPopulaires .Attraction h3, .attractionsPopulaires .Attraction .h3 {
   font-size: 20px;
   text-align: center;
+  font-weight: bold;
+  color: var(--vert-fonce);
 }
 .attractionsPopulaires .Attraction p {
   text-align: center;
   font-size: 1em;
+  color: var(--vert);
 }
 
 .calendrier {
@@ -12117,15 +12156,37 @@ form.infos {
 }
 .calendrier .annee {
   padding: 10px 25px;
+  color: var(--vert-fonce);
+}
+@media (max-width: 992px) {
+  .calendrier .annee {
+    align-self: center;
+  }
 }
 .calendrier .mois {
   padding: 10px 25px;
   font-weight: bold;
 }
+.calendrier .mois ul li a {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  color: var(--vert-fonce);
+}
+.calendrier .mois ul li a:hover {
+  color: var(--vert-pale);
+}
+@media (max-width: 992px) {
+  .calendrier .mois {
+    align-self: center;
+  }
+}
 .calendrier .jourSemaine {
+  align-self: center;
   margin: 0;
-  padding: 10px 25px;
   text-align: center;
+  color: var(--vert);
+  margin-bottom: 20px;
+  margin-right: 30px;
 }
 .calendrier .jours {
   align-self: center;
@@ -12133,6 +12194,10 @@ form.infos {
   grid-template-columns: repeat(7, 1fr);
   grid-gap: 10px 25px;
   font-weight: lighter;
+  color: var(--vert-fonce);
+}
+.calendrier .jours li:hover {
+  color: var(--noir);
 }
 .calendrier .bientot {
   align-self: center;
@@ -12140,13 +12205,14 @@ form.infos {
   width: 700px;
   margin-top: 30px;
   text-align: center;
-  background-color: grey;
+  background-color: var(--vert);
   border-top-left-radius: 25%;
   border-top-right-radius: 25%;
 }
 .calendrier .bientot h2, .calendrier .bientot .h2 {
   margin-top: 20px;
   font-weight: bold;
+  color: #fff;
 }
 
 .logement {
@@ -12163,6 +12229,7 @@ form.infos {
   margin-bottom: 100px;
   font-weight: bold;
   text-align: center;
+  color: var(--vert-fonce);
 }
 .logement .option1 {
   display: flex;
@@ -12177,10 +12244,12 @@ form.infos {
 }
 .logement .option1 p {
   width: 200px;
+  color: var(--vert-pale);
 }
 .logement .option1 p span {
   font-size: 20px;
   font-weight: bold;
+  color: var(--vert);
 }
 .logement .option2 {
   display: flex;
@@ -12196,10 +12265,12 @@ form.infos {
 }
 .logement .option2 p {
   width: 200px;
+  color: var(--vert-pale);
 }
 .logement .option2 p span {
   font-size: 20px;
   font-weight: bold;
+  color: var(--vert);
 }
 
 .infolettre {
@@ -12207,23 +12278,34 @@ form.infos {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  width: 100%;
 }
 .infolettre h2, .infolettre .h2 {
   margin-top: 50px;
   font-weight: bold;
+  color: #fff;
 }
 .infolettre p {
   padding: 20px;
+  color: #fff;
 }
 .infolettre .email {
   margin: 20px;
 }
+.infolettre .email input {
+  background-color: var(--bleu);
+  border: 2px solid #fff;
+  color: #fff;
+}
 .infolettre .email a {
-  background-color: gray;
+  background-color: var(--vert-fonce);
   padding: 5px;
-  border: 1px solid black;
+  border: 1px solid var(--vert-fonce);
   border-radius: 10%;
+  color: #fff;
+}
+.infolettre .email a:hover {
+  background-color: var(--vert-pale);
 }
 
 div.interface .personnages {
@@ -12236,6 +12318,15 @@ div.interface .personnages {
   margin-top: 150px;
   width: 800px;
 }
+@media (max-width: 992px) {
+  div.interface .personnages {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+}
 div.interface .personnages a {
   margin: 20px;
 }
@@ -12244,6 +12335,7 @@ div.interface .personnages a .personne {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
 }
 div.interface .personnages a .personne img {
   margin-bottom: 10px;
@@ -12251,9 +12343,12 @@ div.interface .personnages a .personne img {
 }
 div.interface .personnages a .personne h2, div.interface .personnages a .personne .h2 {
   font-size: 1.6em;
+  font-weight: bold;
+  color: var(--vert-fonce);
 }
 div.interface .personnages a .personne h3, div.interface .personnages a .personne .h3 {
   font-size: 1em;
+  color: var(--vert);
 }
 
 .laPersonne {
@@ -12275,6 +12370,18 @@ div.interface .personnages a .personne h3, div.interface .personnages a .personn
 }
 .laPersonne .infoPersonne h2, .laPersonne .infoPersonne .h2 {
   font-weight: bold;
+  color: var(--vert-fonce);
+}
+.laPersonne .infoPersonne p {
+  color: var(--vert);
+}
+@media (max-width: 992px) {
+  .laPersonne {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .publicites {
@@ -12295,9 +12402,11 @@ div.interface .personnages a .personne h3, div.interface .personnages a .personn
   height: 100%;
   margin-right: 40px;
   font-weight: bold;
+  color: var(--vert-fonce);
 }
 .publicites .publicite1 p {
   margin-left: 150px;
+  color: var(--vert-fonce);
 }
 .publicites .publicite1 p::after {
   content: "";
@@ -12308,8 +12417,8 @@ div.interface .personnages a .personne h3, div.interface .personnages a .personn
   height: 200px;
   z-index: 1;
   border-radius: 50%;
-  opacity: 0.5;
-  background-color: grey;
+  opacity: 0.3;
+  background-color: var(--vert);
 }
 .publicites .publicite2 {
   display: flex;
@@ -12326,9 +12435,11 @@ div.interface .personnages a .personne h3, div.interface .personnages a .personn
   height: 100%;
   margin-left: 350px;
   font-weight: bold;
+  color: var(--vert-fonce);
 }
 .publicites .publicite2 p {
   margin-right: 150px;
+  color: var(--vert-fonce);
 }
 .publicites .publicite2 p::after {
   content: "";
@@ -12339,8 +12450,8 @@ div.interface .personnages a .personne h3, div.interface .personnages a .personn
   height: 200px;
   z-index: 1;
   border-radius: 50%;
-  opacity: 0.5;
-  background-color: grey;
+  opacity: 0.3;
+  background-color: var(--vert);
 }
 
 .activites {
@@ -12349,6 +12460,14 @@ div.interface .personnages a .personne h3, div.interface .personnages a .personn
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+@media (max-width: 992px) {
+  .activites {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .activites .activite {
   display: flex;
@@ -12364,9 +12483,153 @@ div.interface .personnages a .personne h3, div.interface .personnages a .personn
 .activites .activite h3, .activites .activite .h3 {
   margin-top: 20px;
   text-align: center;
+  color: var(--vert-fonce);
 }
 .activites .activite p {
   text-align: center;
+  color: var(--vert);
+}
+
+.mainNav > #btn-burger {
+  border: 1px red solid;
+  justify-self: flex-end;
+  width: 48px;
+  height: 48px;
+  margin-top: 30px;
+  margin-left: 400px;
+  cursor: pointer;
+  border: 2px solid var(--vert);
+  border-radius: 8px;
+}
+@media (min-width: 992px) {
+  .mainNav > #btn-burger {
+    display: none;
+  }
+}
+.mainNav > #btn-burger .container-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.mainNav > #btn-burger .btn-line {
+  --hauteur: 4px;
+  --largeur: 28px;
+  --distance: 5px;
+  height: var(--hauteur);
+  width: var(--largeur);
+  border-radius: 2px;
+  background-color: var(--vert);
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
+}
+.mainNav > #btn-burger .btn-line:nth-child(2) {
+  margin: var(--distance) 0px;
+}
+
+nav.open .btn-line:nth-child(1) {
+  transform: translate(0px, calc(var(--hauteur) + var(--distance))) rotate(45deg);
+}
+nav.open .btn-line:nth-child(2) {
+  opacity: 0;
+}
+nav.open .btn-line:nth-child(3) {
+  transform: translate(0px, calc(0px - var(--hauteur) - var(--distance))) rotate(-45deg);
+}
+
+nav.open > .nav .navSupp {
+  --variables: 5;
+  height: calc(var(--variables) * 60px);
+}
+@media (max-width: 991px) {
+  nav.open > .nav .navSupp {
+    --variables: 5;
+    height: calc(var(--variables) * 60px);
+  }
+}
+
+@media (max-width: 992px) {
+  .mainNav.open > .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    position: absolute;
+    left: 0;
+    top: 86px;
+    z-index: 30;
+    visibility: visible;
+    width: 100%;
+    overflow: hidden;
+    padding: 0px 0px 0px 32px;
+    margin-top: 80px;
+    background-color: #fff;
+    box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.3);
+    transition-duration: 200ms;
+    transition-property: height;
+  }
+  .mainNav.open > .nav > li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 16px;
+    list-style: none;
+  }
+  .mainNav.open > .nav > li a {
+    position: relative;
+    width: 100%;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1em;
+    color: var(--vert);
+  }
+}
+@media (max-width: 992px) and (min-width: 1200px) {
+  .mainNav.open > .nav > li a {
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 992px) {
+  .mainNav.open > .nav > li a:hover {
+    color: var(--vert-fonce);
+  }
+}
+@media (max-width: 992px) {
+  .mainNav.open > .nav > li .active {
+    color: #ccc;
+    padding-right: 16px;
+  }
+  .mainNav.open > .nav > li .active::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 4px;
+    width: 32px;
+    bottom: -4px;
+    background-color: var(--noir);
+  }
+}
+@media (max-width: 992px) and (min-width: 992px) {
+  .mainNav.open > .nav > li .active::after {
+    margin: auto 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .mainNav > .nav {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .mainNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .interface {
@@ -12406,41 +12669,84 @@ li {
 header.Main {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: start;
+  flex-wrap: wrap;
   height: 160px;
   margin: 0 auto;
-  width: 100%;
+  width: 1200px;
   flex-wrap: wrap;
+}
+@media (max-width: 992px) {
+  header.Main {
+    width: 900px;
+  }
 }
 header.Main .Logo {
   border: 1px red solid;
   margin-left: 0;
-  margin-right: 100px;
+  margin-right: 70px;
   padding: 0;
   align-self: flex-start;
-  width: 220px;
+  width: 200px;
   height: 160px;
 }
-header.Main ul.navSupp {
+header.Main .mainNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-self: flex-end;
+  width: 900px;
+}
+@media (max-width: 992px) {
+  header.Main .mainNav {
+    width: 600px;
+  }
+}
+header.Main .mainNav ul.navSupp {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-self: flex-start;
+  width: 300px;
   font-size: 0.6em;
 }
-header.Main ul.navSupp li {
+header.Main .mainNav ul.navSupp li {
   margin: 10px 10px;
+  color: var(--vert);
+  text-align: center;
 }
-header.Main input.navSupp {
+header.Main .mainNav ul.navSupp li:hover {
+  color: var(--vert-fonce);
+}
+header.Main .mainNav input.navSupp {
   margin-right: 20px;
   margin-left: 350px;
   height: 30px;
-  width: 300px;
+  width: 200px;
   font-size: 0.8em;
 }
-header.Main .nav {
-  margin-left: 150px;
-  font-size: 0.8em;
+@media (max-width: 992px) {
+  header.Main .mainNav input.navSupp {
+    margin-left: 0;
+  }
 }
-header.Main .nav li {
+header.Main .mainNav .nav {
+  align-self: flex-start;
+  margin-right: 150px;
+  margin-top: 60px;
+  font-size: 0.9em;
+}
+header.Main .mainNav .nav li {
   margin: 10px 10px;
+  font-size: 0.8em;
+  color: var(--vert);
+}
+header.Main .mainNav .nav li:hover {
+  color: var(--vert-fonce);
 }
 header.Main::before {
   content: " ";
@@ -12451,7 +12757,7 @@ header.Main::before {
 
 footer {
   margin-top: 300px;
-  background-color: darkgray;
+  background-color: var(--vert);
   border-top-left-radius: 20%;
   border-top-right-radius: 20%;
 }
@@ -12461,4 +12767,8 @@ footer .navFooter {
   justify-content: center;
   align-items: center;
   padding: 10px;
+  background-color: var(--vert-fonce);
+}
+footer .navFooter a {
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */

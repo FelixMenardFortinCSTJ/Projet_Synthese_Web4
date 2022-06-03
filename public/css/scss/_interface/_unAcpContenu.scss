@@ -16,7 +16,16 @@
 
         & h2{
             font-weight: bold;
+            color: var(--vert-fonce);
+        }
+
+        & p{
+            color: var(--vert);
         }
         
+    }
+
+    @include breakpoint-max(992){
+        @include setFlex(column,center,center);
     }
 }

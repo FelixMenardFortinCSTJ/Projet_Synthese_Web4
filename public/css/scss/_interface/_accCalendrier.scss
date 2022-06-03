@@ -13,15 +13,43 @@
     
     .annee{
         padding: 10px 25px;
+        color: var(--vert-fonce);
+
+        @include breakpoint-max(992){
+            align-self: center;
+        }
     }
     .mois{
         padding: 10px 25px;
         font-weight: bold;
+        
+        & ul {
+
+            & li {
+
+                & a{
+                    margin-right: 20px;
+                    margin-bottom: 20px;
+                    color: var(--vert-fonce);
+
+                    &:hover{
+                        color: var(--vert-pale);
+                    }
+                }
+            }
+        }
+
+        @include breakpoint-max(992){
+            align-self: center;
+        }
     }
     .jourSemaine{
+        align-self: center;
         margin: 0;
-        padding: 10px 25px;
         text-align: center;
+        color: var(--vert);
+        margin-bottom: 20px;
+        margin-right: 30px;
     }
 
     .jours{
@@ -30,6 +58,14 @@
         grid-template-columns: repeat(7, 1fr);
         grid-gap: 10px 25px;
         font-weight: lighter;
+        color: var(--vert-fonce);
+
+        & li{
+             &:hover{
+                color: var(--noir);
+            }   
+        }
+       
         
     }
 
@@ -39,13 +75,14 @@
         width: 700px;
         margin-top: 30px;
         text-align: center;
-        background-color: grey;
+        background-color: var(--vert);
         border-top-left-radius: 25%;
         border-top-right-radius: 25%;
 
         & h2{
             margin-top: 20px;
             font-weight: bold;
+            color: #fff;
         }
     }   
 }

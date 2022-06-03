@@ -25,7 +25,18 @@ use App\Models\Entreprise;
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/accueil', function () {
+    return view('accueil');
+});
+Route::get('/lesacp', function () {
+    return view('lesacp');
+});
+Route::get('/unacp', function () {
+    return view('unacp');
+});
+Route::get('/souscategorie', function () {
+    return view('souscategorie');
+});
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

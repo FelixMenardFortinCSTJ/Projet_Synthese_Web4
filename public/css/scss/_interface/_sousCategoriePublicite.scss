@@ -13,10 +13,12 @@
             height: 100%;
             margin-right: 40px;
             font-weight: bold;
+            color: var(--vert-fonce);
         }
 
         & p {
             margin-left: 150px;
+            color: var(--vert-fonce);
 
             &::after{
                 content: "";
@@ -27,8 +29,8 @@
                 height: 200px;
                 z-index: 1;
                 border-radius: 50%;
-                opacity: 0.5;
-                background-color: grey;
+                opacity: 0.3;
+                background-color: var(--vert);
             }
         }
     }
@@ -45,10 +47,12 @@
             height: 100%;
             margin-left: 350px;
             font-weight: bold;
+            color: var(--vert-fonce);
         }
 
         & p {
             margin-right: 150px;
+            color: var(--vert-fonce);
 
             &::after{
                 content: "";
@@ -59,8 +63,8 @@
                 height: 200px;
                 z-index: 1;
                 border-radius: 50%;
-                opacity: 0.5;
-                background-color: grey;
+                opacity: 0.3;
+                background-color: var(--vert);
             }
         }
     }

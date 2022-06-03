@@ -1,0 +1,90 @@
+// Menu 
+//----------------------------------------------------
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Panneau Burger
+// - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.mainNav.open > .nav{
+
+    @include breakpoint-max(992){
+
+        @include setFlex(column, center, start);
+        position: absolute;
+        left: 0;
+        top: 86px;
+        z-index: 30;
+        visibility: visible;
+        // height: 0;
+        width: 100%;
+        overflow: hidden;
+        padding: 0px 0px 0px 32px;
+        margin-top: 80px;
+        background-color: #fff;
+        box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.3);
+        transition-duration: 200ms;
+        transition-property: height;
+        
+    
+        & > li {
+            @include setFlex(column, center, start);
+            padding: 16px;
+            list-style: none;
+            
+    
+            & a {
+                position: relative;
+                width: 100%;
+                font-weight: 700;
+                text-decoration: none;
+                font-size: 1em;
+                color: var(--vert);
+    
+                @include breakpoint-min(1200) {
+                    font-size: 1.2em;
+                }
+    
+                &:hover {
+                    color: var(--vert-fonce);
+                }
+    
+            }
+            & .active {
+                color: #ccc;
+                padding-right: 16px;
+    
+                &::after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    height: 4px;
+                    width: 32px;
+                    bottom: -4px;
+                    background-color: var(--noir);
+    
+                    @include breakpoint-min(992) {
+                        margin: auto 0;
+                    }
+                }
+            } 
+
+            
+        }
+    }
+    
+
+    
+}
+
+.mainNav > .nav{
+    @include breakpoint-max(992){
+        display: none;
+    }
+   
+}
+
+.mainNav {
+    @include breakpoint-max(992){
+        @include setFlex(row,center,center);
+    }
+}

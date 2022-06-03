@@ -7,23 +7,36 @@
 
 .infolettre{
     @include setFlex(column,center,center);
-    margin: 0 auto;
+    width: 100%;
 
     h2{
         margin-top: 50px;
         font-weight: bold;
+        color: #fff;
     }
 
     p{
         padding: 20px;
+        color: #fff;
     }
+
     & .email{
         margin: 20px;
+        & input{
+            background-color: var(--bleu);
+            border: 2px solid #fff;
+            color: #fff;
+        }
         a{
-            background-color: gray;
+           background-color: var(--vert-fonce);
             padding: 5px;
-            border: 1px solid black ;
+            border: 1px solid var(--vert-fonce);
             border-radius: 10%;
+            color: #fff;
+
+            &:hover{
+                background-color: var(--vert-pale);
+            }
         }
     }
 }
