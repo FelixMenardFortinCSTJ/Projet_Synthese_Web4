@@ -113,37 +113,37 @@ Profil
             </ul>
             
             <ul class="jours">
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li><span class="active">10</span></li>
-            <li>11</li>
-            <li>12</li>
-            <li>13</li>
-            <li>14</li>
-            <li>15</li>
-            <li>16</li>
-            <li>17</li>
-            <li>18</li>
-            <li>19</li>
-            <li>20</li>
-            <li>21</li>
-            <li>22</li>
-            <li>23</li>
-            <li>24</li>
-            <li>25</li>
-            <li>26</li>
-            <li>27</li>
-            <li>28</li> 
-            <li>29</li>
-            <li>30</li>
-            <li>31</li>
+            <li class="jour">1</li>
+            <li class="jour">2</li>
+            <li class="jour">3</li>
+            <li class="jour">4</li>
+            <li class="jour">5</li>
+            <li class="jour">6</li>
+            <li class="jour">7</li>
+            <li class="jour">8</li>
+            <li class="jour">9</li>
+            <li class="jour">10</li>
+            <li class="jour">11</li>
+            <li class="jour">12</li>
+            <li class="jour">13</li>
+            <li class="jour">14</li>
+            <li class="jour">15</li>
+            <li class="jour">16</li>
+            <li class="jour">17</li>
+            <li class="jour">18</li>
+            <li class="jour">19</li>
+            <li class="jour">20</li>
+            <li class="jour">21</li>
+            <li class="jour">22</li>
+            <li class="jour">23</li>
+            <li class="jour">24</li>
+            <li class="jour">25</li>
+            <li class="jour">26</li>
+            <li class="jour">27</li>
+            <li class="jour">28</li> 
+            <li class="jour">29</li>
+            <li class="jour">30</li>
+            <li class="jour">31</li>
             
             </ul>
 

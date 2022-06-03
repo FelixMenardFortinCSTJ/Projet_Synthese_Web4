@@ -51,12 +51,27 @@ static menuBurger() {
     });
 }
 
+static calendrier() {
+
+    var Jours;
+    Jours = document.querySelector('.jours');
+   
+
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // Ouverture et fermeture du menu hamburger
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    Jours.addEventListener("click", e => {
+        Jours.parentNode.classList.toggle('open');
+    });
+}
+
 /** * * * * * * * * * * * * * * * * * * * * * * * * * * *
      * Initialisation du code au chargement de la page
      */
  static init() {
     window.addEventListener("load", () => {
         this.menuBurger();
+        this.calendrier();
     });
 }
 }

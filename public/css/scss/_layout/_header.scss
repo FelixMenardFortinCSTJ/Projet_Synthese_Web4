@@ -14,7 +14,7 @@ header.Main{
 
     & .Logo{
         margin-left: 0;
-        margin-right: 70px;
+        // margin-right: 70px;
         padding: 0;
         align-self: flex-start;
         width: 200px;
@@ -24,14 +24,13 @@ header.Main{
         @include setFlex(row,center,center);
         flex-wrap: wrap;
         align-self: flex-end;
-        width: 900px;
+        width: 800px;
 
         @include breakpoint-max(992){
             width: 600px
         }
 
         & ul.navSupp{
-            @include debug;
             @include setFlex(row,center,center);
             justify-self: flex-start;
             width: 300px;
@@ -49,7 +48,7 @@ header.Main{
         }
         & input.navSupp{
             margin-right: 20px;
-            margin-left: 350px;
+            margin-top: 30px;
             height: 30px;
             width: 200px;
             font-size: 0.8em;

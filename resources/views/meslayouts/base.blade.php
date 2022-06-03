@@ -13,36 +13,41 @@
 </head>
 <body>
     <header class="Main">
+
         <img class="Logo" src="{{asset('_assets/svg/Logo.svg')}}" alt="Logo">
 
-        <input class="navSupp" id="searchbar"  type="text"
-            name="search" placeholder="Vous recherchez...">
+        
+        
+            <nav class="mainNav">
+                <input class="navSupp" id="searchbar"  type="text"
+                name="search" placeholder="Vous recherchez...">
 
-        <ul class="navSupp">
-            <li><a href="{{route('register')}}">S'inscrire</a></li>
-            <li><a href="{{route('login')}}">Se connecter</a></li>
-            <li><a href="tableauDeBordProfil.html">Profil</a></li>
-            <li><p id="OpenPanier">Panier</p></li>
-        </ul>
-        <ul class="nav">
-            <li><a href="{{route('groupes.show', 1)}}">Agriculture</a></li>
-            <li><a href="{{route('groupes.show', 2)}}">Activités</a></li>
-            <li><a href="{{route('groupes.show', 3)}}">Agroalimentaire</a></li>
-            <li><a href="{{route('groupes.show', 4)}}">Restauration</a></li>
-            <li><a href="{{route('groupes.show', 5)}}">Hébergement</a></li>
-            <li><a href="{{route('forfaits.index')}}">Forfaits</a></li>
-            <li><a href="{{route('mrcs.index')}}">Portrait de la région</a></li>
-        </ul>
-
-            <span id="btn-burger">
-                    <div class="container-btn">
-                        <div class="btn-line"></div>
-                        <div class="btn-line"></div>
-                        <div class="btn-line"></div>
-                    </div>
-            </span>
-
-        </nav>
+                <ul class="navSupp">
+                    <li><a href="{{route('register')}}">S'inscrire</a></li>
+                    <li><a href="{{route('login')}}">Se connecter</a></li>
+                    <li><a href="tableauDeBordProfil.html">Profil</a></li>
+                    <li><p id="OpenPanier">Panier</p></li>
+                </ul>
+                <ul class="nav">
+                    <li><a href="{{route('groupes.show', 1)}}">Agriculture</a></li>
+                    <li><a href="{{route('groupes.show', 2)}}">Activités</a></li>
+                    <li><a href="{{route('groupes.show', 3)}}">Agroalimentaire</a></li>
+                    <li><a href="{{route('groupes.show', 4)}}">Restauration</a></li>
+                    <li><a href="{{route('groupes.show', 5)}}">Hébergement</a></li>
+                    <li><a href="{{route('forfaits.index')}}">Forfaits</a></li>
+                    <li><a href="{{route('mrcs.index')}}">Portrait de la région</a></li>
+                </ul>
+        
+                    <span id="btn-burger">
+                            <div class="container-btn">
+                                <div class="btn-line"></div>
+                                <div class="btn-line"></div>
+                                <div class="btn-line"></div>
+                            </div>
+                    </span>
+           
+            </nav>
+        
     </header>
     <div class="interface">
         @yield('contenu')
