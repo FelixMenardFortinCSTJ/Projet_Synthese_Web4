@@ -65,6 +65,15 @@ Tableau de bord admin
                         <h2>Nom du commercant</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quibusdam eaque ullam corporis eos. Deserunt, sit perspiciatis voluptatum, libero, voluptatem ducimus facilis reprehenderit beatae molestiae nihil magni id consequuntur illum?</p>
                         <button>Supprimer</button>
+                        @foreach ($favoris as $favori)
+                        @if (Auth::user()->id == $favori->user_id)
+                            <div class="favori">
+                                <h2></h2>
+                                <p>{{ $favori->entreprise->nom }}</p>- {{ $favori->entreprise->ville }}
+                                {{ $favori->entreprise->adresse }}
+                            </div>
+                        @endif
+                    @endforeach
                     </div>
                     <button>Afficher plus</button>
                     </div>
@@ -87,6 +96,19 @@ Tableau de bord admin
                     <!-- //////////////////////// -->
                 </div>
             </div>
+            {{-- Section panier --}}
+            <div class="Transactions">
+                @foreach ($paniers as $panier)
+                    @if (Auth::user()->id == $panier->user_id)
+                        <p>
+                            {{-- @dd($panier) --}}
+                            {{ $panier->forfait->nom_forfait }} - {{ $panier->forfait->categorie_forfait }}
+                            {{ $panier->forfait->prix }}$
+                        </p>
+                    @endif
+                @endforeach
+            </div>
+            {{-- //////////////////////////////////////////////////// --}}
         </div>
     </div>
 </x-app-layout>

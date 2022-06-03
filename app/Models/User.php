@@ -48,4 +48,12 @@ class User extends Authenticatable
     {
         return $this->hasOne(Transaction::class);
     }
+    public function panier()
+    {
+        return $this->hasOne(Panier::class);
+    }
+    public function favori()
+    {
+        return $this->hasOne(Favori::class);
+    }
 }

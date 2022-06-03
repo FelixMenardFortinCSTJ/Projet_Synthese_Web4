@@ -23,4 +23,8 @@ class Entreprise extends Model
     {
         return $this->belongsToMany(Categorie::class);
     }
+    public function favori()
+    {
+        return $this->hasOneMany(Favori::class);
+    }
 }
