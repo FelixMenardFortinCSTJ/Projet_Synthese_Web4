@@ -11834,11 +11834,17 @@ form.infos {
   position: absolute;
   height: 400px;
   width: 400px;
-  right: -50px;
+  right: -30px;
   top: -100px;
   border-radius: 50%;
   background-color: var(--vert-pale);
   opacity: 0.2;
+}
+@media (max-width: 992px) {
+  .introAgrotourisme p::after {
+    height: 300px;
+    width: 300px;
+  }
 }
 .introAgrotourisme h2, .introAgrotourisme .h2 {
   margin-left: 200px;
@@ -11847,7 +11853,6 @@ form.infos {
   font-weight: bold;
   color: var(--vert);
 }
-
 .attractionsPopulaires {
   display: flex;
   flex-direction: row;
@@ -11857,8 +11862,16 @@ form.infos {
   margin: 0 auto;
   width: 600px;
 }
+@media (max-width: 992px) {
+  .attractionsPopulaires {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .attractionsPopulaires h2, .attractionsPopulaires .h2 {
-  margin-top: 450px;
+  margin-top: 300px;
   margin-bottom: 100px;
   font-size: 2.4em;
   color: var(--vert);
@@ -11904,6 +11917,11 @@ form.infos {
   padding: 10px 25px;
   color: var(--vert-fonce);
 }
+@media (max-width: 992px) {
+  .calendrier .annee {
+    align-self: center;
+  }
+}
 .calendrier .mois {
   padding: 10px 25px;
   font-weight: bold;
@@ -11915,6 +11933,11 @@ form.infos {
 }
 .calendrier .mois ul li a:hover {
   color: var(--vert-pale);
+}
+@media (max-width: 992px) {
+  .calendrier .mois {
+    align-self: center;
+  }
 }
 .calendrier .jourSemaine {
   align-self: center;
@@ -12110,6 +12133,14 @@ div.interface .personnages a .personne h3, div.interface .personnages a .personn
 }
 .laPersonne .infoPersonne p {
   color: var(--vert);
+}
+@media (max-width: 992px) {
+  .laPersonne {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .publicites {

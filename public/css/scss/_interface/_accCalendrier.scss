@@ -14,6 +14,10 @@
     .annee{
         padding: 10px 25px;
         color: var(--vert-fonce);
+
+        @include breakpoint-max(992){
+            align-self: center;
+        }
     }
     .mois{
         padding: 10px 25px;
@@ -33,6 +37,10 @@
                     }
                 }
             }
+        }
+
+        @include breakpoint-max(992){
+            align-self: center;
         }
     }
     .jourSemaine{

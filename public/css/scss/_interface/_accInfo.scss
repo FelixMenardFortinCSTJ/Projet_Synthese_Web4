@@ -8,6 +8,7 @@
 .introAgrotourisme{
     @include setFlex(column,start,start);
     width: 1200px;
+
     & p{
         position: relative;
         align-self: end;
@@ -17,16 +18,23 @@
         margin-right: 150px;
         color: var(--vert);
 
+       
+
         &::after{
             content: " ";
             position: absolute;
             height: 400px;
             width: 400px;
-            right: -50px;
+            right: -30px;
             top: -100px;
             border-radius: 50%;
             background-color: var(--vert-pale);
             opacity: 0.2;
+
+            @include breakpoint-max(992){
+                height: 300px;
+                width: 300px;
+            }
         }
         
     }
@@ -37,6 +45,10 @@
         margin-bottom: 20px;
         font-weight: bold;
         color: var(--vert);
+
+         @include breakpoint-max(992){
+            
+        }
 
         }
     

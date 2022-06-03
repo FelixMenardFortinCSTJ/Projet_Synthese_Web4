@@ -24,4 +24,8 @@
         }
         
     }
+
+    @include breakpoint-max(992){
+        @include setFlex(column,center,center);
+    }
 }
