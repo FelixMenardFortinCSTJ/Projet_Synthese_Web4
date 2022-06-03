@@ -5,35 +5,28 @@
 // Intro du portrait de la régions
 // - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-div.BackgroundDesc{
-    padding: 100px;
-    width: 100vw;
+.IntroRegion{
+    @include setFlex(column, center, center);
+    padding: 50px 50px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 1200px;
     height: 500px;
-    background-image: url(/public/_assets/jpg/Paysage1-assets/paysage1-2000.jpg);
-    background-size: cover;
-    background-position: 0 600px; 
+    text-align: center;
+    z-index: 5;
+    border-radius: 5px;
+    background-image: url("/_assets/jpg/Paysage5.jpg" );
+    background-position: center;
+    object-fit: cover;
+    color: #fff;
 
-    @include breakpoint-max(1200){
-        background-image: url(/public/_assets/jpg/Paysage1-assets/paysage1-1200.jpg);
-        background-position: 0 500px; 
+    @include breakpoint-max(1600){
+        width: 800px;
     }
 
-    .IntroRegion{
-        padding: 100px 200px;
-        margin: 0 auto;
-        width: 80vw;
-        z-index: 5;
-        border-radius: 5px;
-        text-align: center;
-        background-color: rgba(255, 255, 255, 0.85);
-    
-        @include breakpoint-max(1200){
-            padding: 50px 200px;
-        }
-
-        @include breakpoint-max(992){
-            padding: 50px 50px;
-        }
+    @include breakpoint-max(992){
+        width: 600px;
     }
 }
 

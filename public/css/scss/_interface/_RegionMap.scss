@@ -9,23 +9,10 @@
     
     & img{
         position: absolute;
-        right: 700px;
-        left: 700px;
-        top: 530px;
+        right: 43vw;
+        top: 1100px;
         width: 300px;
         margin: 0 auto;
-
-        @include breakpoint-max(1500){
-            left: 500px;
-        }
-
-        @include breakpoint-max(1200){
-            left: 300px;
-        }
-
-        @include breakpoint-max(992){
-            left: 150px;
-        }
     }
 
     & a{
@@ -47,109 +34,37 @@
     & .Argenteuil{
         position: absolute;
         top: 1520px;
-        left: 950px;
-
-        @include breakpoint-max(1500){
-            left: 750px;
-        }
-
-        @include breakpoint-max(1200){
-            left: 550px;
-        }
-
-        @include breakpoint-max(992){
-            left: 400px;
-        }
+        right: 43vw;
     }
 
     & .PaysDenHaut{
         position: absolute;
         top: 1450px;
-        left: 1100px;
-
-        @include breakpoint-max(1500){
-            left: 900px;
-        }
-
-        @include breakpoint-max(1200){
-            left: 700px;
-        }
-
-        @include breakpoint-max(992){
-            left: 550px;
-        }
+        right: 43vw;
     }
 
     & .RiviereDuNord{
         position: absolute;
         top: 1520px;
-        left: 1140px;
-
-        @include breakpoint-max(1500){
-            left: 940px;
-        }
-
-        @include breakpoint-max(1200){
-            left: 740px;
-        }
-
-        @include breakpoint-max(992){
-            left: 590px;
-        }
+        right: 43vw;
     }
 
     & .Laurentides{
         position: absolute;
         top: 1300px;
-        left: 1000px;
-
-        @include breakpoint-max(1500){
-            left: 900px;
-        }
-
-        @include breakpoint-max(1200){
-            left: 700px;
-        }
-
-        @include breakpoint-max(992){
-            left: 550px;
-        }
+        right: 43vw;
     }
 
     & .Mirabel{
         position: absolute;
         top: 1570px;
-        left: 1090px;
-
-        @include breakpoint-max(1500){
-            left: 890px;
-        }
-
-        @include breakpoint-max(1200){
-            left: 690px;
-        }
-
-        @include breakpoint-max(992){
-            left: 540px;
-        }
+        right: 43vw;
     }
 
     & .DeuxMontagnes{
         position: absolute;
         top: 1625px;
-        left: 1090px;
-
-        @include breakpoint-max(1500){
-            left: 890px;
-        }
-
-        @include breakpoint-max(1200){
-            left: 690px;
-        }
-
-        @include breakpoint-max(992){
-            left: 540px;
-        }
+        right: 43vw;
     }
 }
 

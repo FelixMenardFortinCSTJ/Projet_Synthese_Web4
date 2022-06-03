@@ -11593,6 +11593,21 @@ form.Edition div.edit2 {
   }
 }
 
+.IntroRegion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px 50px;
 div.BackgroundDesc {
   padding: 100px;
   width: 100vw;
@@ -11610,11 +11625,18 @@ div.BackgroundDesc {
 div.BackgroundDesc .IntroRegion {
   padding: 100px 200px;
   margin: 0 auto;
-  width: 80vw;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 1200px;
+  height: 500px;
+  text-align: center;
   z-index: 5;
   border-radius: 5px;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-image: url("/_assets/jpg/Paysage5.jpg");
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  color: #fff;
 }
 @media (max-width: 1200px) {
   div.BackgroundDesc .IntroRegion {
@@ -11622,16 +11644,15 @@ div.BackgroundDesc .IntroRegion {
   }
 }
 @media (max-width: 992px) {
-  div.BackgroundDesc .IntroRegion {
-    padding: 50px 50px;
+  .IntroRegion {
+    width: 600px;
   }
 }
 
 .MapLaurentides img {
   position: absolute;
-  right: 700px;
-  left: 700px;
-  top: 530px;
+  right: 43vw;
+  top: 1100px;
   width: 300px;
   margin: 0 auto;
 }
@@ -11667,122 +11688,32 @@ div.BackgroundDesc .IntroRegion {
 .MapLaurentides .Argenteuil {
   position: absolute;
   top: 1520px;
-  left: 950px;
-}
-@media (max-width: 1500px) {
-  .MapLaurentides .Argenteuil {
-    left: 750px;
-  }
-}
-@media (max-width: 1200px) {
-  .MapLaurentides .Argenteuil {
-    left: 550px;
-  }
-}
-@media (max-width: 992px) {
-  .MapLaurentides .Argenteuil {
-    left: 400px;
-  }
+  right: 43vw;
 }
 .MapLaurentides .PaysDenHaut {
   position: absolute;
   top: 1450px;
-  left: 1100px;
-}
-@media (max-width: 1500px) {
-  .MapLaurentides .PaysDenHaut {
-    left: 900px;
-  }
-}
-@media (max-width: 1200px) {
-  .MapLaurentides .PaysDenHaut {
-    left: 700px;
-  }
-}
-@media (max-width: 992px) {
-  .MapLaurentides .PaysDenHaut {
-    left: 550px;
-  }
+  right: 43vw;
 }
 .MapLaurentides .RiviereDuNord {
   position: absolute;
   top: 1520px;
-  left: 1140px;
-}
-@media (max-width: 1500px) {
-  .MapLaurentides .RiviereDuNord {
-    left: 940px;
-  }
-}
-@media (max-width: 1200px) {
-  .MapLaurentides .RiviereDuNord {
-    left: 740px;
-  }
-}
-@media (max-width: 992px) {
-  .MapLaurentides .RiviereDuNord {
-    left: 590px;
-  }
+  right: 43vw;
 }
 .MapLaurentides .Laurentides {
   position: absolute;
   top: 1300px;
-  left: 1000px;
-}
-@media (max-width: 1500px) {
-  .MapLaurentides .Laurentides {
-    left: 900px;
-  }
-}
-@media (max-width: 1200px) {
-  .MapLaurentides .Laurentides {
-    left: 700px;
-  }
-}
-@media (max-width: 992px) {
-  .MapLaurentides .Laurentides {
-    left: 550px;
-  }
+  right: 43vw;
 }
 .MapLaurentides .Mirabel {
   position: absolute;
   top: 1570px;
-  left: 1090px;
-}
-@media (max-width: 1500px) {
-  .MapLaurentides .Mirabel {
-    left: 890px;
-  }
-}
-@media (max-width: 1200px) {
-  .MapLaurentides .Mirabel {
-    left: 690px;
-  }
-}
-@media (max-width: 992px) {
-  .MapLaurentides .Mirabel {
-    left: 540px;
-  }
+  right: 43vw;
 }
 .MapLaurentides .DeuxMontagnes {
   position: absolute;
   top: 1625px;
-  left: 1090px;
-}
-@media (max-width: 1500px) {
-  .MapLaurentides .DeuxMontagnes {
-    left: 890px;
-  }
-}
-@media (max-width: 1200px) {
-  .MapLaurentides .DeuxMontagnes {
-    left: 690px;
-  }
-}
-@media (max-width: 992px) {
-  .MapLaurentides .DeuxMontagnes {
-    left: 540px;
-  }
+  right: 43vw;
 }
 
 img {
@@ -11799,7 +11730,6 @@ img {
   width: 100vw;
   padding: 50px 300px;
   text-align: center;
-  background-color: var(--bleu);
 }
 @media (max-width: 1400px) {
   .DescriptionMRC {
