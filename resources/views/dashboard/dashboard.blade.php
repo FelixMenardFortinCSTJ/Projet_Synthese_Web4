@@ -17,7 +17,7 @@ Tableau de bord admin
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                     <!-- ///////////PROFIL///////////// -->
-                    <h1>Profil</h1>
+                    <!-- <h1>Profil</h1> -->
                     <div class="Infos">
                         <div class="nom">
                             <h3>Nom : </h3>
@@ -73,16 +73,15 @@ Tableau de bord admin
                             <button>Afficher plus</button>
                     </div>
                 </div>
-                <div class="Transactions">
-                    <h2>Transactions</h2>
-                    <!-- <div class="Transaction">
+                <!-- <div class="Transactions">
+                    <div class="Transaction">
                         <p>Forfait acheté</p>
                         <p>prix$</p>
                         <p>numéro de commande</p>
                         <button>Accéder à la facture</button>
                     </div>
-                    <button>Afficher plus</button> -->
-                </div>
+                    <button>Afficher plus</button>
+                </div> -->
                 <!-- ////////ADMIN//////// -->
                 @if(Auth::user()->role >5)
                 <a href="{{route('admin.evenements.index')}}">Les évènements</a>
@@ -94,6 +93,7 @@ Tableau de bord admin
             </div>
             {{-- Section panier --}}
             <div class="Transactions">
+                <h2>Transactions</h2>
                 @foreach ($paniers as $panier)
                     @if (Auth::user()->id == $panier->user_id)
                         <p>

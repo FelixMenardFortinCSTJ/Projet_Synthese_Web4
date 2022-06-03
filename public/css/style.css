@@ -12037,7 +12037,7 @@ p, button, input {
   margin: 1em;
   height: 400px;
   width: 45vw;
-  z-index: 10;
+  z-index: 100;
   border-radius: 5px;
   background-color: var(--bleu);
 }
@@ -12072,8 +12072,14 @@ p, button, input {
   position: absolute;
   top: 270px;
   width: 800px;
-  height: 800px;
+  height: 950px;
   background-color: var(--blanc);
+}
+
+@media (max-width: 1230px) {
+  .HideLaravel {
+    display: none;
+  }
 }
 
 .Carte {
@@ -12777,6 +12783,10 @@ form.infos {
   margin: 16px;
   width: 50px;
   cursor: pointer;
+}
+
+.prixForfaitFiche {
+  display: inline;
 }
 
 .Panier {

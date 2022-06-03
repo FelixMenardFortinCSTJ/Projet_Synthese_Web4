@@ -10,8 +10,8 @@ Forfait
 <div class="Fiche">
     <h2>{{$forfait->nom_forfait}}</h2>
     <p>{{$forfait->description}}</p>
-    <h3>prix</h3>
-    <p>{{$forfait->prix}}</p>
+    <h3 class="prixForfaitFiche">prix :</h3>
+    <p class="prixForfaitFiche">{{$forfait->prix}}$</p>
     <form action="/savepanier" method="POST">
         @csrf
         <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
