@@ -11,6 +11,11 @@
         height: 650px;
         width: 1200px;
         background-color: grey;
+        margin-top: 30px;
+
+        @include breakpoint-max(992){
+            width: 800px;
+        }
 
         & h1{
             z-index: 2;

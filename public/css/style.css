@@ -11783,6 +11783,12 @@ form.infos {
   height: 650px;
   width: 1200px;
   background-color: grey;
+  margin-top: 30px;
+}
+@media (max-width: 992px) {
+  .interface .header {
+    width: 800px;
+  }
 }
 .interface .header h1, .interface .header .h1 {
   z-index: 2;
@@ -12048,6 +12054,15 @@ div.interface .personnages {
   margin-top: 150px;
   width: 800px;
 }
+@media (max-width: 992px) {
+  div.interface .personnages {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+}
 div.interface .personnages a {
   margin: 20px;
 }
@@ -12056,6 +12071,7 @@ div.interface .personnages a .personne {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
 }
 div.interface .personnages a .personne img {
   margin-bottom: 10px;

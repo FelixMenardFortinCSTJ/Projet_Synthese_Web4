@@ -6,12 +6,18 @@ div.interface{
         margin-top: 150px;
         width: 800px;
 
+        @include breakpoint-max(992){
+            @include setFlex(column,center,center);
+            margin-bottom: 30px;
+        }
+
         & a{
             margin: 20px;
 
             & .personne{
                 
                 @include setFlex(column,center,center);
+                margin-bottom: 30px;
                 
                 & img{
                     margin-bottom: 10px;
