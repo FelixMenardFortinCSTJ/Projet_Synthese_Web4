@@ -6,7 +6,7 @@ mrc
 
 @section('contenu')
 <div class="nom">{{ $mrc->nom }}</div>
-<div class="desccription">{{ $mrc->description }}</div>
+<div class="desccription DescriptionMRC">{{ $mrc->description }}</div>
 <div class="image"><img src="{{$mrc->svg}}" alt=""></div>
 <!-- <div class="MapRegion">
             <img class="mapMRC" src="{{asset('_assets/svg/placeholder.svg')}}" alt="MapMRC">
