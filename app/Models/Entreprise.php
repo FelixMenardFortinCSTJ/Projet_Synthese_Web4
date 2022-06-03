@@ -25,6 +25,6 @@ class Entreprise extends Model
     }
     public function favori()
     {
-        return $this->hasOne(Favori::class);
+        return $this->hasOneMany(Favori::class);
     }
 }
