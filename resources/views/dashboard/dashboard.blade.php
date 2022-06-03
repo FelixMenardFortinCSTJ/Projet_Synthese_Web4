@@ -67,11 +67,11 @@ Tableau de bord admin
                         <button>Supprimer</button>
                         @foreach ($favoris as $favori)
                         @if (Auth::user()->id == $favori->user_id)
-                            <p>
-                                {{-- @dd($favori) --}}
-                                {{ $favori->entreprise->nom }} - {{ $favori->entreprise->ville }}
+                            <div class="favori">
+                                <h2></h2>
+                                <p>{{ $favori->entreprise->nom }}</p>- {{ $favori->entreprise->ville }}
                                 {{ $favori->entreprise->adresse }}
-                            </p>
+                            </div>
                         @endif
                     @endforeach
                     </div>
@@ -108,6 +108,7 @@ Tableau de bord admin
                     @endif
                 @endforeach
             </div>
+            {{-- //////////////////////////////////////////////////// --}}
         </div>
     </div>
 </x-app-layout>
