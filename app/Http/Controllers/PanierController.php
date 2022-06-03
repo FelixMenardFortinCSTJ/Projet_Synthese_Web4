@@ -14,8 +14,8 @@ class PanierController extends Controller
      */
     public function index()
     {
-        //
-    }
+        $paniers = Paiement::all();
+        return view('paniers.index', ['paniers'=>$paiements]);    }
 
     /**
      * Show the form for creating a new resource.
@@ -64,7 +64,7 @@ class PanierController extends Controller
      */
     public function edit(Panier $panier)
     {
-        //
+        return view('paniers.edit', ['panier'=>$panier]);
     }
 
     /**

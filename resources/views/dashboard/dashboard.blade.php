@@ -39,26 +39,40 @@ Tableau de bord admin
                             <h3>Numéro de téléphone : </h3>
                             <p>Telephone</p>
                         </div>
+                       <div class="Bouton">
+                            <button><a href="{{route('usagers.show', $usager['id'])}}">Modifier</a></button>
+                            <button><a href="{{route('usagers.delete', $usager['id'])}}">Delete</a></button>
+                       </div>
                     </div>
-                    <div class="Carte">
-                        <h2>Carte</h2>
-                        <div class="NomCarte">
-                            <h3>Nom de la carte : </h3>
-                            <p>titulaire</p>
+
+                    @foreach ($paiements as $paiement)
+                    @if (Auth::user()->id == $paiement->user_id)
+                        <div class="Carte">
+                            <h2>Carte</h2>
+                            <div class="NomCarte">
+                                <h3>Titulaire :</h3>
+                                <p>{{ $paiement->titulaire }}</p>
+                            </div>
+                            <div class="NumeroCarte">
+                                <h3>Numéro de la carte :</h3>
+                                <p> {{ $paiement->numero_carte }} </p>
+                            </div>
+                            <div class="Expiration">
+                                <h3>Date d'expiration :</h3>
+                                <p> {{ $paiement->date_expiration }} </p>
+                            </div>
+                            <div class="Securite">
+                                <h3>Numéro de sécurité : </h3>
+                                <p> {{ $paiement->code_securite }} </p>
+                            </div>
+                            <div class="Bouton">
+                                <button><a href="{{route('paiements.show', $paiement['id'])}}">Modifier</a></button>
+                                <button><a href="{{route('paiements.delete', $paiement['id'])}}">Delete</a></button>
+                            </div>
                         </div>
-                        <div class="NumeroCarte">
-                            <h3>Numéro de la carte : </h3>
-                            <p>numero_carte</p>
-                        </div>
-                        <div class="Expiration">
-                            <h3>Date d'expiration : </h3>
-                            <p>date_expiration</p>
-                        </div>
-                        <div class="Securite">
-                            <h3>Numéro de sécurité : </h3>
-                            <p>code_securite</p>
-                        </div>
-                    </div>
+                    @endif
+                    @endforeach
+
                     <div class="Favoris">
                         <h2>Favoris</h2>
                         <div class="Favori">
@@ -71,8 +85,8 @@ Tableau de bord admin
                             @endif
                             @endforeach
                             <button>Afficher plus</button>
+                        </div>
                     </div>
-                </div>
                 <!-- <div class="Transactions">
                     <div class="Transaction">
                         <p>Forfait acheté</p>
@@ -93,7 +107,7 @@ Tableau de bord admin
             </div>
             {{-- Section panier --}}
             <div class="Transactions">
-                <h2>Transactions</h2>
+                <h2>Panier</h2>
                 @foreach ($paniers as $panier)
                     @if (Auth::user()->id == $panier->user_id)
                         <p>
@@ -101,8 +115,11 @@ Tableau de bord admin
                             <h2>{{ $panier->forfait->nom_forfait }}</h2> - {{ $panier->forfait->categorie_forfait }}
                             {{ $panier->forfait->prix }}$
                         </p>
-                    @endif
-                @endforeach
+                        @endif
+                        @endforeach
+                        <div class="Bouton">
+                            <button><a href="{{route('paniers.edit', $panier['id'])}}">Modifier</a></button>
+                        </div>
             </div>
             {{-- //////////////////////////////////////////////////// --}}
         </div>
