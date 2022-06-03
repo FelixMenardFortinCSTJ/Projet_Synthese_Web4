@@ -14,16 +14,11 @@
 <body>
     <header class="Main">
         <img class="Logo" src="{{asset('svg/placeholder.svg')}}" alt="Logo">
-
+        
+        
         <nav class="mainNav">
-
-            <span id="btn-burger">
-                    <div class="container-btn">
-                        <div class="btn-line"></div>
-                        <div class="btn-line"></div>
-                        <div class="btn-line"></div>
-                    </div>
-            </span>
+            
+        
             
             <input class="navSupp" id="searchbar"  type="text"
             name="search" placeholder="Vous recherchez...">
@@ -44,6 +39,14 @@
                 <li><a href="ForfaitsAccueil.html">Forfaits</a></li>
                 <li><a href="PortraitRegion.html">Portrait de la région</a></li>
             </ul>
+
+            <span id="btn-burger">
+                    <div class="container-btn">
+                        <div class="btn-line"></div>
+                        <div class="btn-line"></div>
+                        <div class="btn-line"></div>
+                    </div>
+            </span>
 
         </nav>  
     </header>

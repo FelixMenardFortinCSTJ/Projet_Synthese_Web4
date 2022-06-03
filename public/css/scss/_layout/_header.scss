@@ -9,6 +9,10 @@ header.Main{
     width: 1200px;
     flex-wrap: wrap;
 
+    @include breakpoint-max(992){
+        width: 900px
+    }
+
     & .Logo{
         @include debug;
         margin-left: 0;
@@ -23,6 +27,10 @@ header.Main{
         flex-wrap: wrap;
         align-self: flex-end;
         width: 900px;
+
+        @include breakpoint-max(992){
+            width: 600px
+        }
 
         & ul.navSupp{
             @include setFlex(row,center,center);
@@ -46,6 +54,10 @@ header.Main{
             height: 30px;
             width: 200px;
             font-size: 0.8em;
+
+            @include breakpoint-max(992){
+               margin-left: 0;
+            }
             
         }
     

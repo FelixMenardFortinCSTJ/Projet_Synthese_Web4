@@ -12254,6 +12254,8 @@ div.interface .personnages a .personne h3, div.interface .personnages a .personn
   justify-self: flex-end;
   width: 48px;
   height: 48px;
+  margin-top: 30px;
+  margin-left: 400px;
   cursor: pointer;
   border: 2px solid var(--vert);
   border-radius: 8px;
@@ -12306,6 +12308,89 @@ nav.open > .nav .navSupp {
   }
 }
 
+@media (max-width: 992px) {
+  .mainNav.open > .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    position: absolute;
+    left: 0;
+    top: 86px;
+    z-index: 30;
+    visibility: visible;
+    width: 100%;
+    overflow: hidden;
+    padding: 0px 0px 0px 32px;
+    margin-top: 80px;
+    background-color: #fff;
+    box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.3);
+    transition-duration: 200ms;
+    transition-property: height;
+  }
+  .mainNav.open > .nav > li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 16px;
+    list-style: none;
+  }
+  .mainNav.open > .nav > li a {
+    position: relative;
+    width: 100%;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1em;
+    color: var(--vert);
+  }
+}
+@media (max-width: 992px) and (min-width: 1200px) {
+  .mainNav.open > .nav > li a {
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 992px) {
+  .mainNav.open > .nav > li a:hover {
+    color: var(--vert-fonce);
+  }
+}
+@media (max-width: 992px) {
+  .mainNav.open > .nav > li .active {
+    color: #ccc;
+    padding-right: 16px;
+  }
+  .mainNav.open > .nav > li .active::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 4px;
+    width: 32px;
+    bottom: -4px;
+    background-color: var(--noir);
+  }
+}
+@media (max-width: 992px) and (min-width: 992px) {
+  .mainNav.open > .nav > li .active::after {
+    margin: auto 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .mainNav > .nav {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .mainNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .interface {
   display: flex;
   flex-direction: column;
@@ -12351,6 +12436,11 @@ header.Main {
   width: 1200px;
   flex-wrap: wrap;
 }
+@media (max-width: 992px) {
+  header.Main {
+    width: 900px;
+  }
+}
 header.Main .Logo {
   border: 1px red solid;
   margin-left: 0;
@@ -12368,6 +12458,11 @@ header.Main .mainNav {
   flex-wrap: wrap;
   align-self: flex-end;
   width: 900px;
+}
+@media (max-width: 992px) {
+  header.Main .mainNav {
+    width: 600px;
+  }
 }
 header.Main .mainNav ul.navSupp {
   display: flex;
@@ -12392,6 +12487,11 @@ header.Main .mainNav input.navSupp {
   height: 30px;
   width: 200px;
   font-size: 0.8em;
+}
+@media (max-width: 992px) {
+  header.Main .mainNav input.navSupp {
+    margin-left: 0;
+  }
 }
 header.Main .mainNav .nav {
   align-self: flex-start;
