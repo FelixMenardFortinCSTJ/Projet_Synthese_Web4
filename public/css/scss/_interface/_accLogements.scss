@@ -26,7 +26,15 @@
         width: 450px;
 
         img{
+            align-self: center;
+            display: block;
+            object-fit: cover;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 10px;
             width: 200px;
+            height: 200px;
+            border-radius: 10%;
         }
         p{
             & span{
@@ -46,7 +54,15 @@
         margin-top: 30px;
 
         img{
+            align-self: center;
+            display: block;
+            object-fit: cover;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 10px;
             width: 200px;
+            height: 200px;
+            border-radius: 10%;
         }
         p{
             & span{

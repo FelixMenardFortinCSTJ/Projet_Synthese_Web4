@@ -10,8 +10,10 @@
         @include setFlex(column, center, center);
         height: 650px;
         width: 1200px;
-        background-color: grey;
+        background-image: url("/_assets/jpg/ImageSab/ImgSab7.jpg" );
+        object-fit: fill;
         margin-top: 30px;
+        color: #fff;
 
         @include breakpoint-max(992){
             width: 800px;
@@ -38,8 +40,18 @@
             height: 500px;
             width: 500px;
             border-radius: 50%;
-            background-color: var(--vert-pale);
+            background-color: var(--vert);
             opacity: 0.5;
+
+        }
+
+        &::before{
+            content: " ";
+            position: absolute;
+            height: 650px;
+            width: 1200px;
+            background-color: #000;
+            opacity: 0.4;
 
         }
     }

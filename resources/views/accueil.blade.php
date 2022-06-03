@@ -33,7 +33,7 @@ Profil
             Les <span>Attractions</span> les plus <br> <span>populaires</span> de la saison
         </h2>
         <div class="Attraction">
-            <img src="/public/_assets/svg/placeholder.svg" alt="Attraction1">
+            <img src={{asset('_assets/jpg/ImageSab/imgSab1.jpg')}} alt="Attraction1">
             <h3>
                 Nom de l'attraction
             </h3>
@@ -45,7 +45,7 @@ Profil
         
 
         <div class="Attraction">
-            <img src="/public/_assets/svg/placeholder.svg" alt="Attraction2">
+            <img src={{asset('_assets/jpg/ImageSab/imgSab2.jpg')}} alt="Attraction2">
             <h3>
                 Nom de l'attraction
             </h3>
@@ -56,7 +56,7 @@ Profil
 
 
         <div class="Attraction">
-            <img src="/public/_assets/svg/placeholder.svg" alt="Attraction3">
+            <img src={{asset('_assets/jpg/ImageSab/imgSab3.jpg')}} alt="Attraction3">
             <h3>
                 Nom de l'attraction
             </h3>
@@ -67,7 +67,7 @@ Profil
 
 
         <div class="Attraction">
-            <img src="/public/_assets/svg/placeholder.svg" alt="Attraction4">
+            <img src={{asset('_assets/jpg/ImageSab/imgSab4.jpg')}} alt="Attraction4">
             <h3>
                 Nom de l'attraction
             </h3>
@@ -163,7 +163,7 @@ Profil
         </h2>
 
         <div class="option1">
-            <img src="/public/_assets/svg/placeholder.svg" alt="imgLogement">
+            <img src={{asset('_assets/jpg/ImageSab/Logement1.jpg')}} alt="imgLogement">
             <p>
                 <span>Option 1 </span><br>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, accusantium!
@@ -176,7 +176,7 @@ Profil
                 <span>Option 2 </span><br>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, accusantium!
             </p>
-            <img src="/public/_assets/svg/placeholder.svg" alt="imgLogement">
+            <img src={{asset('_assets/jpg/ImageSab/Logement2.jpg')}} alt="imgLogement">
         </div>
     </div>
 </div>

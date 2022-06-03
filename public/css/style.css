@@ -12043,8 +12043,11 @@ form.infos {
   align-items: center;
   height: 650px;
   width: 1200px;
-  background-color: grey;
+  background-image: url("/_assets/jpg/ImageSab/ImgSab7.jpg");
+  -o-object-fit: fill;
+     object-fit: fill;
   margin-top: 30px;
+  color: #fff;
 }
 @media (max-width: 992px) {
   .interface .header {
@@ -12070,8 +12073,16 @@ form.infos {
   height: 500px;
   width: 500px;
   border-radius: 50%;
-  background-color: var(--vert-pale);
+  background-color: var(--vert);
   opacity: 0.5;
+}
+.interface .header::before {
+  content: " ";
+  position: absolute;
+  height: 650px;
+  width: 1200px;
+  background-color: #000;
+  opacity: 0.4;
 }
 
 .introAgrotourisme {
@@ -12151,7 +12162,15 @@ form.infos {
 }
 .attractionsPopulaires .Attraction img {
   align-self: center;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
   width: 200px;
+  height: 200px;
+  border-radius: 10%;
 }
 .attractionsPopulaires .Attraction h3, .attractionsPopulaires .Attraction .h3 {
   font-size: 20px;
@@ -12260,7 +12279,16 @@ form.infos {
   width: 450px;
 }
 .logement .option1 img {
+  align-self: center;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
   width: 200px;
+  height: 200px;
+  border-radius: 10%;
 }
 .logement .option1 p {
   width: 200px;
@@ -12281,7 +12309,16 @@ form.infos {
   margin-top: 30px;
 }
 .logement .option2 img {
+  align-self: center;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
   width: 200px;
+  height: 200px;
+  border-radius: 10%;
 }
 .logement .option2 p {
   width: 200px;
