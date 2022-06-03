@@ -10,12 +10,6 @@ Forfait
         <div class="Fiche">
             <h2>{{$forfait->nom_forfait}}</h2>
             <p>{{$forfait->description}}</p>
-<<<<<<< HEAD
-            <h3 class="PrixForfait">prix :</h3>
-            <p class="PrixForfait">{{$forfait->prix}}$</p>
-            <button>Ajouter au panier</button>
-            <button id="OpenPanier">Accéder au panier</button>
-=======
             <h3>prix</h3>
             <p>{{$forfait->prix}}</p>
             <form action="/savepanier" method="POST">
@@ -25,7 +19,6 @@ Forfait
                 <button>Ajouter au panier</button>
             </form>
 
->>>>>>> abac88180114789474dd0512d8f1526f7f978c24
         </div>
         <div  class="Panier-close" id="Panier" >
             <h1>Panier</h1>
