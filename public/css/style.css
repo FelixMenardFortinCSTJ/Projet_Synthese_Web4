@@ -12249,6 +12249,63 @@ div.interface .personnages a .personne h3, div.interface .personnages a .personn
   color: var(--vert);
 }
 
+.mainNav > #btn-burger {
+  border: 1px red solid;
+  justify-self: flex-end;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  border: 2px solid var(--vert);
+  border-radius: 8px;
+}
+@media (min-width: 992px) {
+  .mainNav > #btn-burger {
+    display: none;
+  }
+}
+.mainNav > #btn-burger .container-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.mainNav > #btn-burger .btn-line {
+  --hauteur: 4px;
+  --largeur: 28px;
+  --distance: 5px;
+  height: var(--hauteur);
+  width: var(--largeur);
+  border-radius: 2px;
+  background-color: var(--vert);
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
+}
+.mainNav > #btn-burger .btn-line:nth-child(2) {
+  margin: var(--distance) 0px;
+}
+
+nav.open .btn-line:nth-child(1) {
+  transform: translate(0px, calc(var(--hauteur) + var(--distance))) rotate(45deg);
+}
+nav.open .btn-line:nth-child(2) {
+  opacity: 0;
+}
+nav.open .btn-line:nth-child(3) {
+  transform: translate(0px, calc(0px - var(--hauteur) - var(--distance))) rotate(-45deg);
+}
+
+nav.open > .nav .navSupp {
+  --variables: 5;
+  height: calc(var(--variables) * 60px);
+}
+@media (max-width: 991px) {
+  nav.open > .nav .navSupp {
+    --variables: 5;
+    height: calc(var(--variables) * 60px);
+  }
+}
+
 .interface {
   display: flex;
   flex-direction: column;
@@ -12286,11 +12343,12 @@ li {
 header.Main {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: start;
+  flex-wrap: wrap;
   height: 160px;
   margin: 0 auto;
-  width: 100%;
+  width: 1200px;
   flex-wrap: wrap;
 }
 header.Main .Logo {
@@ -12302,32 +12360,51 @@ header.Main .Logo {
   width: 200px;
   height: 160px;
 }
-header.Main ul.navSupp {
+header.Main .mainNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-self: flex-end;
+  width: 900px;
+}
+header.Main .mainNav ul.navSupp {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-self: flex-start;
+  width: 300px;
   font-size: 0.6em;
 }
-header.Main ul.navSupp li {
+header.Main .mainNav ul.navSupp li {
   margin: 10px 10px;
   color: var(--vert);
+  text-align: center;
 }
-header.Main ul.navSupp li:hover {
+header.Main .mainNav ul.navSupp li:hover {
   color: var(--vert-fonce);
 }
-header.Main input.navSupp {
+header.Main .mainNav input.navSupp {
   margin-right: 20px;
   margin-left: 350px;
   height: 30px;
-  width: 300px;
+  width: 200px;
   font-size: 0.8em;
 }
-header.Main .nav {
-  margin-left: 150px;
-  font-size: 0.8em;
+header.Main .mainNav .nav {
+  align-self: flex-start;
+  margin-right: 150px;
+  margin-top: 60px;
+  font-size: 0.9em;
 }
-header.Main .nav li {
+header.Main .mainNav .nav li {
   margin: 10px 10px;
+  font-size: 0.8em;
   color: var(--vert);
 }
-header.Main .nav li:hover {
+header.Main .mainNav .nav li:hover {
   color: var(--vert-fonce);
 }
 header.Main::before {

@@ -2,10 +2,11 @@
 //----------------------------------------------------  
 
 header.Main{
-    @include setFlex(row,center,center);
+    @include setFlex(row,start,start);
+    flex-wrap: wrap;
     height: 160px;
     margin: 0 auto;
-    width: 100%;
+    width: 1200px;
     flex-wrap: wrap;
 
     & .Logo{
@@ -17,38 +18,51 @@ header.Main{
         width: 200px;
         height: 160px;
     }
+    .mainNav {
+        @include setFlex(row,center,center);
+        flex-wrap: wrap;
+        align-self: flex-end;
+        width: 900px;
 
-    & ul.navSupp{
-        font-size: 0.6em;  
-
-        & li{
-            margin: 10px 10px;
-            color: var(--vert);
-
-            &:hover{
-                color: var(--vert-fonce);
+        & ul.navSupp{
+            @include setFlex(row,center,center);
+            justify-self: flex-start;
+            width: 300px;
+            font-size: 0.6em;  
+    
+            & li{
+                margin: 10px 10px;
+                color: var(--vert);
+                text-align: center;
+    
+                &:hover{
+                    color: var(--vert-fonce);
+                }
             }
         }
-    }
-    & input.navSupp{
-        margin-right: 20px;
-        margin-left: 350px;
-        height: 30px;
-        width: 300px;
-        font-size: 0.8em;
-        
-    }
-
-    & .nav{
-        margin-left: 150px;
-        font-size: 0.8em;
-
-        & li{
-            margin: 10px 10px;
-            color: var(--vert);
-
-            &:hover{
-                color: var(--vert-fonce);
+        & input.navSupp{
+            margin-right: 20px;
+            margin-left: 350px;
+            height: 30px;
+            width: 200px;
+            font-size: 0.8em;
+            
+        }
+    
+        & .nav{
+            align-self: flex-start;
+            margin-right: 150px;
+            margin-top: 60px;
+            font-size: 0.9em;
+    
+            & li{
+                margin: 10px 10px;
+                font-size: 0.8em;
+                color: var(--vert);
+    
+                &:hover{
+                    color: var(--vert-fonce);
+                }
             }
         }
     }

@@ -1,0 +1,40 @@
+// Menu 
+//----------------------------------------------------
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Menu Burger
+// - - - - - - - - - - - - - - - - - - - - - - - - - - -
+.mainNav > #btn-burger {
+    @include debug;
+    justify-self: flex-end;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    border: 2px solid var(--vert);
+    border-radius: 8px;
+
+    @include breakpoint-min(992){
+        display: none;
+    }
+
+    & .container-btn {
+        @include setFlex(column, center, center);
+        height: 100%;
+    }
+
+    & .btn-line {
+        --hauteur: 4px;
+        --largeur: 28px;
+        --distance: 5px;
+        height: var(--hauteur);
+        width: var(--largeur);
+        border-radius: 2px;
+        background-color: var(--vert);
+        transition-duration: 500ms;
+        transition-timing-function: ease-out;
+        
+        &:nth-child(2) {
+            margin: var(--distance) 0px;
+        }
+    }
+}
