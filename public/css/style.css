@@ -12063,9 +12063,12 @@ div.interface .personnages a .personne img {
 }
 div.interface .personnages a .personne h2, div.interface .personnages a .personne .h2 {
   font-size: 1.6em;
+  font-weight: bold;
+  color: var(--vert-fonce);
 }
 div.interface .personnages a .personne h3, div.interface .personnages a .personne .h3 {
   font-size: 1em;
+  color: var(--vert);
 }
 
 .laPersonne {

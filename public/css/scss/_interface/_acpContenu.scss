@@ -20,10 +20,13 @@ div.interface{
 
                 & h2 {
                     font-size: 1.6em;
+                    font-weight: bold;
+                    color: var(--vert-fonce);
                 }
 
                 & h3 {
                     font-size: 1em;
+                    color: var(--vert);
                 }
             }
         }

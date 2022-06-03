@@ -9,7 +9,7 @@ Profil
 
 <div class="header">
     <h1>
-        Nos Artisans, Commerçants et Producteurs
+        Nos Artisans, Commerçants, et Producteurs
     </h1>
 </div>
 
