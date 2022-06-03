@@ -7,12 +7,14 @@ use App\Http\Controllers\MembreController;
 use App\Http\Controllers\PaiementController;
 use App\Http\Controllers\UsagerController;
 use App\Http\Controllers\CategorieController;
+use App\Http\Controllers\CategorieEntrepriseController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EntrepriseController;
 use App\Http\Controllers\GroupeController;
 use App\Http\Controllers\MrcController;
 use App\Http\Controllers\PanierController;
 use App\Http\Controllers\FavoriController;
+use App\Models\Categorie;
 use App\Models\Entreprise;
 
 /*
@@ -217,3 +219,5 @@ Route::group(['prefix'=>'/categories', 'as'=>'categories.', 'controller'=>Catego
 Route::post('/savepanier',[PanierController::class, 'store'])->middleware('auth');
 //ajouter au favori
 Route::post('/savefavori',[FavoriController::class, 'store'])->middleware('auth');
+//Search bar catégorie
+Route::get('/categories/search', [CategorieController::class, 'filterName']);
