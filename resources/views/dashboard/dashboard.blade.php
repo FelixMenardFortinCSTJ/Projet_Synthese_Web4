@@ -65,6 +65,15 @@ Tableau de bord admin
                         <h2>Nom du commercant</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quibusdam eaque ullam corporis eos. Deserunt, sit perspiciatis voluptatum, libero, voluptatem ducimus facilis reprehenderit beatae molestiae nihil magni id consequuntur illum?</p>
                         <button>Supprimer</button>
+                        @foreach ($favoris as $favori)
+                        @if (Auth::user()->id == $favori->user_id)
+                            <p>
+                                {{-- @dd($favori) --}}
+                                {{ $favori->entreprise->nom }} - {{ $favori->entreprise->ville }}
+                                {{ $favori->entreprise->adresse }}
+                            </p>
+                        @endif
+                    @endforeach
                     </div>
                     <button>Afficher plus</button>
                     </div>

@@ -12,6 +12,7 @@ use App\Http\Controllers\EntrepriseController;
 use App\Http\Controllers\GroupeController;
 use App\Http\Controllers\MrcController;
 use App\Http\Controllers\PanierController;
+use App\Http\Controllers\FavoriController;
 use App\Models\Entreprise;
 
 /*
@@ -198,3 +199,4 @@ Route::group(['prefix'=>'/categories', 'as'=>'categories.', 'controller'=>Catego
 //     Route::post('/{panier}/delete', 'destroy')->name('destroy');
 // });
 Route::post('/savepanier',[PanierController::class, 'store'])->middleware('auth');
+Route::post('/savepanier',[FavoriController::class, 'store'])->middleware('auth');

@@ -45,6 +45,12 @@ Entreprise
             <span class="label">Description: </span>
             {{$entreprise->description}}
         </div>
+        <form action="/savefavori" method="POST">
+            @csrf
+            <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+            <input type="hidden" name="entreprise_id" value="{{$entreprise->id}}">
+            <button>Ajouter au favori</button>
+        </form>
     </div>
 </div>
 @endsection

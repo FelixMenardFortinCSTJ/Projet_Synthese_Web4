@@ -35,7 +35,12 @@ class FavoriController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $favori = new Favori();
+        $favori->user_id = $request->user_id;
+        $favori->entreprise_id = $request->entreprise_id;
+
+        $favori->save();
+        return redirect('/forfaits')->with('success','Le membre à été ajoutée à vos favoris !');
     }
 
     /**
