@@ -17,6 +17,12 @@ class MrcController extends Controller
         $mrcs = Mrc::all();
         return view('mrcs.index', ['mrcs'=>$mrcs]);
     }
+    public function mrcCategorieShow($region)
+    {
+        $mrcs = Mrc::where('region_id', '=', $region)->get();
+        // dd($mrcs);
+        return view('mrcs.show', ['mrc'=>$mrcs]);
+    }
 
     /**
      * Show the form for creating a new resource.

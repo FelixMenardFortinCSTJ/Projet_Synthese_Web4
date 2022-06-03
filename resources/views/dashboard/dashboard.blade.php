@@ -5,7 +5,6 @@ Tableau de bord admin
 @endsection
 
 @section('contenu')
-
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -48,8 +47,4 @@ Tableau de bord admin
         </div>
     </div>
 </x-app-layout>
-<<<<<<< HEAD
 @endsection
-=======
-@endsection
->>>>>>> 610f4dae6e4098b94c9d0b4c59762303cd7eee99

@@ -31,7 +31,7 @@
             <li><a href="{{route('groupes.show', 4)}}">Restauration</a></li>
             <li><a href="{{route('groupes.show', 5)}}">Hébergement</a></li>
             <li><a href="{{route('forfaits.index')}}">Forfaits</a></li>
-            <li><a href="PortraitRegion.html">Portrait de la région</a></li>
+            <li><a href="{{route('mrcs.index')}}">Portrait de la région</a></li>
         </ul>
 
 

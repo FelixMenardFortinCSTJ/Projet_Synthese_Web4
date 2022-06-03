@@ -9,6 +9,7 @@ use App\Http\Controllers\UsagerController;
 use App\Http\Controllers\CategorieController;
 use App\Http\Controllers\EntrepriseController;
 use App\Http\Controllers\GroupeController;
+use App\Http\Controllers\MrcController;
 use App\Models\Entreprise;
 
 /*
@@ -73,12 +74,12 @@ Route::group(['prefix'=>'/forfaits', 'as'=>'forfaits.', 'controller'=>ForfaitCon
     Route::post('/{forfait}/delete', 'destroy')->name('destroy');
 });
 //mrc
-Route::group(['prefix'=>'/mrcs', 'as'=>'mrcs.', 'controller'=>mrcController::class, 'where'=>['mrc'=>'[0-9]+']], function () {
+Route::group(['prefix'=>'/mrcs', 'as'=>'mrcs.', 'controller'=>MrcController::class, 'where'=>['mrc'=>'[0-9]+']], function () {
     Route::get('/', 'index')->name('index');
 
-    Route::get('/{categorie}', 'categorieShow')
-        ->name('categorie.show')
-        ->where(['categorie' => 'Les Laurentides|Antoine-Labelle|Thérèse-De Blainville|ArgenteuilLes|Deux-Montagne|Hors MRC(autochtones)|Les Pays-den-Haut|Hors MRC|La Rivière-du-Nord']);
+    Route::get('/{categorie}', 'regionShow')
+        ->name('show')
+        ->where(['categorie' => 'Les Laurentides|Antoine-Labelle|Thérèse-De Blainville|ArgenteuilLes|Deux-Montagne|Les Pays-den-Haut|La Rivière-du-Nord']);
         
     Route::get('/{mrc}', 'show')->name('show');
 
