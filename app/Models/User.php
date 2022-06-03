@@ -52,4 +52,8 @@ class User extends Authenticatable
     {
         return $this->hasOne(Panier::class);
     }
+    public function favori()
+    {
+        return $this->hasOne(Favori::class);
+    }
 }
