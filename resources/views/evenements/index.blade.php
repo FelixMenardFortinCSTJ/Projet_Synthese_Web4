@@ -7,6 +7,9 @@ Evenement
 @section('contenu')
 <h1>Les évenements</h1>
 <div class="tableau">
+    <a href="{{route('admin.evenements.create')}}">
+        Créer un évènement
+    </a>
     @foreach($evenements as $evenement)
     <div class="evenements">
         <a href="{{route('evenements.show', $evenement['id'])}}">

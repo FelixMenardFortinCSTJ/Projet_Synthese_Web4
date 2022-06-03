@@ -21,7 +21,7 @@ Tableau de bord admin
                     <div class="Infos">
                         <div class="nom">
                             <h3>Nom : </h3>
-                            <p>nom</p>
+                            <p>{{$usager->nom}}</p>
                         </div>
                         <div class="prenom">
                             <h3>Prenom : </h3>
@@ -29,7 +29,7 @@ Tableau de bord admin
                         </div>
                         <div class="Courriel">
                             <h3>Adresse courriel : </h3>
-                            <p>Adresse courriel</p>
+                            <p>{{$usager->courriel}}</p>
                         </div>
                         <div class="Adresse">
                             <h3>Adresse complète : </h3>
@@ -83,10 +83,7 @@ Tableau de bord admin
                         <p>Forfait acheté</p>
                         <p>prix$</p>
                         <p>numéro de commande</p>
-                        <button>Accéder à la facture</button>
-                    </div>
-                    <button>Afficher plus</button>
-                    </div>
+                        <a href="{{route('transactions.index')}}">Information sur la transaction</a>
                     <!-- ////////ADMIN//////// -->
                     @if(Auth::user()->role >5)
                     <a href="{{route('admin.evenements.index')}}">Les évènements</a>

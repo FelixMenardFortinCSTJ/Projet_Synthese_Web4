@@ -5,7 +5,7 @@ Evenement
 @endsection
 
 @section('contenu')
-<form action="{{route('evenements.store')}}" method="post">
+<form action="{{route('admin.evenements.store')}}" method="post">
     @include('evenements.form')
         <div>
             <button type="submit">Ajouter</button>

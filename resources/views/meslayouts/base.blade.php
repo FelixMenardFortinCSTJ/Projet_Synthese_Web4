@@ -15,9 +15,8 @@
     <header class="Main">
         <img class="Logo" src="{{asset('_assets/svg/Logo.svg')}}" alt="Logo">
 
-        <input class="navSupp" id="searchbar"  type="text"
-            name="search" placeholder="Vous recherchez...">
-
+        @include("recherche.form")
+        
         <ul class="navSupp">
             <li><a href="{{route('register')}}">S'inscrire</a></li>
             <li><a href="{{route('login')}}">Se connecter</a></li>

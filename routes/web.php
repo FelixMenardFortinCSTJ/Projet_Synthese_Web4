@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AppController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EvenementController;
 use App\Http\Controllers\ForfaitController;
@@ -13,7 +14,13 @@ use App\Http\Controllers\GroupeController;
 use App\Http\Controllers\MrcController;
 use App\Http\Controllers\PanierController;
 use App\Http\Controllers\FavoriController;
+use App\Http\Controllers\TransactionController;
 use App\Models\Entreprise;
+use App\Models\Transaction;
+use App\Models\Usager;
+use Symfony\Component\Console\Input\Input;
+
+use function PHPUnit\Framework\returnSelf;
 
 /*
 |--------------------------------------------------------------------------
@@ -153,6 +160,21 @@ Route::group(['prefix'=>'/paiements', 'as'=>'paiements.', 'controller'=>Paiement
     Route::post('/{paiement}/delete', 'destroy')->name('destroy');
 });
 
+//Route Transactions
+Route::group(['prefix'=>'/transactions', 'as'=>'transactions.', 'controller'=>TransactionController::class, 'where'=>['transaction'=>'[0-9]+']], function () {
+    Route::get('/', 'index')->name('index');
+    Route::get('/{transaction}', 'show')->name('show');
+
+    Route::get('/create', 'create')->name('create');
+    Route::post('/create', 'store')->name('store');
+
+    Route::get('/{transaction}/edit', 'edit')->name('edit');
+    Route::post('/{transaction}/edit', 'update')->name('update');
+
+    Route::get('/{transaction}/delete', 'delete')->name('delete');
+    Route::post('/{transaction}/delete', 'destroy')->name('destroy');
+});
+
 
 Route::get('/accueil', function () {
     return view('Accueil');
@@ -202,3 +224,14 @@ Route::group(['prefix'=>'/categories', 'as'=>'categories.', 'controller'=>Catego
 Route::post('/savepanier',[PanierController::class, 'store'])->middleware('auth');
 //ajouter au favori
 Route::post('/savefavori',[FavoriController::class, 'store'])->middleware('auth');
+
+Route::get('/recherche', [AppController::class, 'search'])->name('recherche');
+
+// La barre de recherche 
+// Route::any('/search', function(){
+//     $q = Input::get('q');
+//     $user = Usager::where('nom')->get();
+//     if(count($user)>0)
+//     return view('welcome')->withDetails($user)->withQuery ($q);
+//     else return view('welcome')->withMessage('Pas de détals de recherche trouvé');
+// });
