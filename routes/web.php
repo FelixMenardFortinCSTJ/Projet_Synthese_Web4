@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AppController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EvenementController;
 use App\Http\Controllers\ForfaitController;
@@ -16,6 +17,11 @@ use App\Http\Controllers\PanierController;
 use App\Http\Controllers\FavoriController;
 use App\Models\Categorie;
 use App\Models\Entreprise;
+use App\Models\Transaction;
+use App\Models\Usager;
+use Symfony\Component\Console\Input\Input;
+
+use function PHPUnit\Framework\returnSelf;
 
 /*
 |--------------------------------------------------------------------------
@@ -168,6 +174,21 @@ Route::group(['prefix'=>'/paiements', 'as'=>'paiements.', 'controller'=>Paiement
 
     Route::get('/{paiement}/delete', 'delete')->name('delete');
     Route::post('/{paiement}/delete', 'destroy')->name('destroy');
+});
+
+//Route Transactions
+Route::group(['prefix'=>'/transactions', 'as'=>'transactions.', 'controller'=>TransactionController::class, 'where'=>['transaction'=>'[0-9]+']], function () {
+    Route::get('/', 'index')->name('index');
+    Route::get('/{transaction}', 'show')->name('show');
+
+    Route::get('/create', 'create')->name('create');
+    Route::post('/create', 'store')->name('store');
+
+    Route::get('/{transaction}/edit', 'edit')->name('edit');
+    Route::post('/{transaction}/edit', 'update')->name('update');
+
+    Route::get('/{transaction}/delete', 'delete')->name('delete');
+    Route::post('/{transaction}/delete', 'destroy')->name('destroy');
 });
 
 
