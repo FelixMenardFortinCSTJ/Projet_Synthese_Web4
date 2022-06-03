@@ -92,6 +92,7 @@ Tableau de bord admin
                     <a href="{{route('admin.evenements.index')}}">Les évènements</a>
                     <a href="{{route('admin.entreprises.index')}}">Voir les entreprises</a>
                     <!-- Route activité manquante -->
+
                     @endif
                     <!-- //////////////////////// -->
                 </div>
