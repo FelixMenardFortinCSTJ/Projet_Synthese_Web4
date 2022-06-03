@@ -40,7 +40,7 @@ class FavoriController extends Controller
         $favori->entreprise_id = $request->entreprise_id;
 
         $favori->save();
-        return redirect('/forfaits')->with('success','Le membre à été ajoutée à vos favoris !');
+        return redirect('/dashboard')->with('success','Le membre à été ajoutée à vos favoris !');
     }
 
     /**

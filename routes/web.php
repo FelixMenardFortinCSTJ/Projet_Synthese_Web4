@@ -198,5 +198,7 @@ Route::group(['prefix'=>'/categories', 'as'=>'categories.', 'controller'=>Catego
 //     Route::get('/{panier}/delete', 'delete')->name('delete');
 //     Route::post('/{panier}/delete', 'destroy')->name('destroy');
 // });
+//ajouter au panier
 Route::post('/savepanier',[PanierController::class, 'store'])->middleware('auth');
-Route::post('/savepanier',[FavoriController::class, 'store'])->middleware('auth');
+//ajouter au favori
+Route::post('/savefavori',[FavoriController::class, 'store'])->middleware('auth');

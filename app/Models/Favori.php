@@ -12,7 +12,8 @@ class Favori extends Model
     {
         return $this->belongsTo(User::class);
     }
-    public function entreprise(){
+    public function entreprise()
+    {
         return $this->belongTo(Entreprise::class, 'entreprise_id');
     }
 }
