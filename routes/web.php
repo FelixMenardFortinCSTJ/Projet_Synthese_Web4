@@ -31,6 +31,9 @@ Route::get('/accueil', function () {
 Route::get('/lesacp', function () {
     return view('lesacp');
 });
+Route::get('/unacp', function () {
+    return view('unacp');
+});
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

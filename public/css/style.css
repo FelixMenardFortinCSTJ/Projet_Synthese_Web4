@@ -12090,6 +12090,10 @@ div.interface .personnages a .personne h3, div.interface .personnages a .personn
 }
 .laPersonne .infoPersonne h2, .laPersonne .infoPersonne .h2 {
   font-weight: bold;
+  color: var(--vert-fonce);
+}
+.laPersonne .infoPersonne p {
+  color: var(--vert);
 }
 
 .publicites {
