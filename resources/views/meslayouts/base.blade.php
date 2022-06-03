@@ -14,8 +14,10 @@
 <body>
     <header class="Main">
         <img class="Logo" src="{{asset('_assets/svg/Logo.svg')}}" alt="Logo">
-
-        @include('categories.nav')
+        <form action="{{ url('/categories/search') }}" method="GET">
+            <input type="search" name="search" placeholder="Catégorie ..." aria-label="Search">
+        </form>
+        {{-- @include('meslayouts.nav') --}}
         <ul class="navSupp">
             <li><a href="{{route('register')}}">S'inscrire</a></li>
             <li><a href="{{route('login')}}">Se connecter</a></li>
@@ -23,6 +25,7 @@
             <li><p id="OpenPanier">Panier</p></li>
         </ul>
         <ul class="nav">
+            {{-- <li><a href="{{route('accueil')}}">Accueil</a></li> --}}
             <li><a href="{{route('groupes.show', 1)}}">Agriculture</a></li>
             <li><a href="{{route('groupes.show', 2)}}">Activités</a></li>
             <li><a href="{{route('groupes.show', 3)}}">Agroalimentaire</a></li>

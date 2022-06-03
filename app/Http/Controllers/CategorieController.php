@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Categorie;
+use App\Models\Entreprise;
 use Illuminate\Http\Request;
 
 class CategorieController extends Controller
@@ -82,5 +83,17 @@ class CategorieController extends Controller
     public function destroy(Categorie $categorie)
     {
         //
+    }
+
+    public function filterName()
+    {
+        $search_text = trim($_GET['search']);
+
+        $resultat = Categorie::where('nom', 'LIKE', '%'. $search_text. '%')->get();
+
+        return view('categories.rechercheUser', [
+            'categories' => $resultat,
+            'entreprises' => Entreprise::all(),
+        ]);
     }
 }
