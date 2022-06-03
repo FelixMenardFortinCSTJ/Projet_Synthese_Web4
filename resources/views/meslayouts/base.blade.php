@@ -13,30 +13,11 @@
 </head>
 <body>
     <header class="Main">
-<<<<<<< HEAD
-        <img class="Logo" src="{{asset('svg/placeholder.svg')}}" alt="Logo">
-        
-        
-        <nav class="mainNav">
-            
-        
-            
-            <input class="navSupp" id="searchbar"  type="text"
-=======
         <img class="Logo" src="{{asset('_assets/svg/Logo.svg')}}" alt="Logo">
 
         <input class="navSupp" id="searchbar"  type="text"
->>>>>>> d1409d6f4baebdfa5384db7e8cf75294d4c5c134
             name="search" placeholder="Vous recherchez...">
-            
-            <ul class="navSupp">
-                <li><a href="CréationDunCompte.html">S'inscrire</a></li>
-                <li><a href="">Se connecter</a></li>
-                <li><a href="tableauDeBordProfil.html">Profil</a></li>
-                <li><a href="tableauDeBordAdmin.html">Admin</a></li>
-            </ul>
 
-<<<<<<< HEAD
         <ul class="navSupp">
             <li><a href="{{route('register')}}">S'inscrire</a></li>
             <li><a href="{{route('login')}}">Se connecter</a></li>
@@ -52,19 +33,7 @@
             <li><a href="{{route('forfaits.index')}}">Forfaits</a></li>
             <li><a href="{{route('mrcs.index')}}">Portrait de la région</a></li>
         </ul>
-=======
-            <ul class="nav">
-                <li><a href="sousCategorie.html">Agriculture</a></li>
-                <li><a href="sousCategorie.html">Restauration</a></li>
-                <li><a href="sousCategorie.html">Agroalimentaire</a></li>
-                <li><a href="sousCategorie.html">Activités</a></li>
-                <li><a href="sousCategorie.html">Hébergement</a></li>
-                <li><a href="ForfaitsAccueil.html">Forfaits</a></li>
-                <li><a href="PortraitRegion.html">Portrait de la région</a></li>
-            </ul>
->>>>>>> CANS2039264_2
 
-<<<<<<< HEAD
             <span id="btn-burger">
                     <div class="container-btn">
                         <div class="btn-line"></div>
@@ -73,17 +42,11 @@
                     </div>
             </span>
 
-        </nav>  
-=======
->>>>>>> d1409d6f4baebdfa5384db7e8cf75294d4c5c134
+        </nav>
     </header>
     <div class="interface">
         @yield('contenu')
     </div>
-<<<<<<< HEAD
-
-    <script src={{asset('js/script.js')}}></script>
-=======
     <footer>
         <div class="infolettre">
                 <img class="Logo" src="{{asset('_assets/svg/Logo.svg')}}" alt="Logo">
@@ -109,7 +72,7 @@
                 </div>
             </div>
         </footer>
-        <script src={{asset('js/Panier.js')}}></script>
->>>>>>> d1409d6f4baebdfa5384db7e8cf75294d4c5c134
+    <script src={{asset('js/Panier.js')}}></script>
+    <script src={{asset('js/script.js')}}></script>
 </body>
 </html>

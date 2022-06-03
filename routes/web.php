@@ -29,7 +29,6 @@ use App\Models\Entreprise;
 Route::get('/', function () {
     return view('welcome');
 });
-<<<<<<< HEAD
 Route::get('/accueil', function () {
     return view('accueil');
 });
@@ -45,14 +44,12 @@ Route::get('/souscategorie', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
-=======
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard.dashboard');
 // })->middleware(['auth'])->name('dashboard');
 
 Route::get('/dashboard', [DashboardController::class,'dashboard'])->middleware(['auth'])->name('dashboard');
->>>>>>> d1409d6f4baebdfa5384db7e8cf75294d4c5c134
 
 require __DIR__.'/auth.php';
 
