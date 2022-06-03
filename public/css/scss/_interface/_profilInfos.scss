@@ -8,11 +8,12 @@
 .Infos{
     position: absolute;
     left: 30px;
-    top: 160px;
+    top: 360px;
     padding: 1em;
     margin: 1em;
     height: 400px;
     width: 45vw;
+    z-index: 100;
     border-radius: 5px;
     background-color: var(--bleu);
 
@@ -24,6 +25,7 @@
 
     & button{
         margin-top: 75px;
+
         @include breakpoint-max(1230){
             margin-top: 50px;
         }
@@ -35,6 +37,18 @@
         & h3, & p{
             display:inline;
         }
+    }
+}
+
+.HideLaravel{
+    position:absolute;
+    top: 270px;
+    width: 800px;
+    height: 950px;
+    background-color: var(--blanc);
+
+    @include breakpoint-max(1230){
+       display: none;
     }
 }
 

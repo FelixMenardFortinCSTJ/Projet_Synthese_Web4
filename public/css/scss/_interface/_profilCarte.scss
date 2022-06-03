@@ -8,12 +8,13 @@
 .Carte{
     position:absolute;
     right: 30px;
-    top: 160px;
+    top: 360px;
     background-color: var(--bleu);
     padding: 1em;
     margin: 1em;
     height: 400px;
     width: 45vw;
+    z-index: 10;
     border-radius: 5px;
 
     @include breakpoint-max(1230){

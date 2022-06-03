@@ -12,6 +12,11 @@ header.Main{
         width: 900px
     }
 
+    & p{
+        cursor: pointer;
+        display: inline;
+    }
+
     & .Logo{
         margin-left: 0;
         // margin-right: 70px;

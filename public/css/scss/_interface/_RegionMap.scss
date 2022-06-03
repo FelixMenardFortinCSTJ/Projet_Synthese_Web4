@@ -5,15 +5,14 @@
 // Carte des Laurentides
 // - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-
 .MapLaurentides{
     
     & img{
         position: absolute;
         right: 700px;
         left: 700px;
-        top: 800px;
-        width: 500px;
+        top: 530px;
+        width: 300px;
         margin: 0 auto;
 
         @include breakpoint-max(1500){
@@ -153,8 +152,13 @@
         }
     }
 }
+
 img{
     display: inline;
     width: 100px;
     margin:0 auto;
+}
+
+.padRegion {
+    height: 500px;
 }
