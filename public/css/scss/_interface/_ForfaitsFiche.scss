@@ -8,6 +8,10 @@
     border-radius: 5px;
     background-color: var(--bleu);
 
+    & .PrixForfait{
+        display: inline;
+    }
+
     & h2 {
         padding-bottom: 12px;
     }

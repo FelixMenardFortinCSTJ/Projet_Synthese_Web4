@@ -27,15 +27,16 @@
 
 .Escapade{
     position: absolute;
-    margin-top: 200px;
+    margin-top: 250px;
     margin-left: 0;
+    width: 50vw;
     top: 0;
     left: 0;
 }
 
 .Decouverte{
     position: absolute;
-    margin-top: 200px;
+    margin-top: 250px;
     margin-right: 0;
     top: 0;
     right: 0;
@@ -45,7 +46,8 @@
 .Detente{
     position: absolute;
     margin-left: 0;
-    top: 664px;
+    width: 50vw;
+    top: 714px;
     left: 0;
     background-color: var(--bleu);
 }
@@ -53,6 +55,11 @@
 .Famille{
     position: absolute;
     margin-right: 0;
-    top: 664px;
+    z-index: 10;
+    top: 714px;
     right: 0;
+}
+
+.pad{
+    height: 800px;
 }

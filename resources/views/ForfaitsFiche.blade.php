@@ -57,4 +57,5 @@ Tableau de bord admin
             </div>
         </div>
 </div>
+<script src="public/js/Panier.js"></script>
 @endsection

@@ -2,18 +2,37 @@
 //----------------------------------------------------
 
 footer{
+<<<<<<< HEAD
     margin-top: 300px;
     background-color: var(--vert);
+=======
+    margin-top: 200px;
+    background-color: rgb(235, 235, 235);
+>>>>>>> d1409d6f4baebdfa5384db7e8cf75294d4c5c134
     border-top-left-radius: 20%;
     border-top-right-radius: 20%;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
 
     & .navFooter{
         @include setFlex(column,center,center);
         padding: 10px;
+<<<<<<< HEAD
         background-color: var(--vert-fonce);
 
         & a{
             color: #fff;
+=======
+
+        & .contacts{
+            @include setFlex(column,center,center);
+            padding: 16px;
+>>>>>>> d1409d6f4baebdfa5384db7e8cf75294d4c5c134
         }
     }
+
+    & .Logo {
+        width: 250px;
+        margin-top: 30px;
+    }
+
 }

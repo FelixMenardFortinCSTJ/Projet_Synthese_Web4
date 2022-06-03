@@ -8,19 +8,40 @@
    	 * Vérification du panneau
      */
 
-        static Panier(){
+    static togglePanneau(panneau, etat){
+        panneau.classList.toggle('panneau-close', !etat);
+        panneau.classList.toggle('panneau-open', etat);
+    }
 
-            var Fermer = document.getElementById("Fermer");
+    static Panier(){
 
-            Fermer.addEventListener("click", e=>{
-                console.log("ferme le panier");
-            });
-        }
+        var Fermer = document.getElementById("Fermer");
+        var OpenPanier = document.getElementById("OpenPanier");
+        var Panier = document.getElementById("Panier");
+		
+
+        Fermer.addEventListener("click", e=>{
+            console.log("ferme le panier");
+			Panier.classList.remove("Panier");
+			Panier.classList.add("Panier-close");
+        });
+
+        OpenPanier.addEventListener("click", e=>{
+            console.log("Ouvre le panier");
+			Panier.classList.remove("Panier-close");
+			Panier.classList.add("Panier");
+        });
+    }
 
     /** * * * * * * * * * * * * * * * * * * * * * * * * * * *
    	 * Initialisation du code au chargement de la page
      */
 	static init() {
-			this.Panier();
+        window.addEventListener("load", () => {
+            // this.btn_toggle = document.querySelector(".Panier-Open");
+            // this.navPan = document.querySelector('.Panier');
+            this.Panier();
+        });
 	}
 }
+Panier.init();

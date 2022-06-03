@@ -18,6 +18,13 @@ class GroupeController extends Controller
         return view("groupes.index", ['groupes'=>$groupes]);
     }
 
+    public function groupeShow($groupe)
+    {
+        $groupe = Groupe::where('groupe_id', '=', $groupe)->get();
+       
+        return view('groupes.show', ['groupe'=>$groupe]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -47,7 +54,7 @@ class GroupeController extends Controller
      */
     public function show(Groupe $groupe)
     {
-        //
+        return view('groupes.show', ['groupe'=>$groupe]);
     }
 
     /**
