@@ -2,11 +2,17 @@
 //----------------------------------------------------
 
 footer{
+    @include setFlex(column,center,center);
     margin-top: 200px;
     background-color: rgb(235, 235, 235);
     border-top-left-radius: 20%;
     border-top-right-radius: 20%;
     box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
+
+    @include breakpoint-max(992){
+        border-top-left-radius: 10%;
+        border-top-right-radius: 10%;
+    }
 
     & .navFooter{
         @include setFlex(column,center,center);

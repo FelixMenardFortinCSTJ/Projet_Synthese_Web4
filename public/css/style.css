@@ -12663,7 +12663,7 @@ form.infos {
 
 .Escapade {
   position: absolute;
-  margin-top: 250px;
+  margin-top: 400px;
   margin-left: 0;
   width: 50vw;
   top: 0;
@@ -12672,7 +12672,7 @@ form.infos {
 
 .Decouverte {
   position: absolute;
-  margin-top: 250px;
+  margin-top: 400px;
   margin-right: 0;
   top: 0;
   right: 0;
@@ -12683,7 +12683,7 @@ form.infos {
   position: absolute;
   margin-left: 0;
   width: 50vw;
-  top: 714px;
+  top: 864px;
   left: 0;
   background-color: var(--bleu);
 }
@@ -12692,12 +12692,12 @@ form.infos {
   position: absolute;
   margin-right: 0;
   z-index: 10;
-  top: 714px;
+  top: 864px;
   right: 0;
 }
 
 .pad {
-  height: 800px;
+  height: 900px;
 }
 
 .Standard, .Solitaire, .Groupe {
@@ -12776,6 +12776,7 @@ form.infos {
   padding: 2em;
   width: 550px;
   height: 110vh;
+  overflow: hidden;
   -webkit-box-shadow: 5px 0 4px -4px #646464, -5px 0 4px -4px #646464;
           box-shadow: 5px 0 4px -4px #646464, -5px 0 4px -4px #646464;
   background-color: var(--blanc);
@@ -12791,7 +12792,7 @@ form.infos {
 
 .Panier .ProduitsPanier button {
   display: block;
-  margin: 10px;
+  margin-top: 10px;
 }
 
 .Panier img {
@@ -13516,12 +13517,32 @@ header.Main::before {
 }
 
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 200px;
   background-color: #ebebeb;
   border-top-left-radius: 20%;
   border-top-right-radius: 20%;
   -webkit-box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
           box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
+}
+
+@media (max-width: 992px) {
+  footer {
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+  }
 }
 
 footer .navFooter {

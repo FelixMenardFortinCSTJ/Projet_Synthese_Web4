@@ -6,13 +6,13 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 .Panier{
-    // display: none;
     position : absolute;
     right: 0;
     top: 0;
     padding: 2em;
     width: 550px;
     height: 110vh;
+    overflow: hidden;
     box-shadow: 5px 0 4px -4px rgb(100, 100, 100), -5px 0 4px -4px rgb(100, 100, 100); 
     background-color: var(--blanc);
     
@@ -24,7 +24,7 @@
 
             & button{
                 display: block;
-                margin: 10px ;
+                margin-top: 10px ;
             }
     }
 

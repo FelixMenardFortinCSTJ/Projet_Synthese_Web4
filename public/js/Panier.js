@@ -25,11 +25,13 @@
 			Panier.classList.remove("Panier");
 			Panier.classList.add("Panier-close");
         });
-
+        
         OpenPanier.addEventListener("click", e=>{
             console.log("Ouvre le panier");
 			Panier.classList.remove("Panier-close");
 			Panier.classList.add("Panier");
+            
+            Panier.classList.add('animate__animated', 'animate__fadeInRightBig');
         });
     }
 
@@ -38,8 +40,6 @@
      */
 	static init() {
         window.addEventListener("load", () => {
-            // this.btn_toggle = document.querySelector(".Panier-Open");
-            // this.navPan = document.querySelector('.Panier');
             this.Panier();
         });
 	}
