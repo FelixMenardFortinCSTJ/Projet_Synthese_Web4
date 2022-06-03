@@ -14,7 +14,7 @@
 <body>
     <header class="Main">
         <img class="Logo" src="{{asset('_assets/svg/Logo.svg')}}" alt="Logo">
-        
+
         <input class="navSupp" id="searchbar"  type="text"
             name="search" placeholder="Vous recherchez...">
 
@@ -22,6 +22,7 @@
             <li><a href="{{route('register')}}">S'inscrire</a></li>
             <li><a href="{{route('login')}}">Se connecter</a></li>
             <li><a href="tableauDeBordProfil.html">Profil</a></li>
+            <li><p id="OpenPanier">Panier</p></li>
         </ul>
         <ul class="nav">
             <li><a href="{{route('groupes.show', 1)}}">Agriculture</a></li>
@@ -48,7 +49,7 @@
                 </p>
                 <div class="email">
                     <input id="infolettre"  type="text"
-                    name="email" placeholder="Votre email ici"> 
+                    name="email" placeholder="Votre email ici">
                     <a href="#"> S'inscrire</a>
                 </div>
             </div>
@@ -62,5 +63,6 @@
                 </div>
             </div>
         </footer>
+        <script src={{asset('js/Panier.js')}}></script>
 </body>
 </html>

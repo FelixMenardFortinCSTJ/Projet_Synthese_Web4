@@ -8,12 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Mrc extends Model
 {
     use HasFactory;
-    public function region()
-    {
-        return $this->belongsTo(Region::class);
-    }
-    public function ville()
-    {
-        return $this->belongsToMany(Ville::class);
-    }
+    // public function region()
+    // {
+    //     return $this->belongsTo(Region::class);
+    // }
+    // public function ville()
+    // {
+    //     return $this->belongsToMany(Ville::class);
+    // }
 }

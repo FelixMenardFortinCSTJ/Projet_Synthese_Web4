@@ -8,8 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Region extends Model
 {
     use HasFactory;
-    public function mrc()
-    {
-        return $this->hasMany(Mrc::class);
-    }
+    // public function mrc()
+    // {
+    //     return $this->hasMany(Mrc::class);
+    // }
 }

@@ -13,4 +13,8 @@ class Forfait extends Model
         "description",
 		"prix",
     ];
+    public function panier()
+    {
+        return $this->hasOne(Panier::class);
+    }
 }
