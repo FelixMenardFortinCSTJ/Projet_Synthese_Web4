@@ -1,5 +1,5 @@
 // Header
-//----------------------------------------------------
+//----------------------------------------------------  
 
 header.Main{
     @include setFlex(row,start,start);
@@ -8,13 +8,11 @@ header.Main{
     margin: 0 auto;
     width: 1200px;
 
-
     @include breakpoint-max(992){
         width: 900px
     }
 
     & .Logo{
-
         margin-left: 0;
         margin-right: 70px;
         padding: 0;
@@ -33,16 +31,17 @@ header.Main{
         }
 
         & ul.navSupp{
+            @include debug;
             @include setFlex(row,center,center);
             justify-self: flex-start;
             width: 300px;
-            font-size: 0.6em;
-
+            font-size: 0.6em;  
+    
             & li{
                 margin: 10px 10px;
                 color: var(--vert);
                 text-align: center;
-
+    
                 &:hover{
                     color: var(--vert-fonce);
                 }
@@ -58,20 +57,20 @@ header.Main{
             @include breakpoint-max(992){
                margin-left: 0;
             }
-
+            
         }
-
+    
         & .nav{
             align-self: flex-start;
             margin-right: 150px;
             margin-top: 60px;
             font-size: 0.9em;
-
+    
             & li{
                 margin: 10px 10px;
                 font-size: 0.8em;
                 color: var(--vert);
-
+    
                 &:hover{
                     color: var(--vert-fonce);
                 }

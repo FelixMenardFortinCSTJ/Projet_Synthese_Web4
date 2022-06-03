@@ -2483,8 +2483,8 @@ textarea.form-control-lg {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  -webkit-print-color-adjust: exact;
-          color-adjust: exact;
+  /* -webkit-print-color-adjust: exact;
+          color-adjust: exact; */
 }
 .form-check-input[type=checkbox] {
   border-radius: 0.25em;
@@ -12723,6 +12723,7 @@ header.Main .mainNav {
   }
 }
 header.Main .mainNav ul.navSupp {
+  border: 1px red solid;
   display: flex;
   flex-direction: row;
   justify-content: center;
