@@ -41,6 +41,7 @@
 }
 
 .HideLaravel{
+    z-index: -100;
     position:absolute;
     top: 270px;
     width: 800px;
@@ -50,5 +51,8 @@
     @include breakpoint-max(1230){
        display: none;
     }
+}
+.BoutonAdmin{
+    z-index: 300;
 }
 

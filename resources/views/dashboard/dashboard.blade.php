@@ -91,9 +91,9 @@ Tableau de bord admin
 
                 <!-- ////////ADMIN//////// -->
                 @if(Auth::user()->role >5)
-                <div class="Bouton">
-                    <button><a href="{{route('admin.evenements.index')}}">Les évènements</a></button>
-                    <button><a href="{{route('admin.entreprises.index')}}">Voir les entreprises</a></button>
+                <div class="BoutonAdmin">
+                    <button><a href="{{route('admin.evenements.edit')}}">Les évènements</a></button>
+                    <button><a href="{{route('admin.entreprises.edit')}}">Voir les entreprises</a></button>
                     {{-- <button><a href="{{route('favoris.delete', $favori)}}">Modifier</a></button> --}}
                 </div>
                 <!-- Route activité manquante -->
