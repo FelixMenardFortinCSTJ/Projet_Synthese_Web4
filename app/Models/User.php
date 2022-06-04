@@ -56,4 +56,8 @@ class User extends Authenticatable
     {
         return $this->hasOne(Favori::class);
     }
+    public function paiement()
+    {
+        return $this->hasOne(Paiement::class);
+    }
 }
