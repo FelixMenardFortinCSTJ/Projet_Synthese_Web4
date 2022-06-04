@@ -65,7 +65,7 @@ Tableau de bord admin
                             @foreach ($favoris as $favori)
                             @if (Auth::user()->id == $favori->user_id)
                             <div class="favori">
-                                <h2>{{ $favori->entreprise->nom }}</h2> 
+                                <h2>{{ $favori->entreprise->nom }}</h2>
                                 <p>{{ $favori->entreprise->ville }} {{ $favori->entreprise->adresse }}</p>
                             </div>
                             @endif

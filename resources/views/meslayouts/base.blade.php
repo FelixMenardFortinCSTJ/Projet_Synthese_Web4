@@ -23,7 +23,7 @@
             <ul class="navSupp">
                 <li><a href="{{route('register')}}">S'inscrire</a></li>
                 <li><a href="{{route('login')}}">Se connecter</a></li>
-                <li><a href="tableauDeBordProfil.html">Profil</a></li>
+                <li><a href="{{route('dashboard')}}">Profil</a></li>
                 <li><p id="OpenPanier">Panier</p></li>
             </ul>
             <ul class="nav">
