@@ -7,7 +7,6 @@ header.Main{
     height: 160px;
     margin: 0 auto;
     width: 1200px;
-    background-color: #fff;
 
     @include breakpoint-max(992){
         width: 900px

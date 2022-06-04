@@ -5,6 +5,7 @@
     width: 100vw;
     padding: 50px 300px;
     text-align: center;
+    background-color: var(--bleu);
 
     @include breakpoint-max(1400){
         padding: 50px 200px;
