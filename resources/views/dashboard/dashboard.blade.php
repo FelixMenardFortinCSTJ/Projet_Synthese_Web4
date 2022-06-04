@@ -88,7 +88,6 @@ Tableau de bord admin
 
                         </div>
                     </div>
-
                 <!-- ////////ADMIN//////// -->
                 @if(Auth::user()->role >5)
                 <div class="BoutonAdmin">
@@ -116,6 +115,18 @@ Tableau de bord admin
                         </div>
                         @endif
                         @endforeach
+                    @endif
+                @endforeach
+                {{--   @foreach($transactions as $transaction)
+                    @if(Auth::user()->id == $transaction->user_id)
+                        <p>
+                            <h2>{{$transaction->panier_id}}</h2>
+                        </p>
+                        @endif
+                @endforeach --}}
+                        <div class="Bouton">
+                            <button><a href="{{route('paniers.index', $panier)}}">Modifier</a></button>
+                        </div>
             </div>
             {{-- //////////////////////////////////////////////////// --}}
         </div>
