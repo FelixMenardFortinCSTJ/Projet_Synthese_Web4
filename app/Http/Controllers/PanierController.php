@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Panier;
+use App\Models\Paiement;
 use Illuminate\Http\Request;
 
 class PanierController extends Controller
@@ -14,8 +15,8 @@ class PanierController extends Controller
      */
     public function index()
     {
-        $paniers = Paiement::all();
-        return view('paniers.index', ['paniers'=>$paiements]);    }
+        $paniers = Panier::all();
+        return view('paniers.index', ['paniers'=>$paniers]);    }
 
     /**
      * Show the form for creating a new resource.
@@ -76,7 +77,9 @@ class PanierController extends Controller
      */
     public function update(Request $request, Panier $panier)
     {
-        //
+        $panier->fill($request->all());
+        $panier->save();
+        return redirect()->route('paniers.show', $panier);
     }
 
     /**

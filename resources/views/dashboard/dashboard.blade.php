@@ -118,7 +118,7 @@ Tableau de bord admin
                         @endif
                         @endforeach
                         <div class="Bouton">
-                            <button><a href="{{route('paniers.edit', $panier['id'])}}">Modifier</a></button>
+                            <button><a href="{{route('paniers.index', $panier)}}">Modifier</a></button>
                         </div>
             </div>
             {{-- //////////////////////////////////////////////////// --}}
