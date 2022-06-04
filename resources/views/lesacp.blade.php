@@ -18,7 +18,7 @@ Profil
     
     <a href="unACP.html">
         <div class="personne">
-            <img src="/public/_assets/svg/placeholder.svg" alt="personne">
+            <img src={{asset('_assets/jpg/ImageSab/personne1.jpg')}} alt="personne">
             <h2>
                 nom de la personne
             </h2>
@@ -30,7 +30,7 @@ Profil
 
     <a href="unACP.html">
         <div class="personne">
-            <img src="/public/_assets/svg/placeholder.svg" alt="personne">
+            <img src={{asset('_assets/jpg/ImageSab/personne2.jpg')}} alt="personne">
             <h2>
                 nom de la personne
             </h2>
@@ -42,7 +42,7 @@ Profil
 
     <a href="unACP.html">
         <div class="personne">
-            <img src="/public/_assets/svg/placeholder.svg" alt="personne">
+            <img src={{asset('_assets/jpg/ImageSab/personne3.jpg')}} alt="personne">
             <h2>
                 nom de la personne
             </h2>
@@ -54,7 +54,7 @@ Profil
 
     <a href="unACP.html">
         <div class="personne">
-            <img src="/public/_assets/svg/placeholder.svg" alt="personne">
+            <img src={{asset('_assets/jpg/ImageSab/personne4.jpg')}} alt="personne">
             <h2>
                 nom de la personne
             </h2>
@@ -66,7 +66,7 @@ Profil
 
     <a href="unACP.html">
         <div class="personne">
-            <img src="/public/_assets/svg/placeholder.svg" alt="personne">
+            <img src={{asset('_assets/jpg/ImageSab/personne5.jpg')}} alt="personne">
             <h2>
                 nom de la personne
             </h2>
@@ -78,7 +78,7 @@ Profil
 
     <a href="unACP.html">
         <div class="personne">
-            <img src="/public/_assets/svg/placeholder.svg" alt="personne">
+            <img src={{asset('_assets/jpg/ImageSab/personne6.jpg')}} alt="personne">
             <h2>
                 nom de la personne
             </h2>

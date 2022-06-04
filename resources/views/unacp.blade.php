@@ -15,7 +15,7 @@ Profil
 </div>
 
 <div class="laPersonne">
-    <img src="/public/_assets/svg/placeholder.svg" alt="imgPersonne">
+    <img src={{asset('_assets/jpg/ImageSab/personne6.jpg')}} alt="imgPersonne">
 
     <div class="infoPersonne">
         <h2>

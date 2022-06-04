@@ -39,7 +39,7 @@ Profil
 <div class="activites">
 
     <div class="activite">
-        <img src="/public/_assets/svg/placeholder.svg" alt="Activite">
+        <img src={{asset('_assets/jpg/ImageSab/imgSab1.jpg')}} alt="Activite">
         <h3>
             Nom de l'Activite
         </h3>
@@ -50,7 +50,7 @@ Profil
 
 
     <div class="activite">
-        <img src="/public/_assets/svg/placeholder.svg" alt="Activite">
+        <img src={{asset('_assets/jpg/ImageSab/imgSab2.jpg')}} alt="Activite">
         <h3>
             Nom de l'Activite
         </h3>
@@ -61,7 +61,7 @@ Profil
 
 
     <div class="activite">
-        <img src="/public/_assets/svg/placeholder.svg" alt="Activite">
+        <img src={{asset('_assets/jpg/ImageSab/imgSab3.jpg')}} alt="Activite">
         <h3>
             Nom de l'Activite
         </h3>
@@ -72,7 +72,7 @@ Profil
 
 
     <div class="activite">
-        <img src="/public/_assets/svg/placeholder.svg" alt="Activite">
+        <img src={{asset('_assets/jpg/ImageSab/imgSab4.jpg')}} alt="Activite">
         <h3>
             Nom de l'Activite
         </h3>

@@ -14,4 +14,10 @@ class Paiement extends Model
         "date_expiration",
         "code_securite",
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+    
 }
