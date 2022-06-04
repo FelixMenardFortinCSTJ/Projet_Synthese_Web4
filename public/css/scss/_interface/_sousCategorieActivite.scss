@@ -21,10 +21,17 @@
             color: var(--vert-fonce);
         }
         & p {
+            margin-bottom: 10px;
             text-align: center;
             color: var(--vert);
         }
 
       
+    }
+}
+
+.categorie {
+    & .nom {
+        text-align: center;
     }
 }

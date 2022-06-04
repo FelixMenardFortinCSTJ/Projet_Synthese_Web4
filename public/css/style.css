@@ -11757,7 +11757,6 @@ img {
   width: 100vw;
   padding: 50px 300px;
   text-align: center;
-  background-color: var(--bleu);
 }
 @media (max-width: 1400px) {
   .DescriptionMRC {
@@ -12521,8 +12520,13 @@ div.interface .personnages a .personne h3, div.interface .personnages a .personn
   color: var(--vert-fonce);
 }
 .activites .activite p {
+  margin-bottom: 10px;
   text-align: center;
   color: var(--vert);
+}
+
+.categorie .nom {
+  text-align: center;
 }
 
 .mainNav > #btn-burger {
