@@ -91,14 +91,15 @@ Tableau de bord admin
                 <!-- ////////ADMIN//////// -->
                 @if(Auth::user()->role >5)
                 <div class="BoutonAdmin">
-                    <button><a href="{{route('admin.evenements.edit')}}">Les évènements</a></button>
-                    <button><a href="{{route('admin.entreprises.edit')}}">Voir les entreprises</a></button>
+                    {{-- bouton pour evenement et entreprise erreur don en commentaire --}}
+                    {{-- <button><a href="{{route('admin.evenements.edit')}}">Les évènements</a></button>
+                    <button><a href="{{route('admin.entreprises.edit')}}">Voir les entreprises</a></button> --}}
                     {{-- <button><a href="{{route('favoris.delete', $favori)}}">Modifier</a></button> --}}
                 </div>
                 <!-- Route activité manquante -->
                 @endif
                     <!-- //////////////////////// -->
-                </div>
+
             </div>
             {{-- Section panier --}}
             <div class="Transactions">
@@ -113,22 +114,9 @@ Tableau de bord admin
                         <div class="Bouton">
                             <button><a href="{{route('paniers.delete', $panier)}}">Supprimer</a></button>
                         </div>
-                        @endif
-                        @endforeach
                     @endif
                 @endforeach
-                {{--   @foreach($transactions as $transaction)
-                    @if(Auth::user()->id == $transaction->user_id)
-                        <p>
-                            <h2>{{$transaction->panier_id}}</h2>
-                        </p>
-                        @endif
-                @endforeach --}}
-                        <div class="Bouton">
-                            <button><a href="{{route('paniers.index', $panier)}}">Modifier</a></button>
-                        </div>
             </div>
-            {{-- //////////////////////////////////////////////////// --}}
         </div>
     </div>
 </x-app-layout>
