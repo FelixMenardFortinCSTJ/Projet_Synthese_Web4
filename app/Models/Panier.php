@@ -16,4 +16,8 @@ class Panier extends Model
     {
         return $this->belongsTo(Forfait::class, 'forfait_id');
     }
+    public function transaction()
+    {
+        return $this->hasOne(Transaction::class);
+    }
 }

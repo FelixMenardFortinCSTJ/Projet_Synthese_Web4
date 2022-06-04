@@ -87,15 +87,6 @@ Tableau de bord admin
                             <button>Afficher plus</button>
                         </div>
                     </div>
-                <!-- <div class="Transactions">
-                    <div class="Transaction">
-                        <p>Forfait acheté</p>
-                        <p>prix$</p>
-                        <p>numéro de commande</p>
-                        <button>Accéder à la facture</button>
-                    </div>
-                    <button>Afficher plus</button>
-                </div> -->
                 <!-- ////////ADMIN//////// -->
                 @if(Auth::user()->role >5)
                 <a href="{{route('admin.evenements.index')}}">Les évènements</a>
@@ -115,8 +106,15 @@ Tableau de bord admin
                             <h2>{{ $panier->forfait->nom_forfait }}</h2> - {{ $panier->forfait->categorie_forfait }}
                             {{ $panier->forfait->prix }}$
                         </p>
+                    @endif
+                @endforeach
+                {{--   @foreach($transactions as $transaction)
+                    @if(Auth::user()->id == $transaction->user_id)
+                        <p>
+                            <h2>{{$transaction->panier_id}}</h2>
+                        </p>
                         @endif
-                        @endforeach
+                @endforeach --}}
                         <div class="Bouton">
                             <button><a href="{{route('paniers.index', $panier)}}">Modifier</a></button>
                         </div>

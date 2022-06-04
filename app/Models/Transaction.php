@@ -9,11 +9,15 @@ class Transaction extends Model
 {
     use HasFactory;
     protected $fillable =[
-        "numero_commande",
-        "facture",
+        "user_id",
+        "panier_id",
     ];
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+    public function panier()
+    {
+        return $this->belongsTo(Panier::class, 'panier_id');
     }
 }
