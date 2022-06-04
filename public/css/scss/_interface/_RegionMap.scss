@@ -9,23 +9,10 @@
     
     & img{
         position: absolute;
-        right: 700px;
-        left: 700px;
-        top: 530px;
+        right: 43vw;
+        top: 600px;
         width: 300px;
         margin: 0 auto;
-
-        @include breakpoint-max(1500){
-            left: 500px;
-        }
-
-        @include breakpoint-max(1200){
-            left: 300px;
-        }
-
-        @include breakpoint-max(992){
-            left: 150px;
-        }
     }
 
     & a{
