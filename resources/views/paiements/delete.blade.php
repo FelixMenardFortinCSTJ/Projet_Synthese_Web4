@@ -5,11 +5,10 @@ Evenement
 @endsection
 
 @section('contenu')
-<form action="{{route('paniers.destroy', $panier)}}" method="post">
-    @include('paniers.form')
+<form action="{{route('paiements.destroy', $paiement)}}" method="post">
+    @include('paiements.form')
     <div>
         <button type="submit">Supprimer</button>
     </div>
 </form>
 @endsection
-

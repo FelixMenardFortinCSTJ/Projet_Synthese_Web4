@@ -19,7 +19,7 @@ class VilleController extends Controller
         return view("villes.index", ['villes'=>$villes]);
     }
 
-  
+
     /**
      * Show the form for creating a new resource.
      *

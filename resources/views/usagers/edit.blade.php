@@ -13,8 +13,6 @@ Profil
     </div>
 </form>
 <div class="options">
-    <a data-icon="calendar_view_month" href="{{route('usagers.index')}}">Retour à la liste</a>
-    <a data-icon="profil" href="{{route('usagers.show', $usager)}}">Retour au profil</a>
-    <a data-icon="delete" href="{{route('usagers.delete', $usager)}}">Supprimer le profil</a>
+    <button><a href="{{route('dashboard')}}">Annuler</a> </button>
 </div>
 @endsection

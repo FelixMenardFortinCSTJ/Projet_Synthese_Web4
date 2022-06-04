@@ -16,7 +16,8 @@ class PanierController extends Controller
     public function index()
     {
         $paniers = Panier::all();
-        return view('paniers.index', ['paniers'=>$paniers]);    }
+        return view('paniers.index', ['paniers'=>$paniers]);
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -82,6 +83,16 @@ class PanierController extends Controller
         return redirect()->route('paniers.show', $panier);
     }
 
+            /**
+     * Show the form for deleting the specified resource.
+     *
+     * @param  \App\Models\Panier  $panier
+     * @return \Illuminate\Http\Response
+     */
+    public function delete(Panier $panier)
+    {
+        return view('paniers.delete', ['panier'=>$panier]);
+    }
     /**
      * Remove the specified resource from storage.
      *
@@ -90,6 +101,7 @@ class PanierController extends Controller
      */
     public function destroy(Panier $panier)
     {
-        //
+        $panier->delete();
+        return redirect()->route('dashboard');
     }
 }

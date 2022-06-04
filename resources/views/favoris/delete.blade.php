@@ -5,8 +5,8 @@ Evenement
 @endsection
 
 @section('contenu')
-<form action="{{route('paniers.destroy', $panier)}}" method="post">
-    @include('paniers.form')
+<form action="{{route('favoris.destroy', $favori)}}" method="post">
+    @include('favoris.form')
     <div>
         <button type="submit">Supprimer</button>
     </div>
