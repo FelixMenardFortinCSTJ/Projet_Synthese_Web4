@@ -25,7 +25,7 @@ Tableau de bord admin
                         </div>
                         <div class="prenom">
                             <h3>Prenom : </h3>
-                            <p>prenom</p>
+                            <p>{{$usager->prenom}}</p>
                         </div>
                         <div class="Courriel">
                             <h3>Adresse courriel : </h3>
@@ -33,15 +33,14 @@ Tableau de bord admin
                         </div>
                         <div class="Adresse">
                             <h3>Adresse complète : </h3>
-                            <p>code_civique</p>
+                            <p>{{$usager->code_postal}}</p>
                         </div>
                         <div class="Telephone">
                             <h3>Numéro de téléphone : </h3>
-                            <p>Telephone</p>
+                            <p>{{$usager->telephone}}</p>
                         </div>
                        <div class="Bouton">
-                            <button><a href="{{route('usagers.show', $usager['id'])}}">Modifier</a></button>
-                            <button><a href="{{route('usagers.delete', $usager['id'])}}">Delete</a></button>
+                            <button><a href="{{route('usagers.show', $usager)}}">Modifier</a></button>
                        </div>
                     </div>
 
@@ -66,8 +65,7 @@ Tableau de bord admin
                                 <p> {{ $paiement->code_securite }} </p>
                             </div>
                             <div class="Bouton">
-                                <button><a href="{{route('paiements.show', $paiement['id'])}}">Modifier</a></button>
-                                <button><a href="{{route('paiements.delete', $paiement['id'])}}">Delete</a></button>
+                                <button><a href="{{route('paiements.show', $paiement)}}">Modifier</a></button>
                             </div>
                         </div>
                     @endif
@@ -79,27 +77,25 @@ Tableau de bord admin
                             @foreach ($favoris as $favori)
                             @if (Auth::user()->id == $favori->user_id)
                             <div class="favori">
-                                <h2>{{ $favori->entreprise->nom }}</h2> 
+                                <h2>{{ $favori->entreprise->nom }}</h2>
                                 <p>{{ $favori->entreprise->ville }} {{ $favori->entreprise->adresse }}</p>
+                                <div class="Bouton">
+                                    <button><a href="{{route('favoris.delete', $favori)}}">Modifier</a></button>
+                                </div>
                             </div>
                             @endif
                             @endforeach
-                            <button>Afficher plus</button>
+
                         </div>
                     </div>
-                <!-- <div class="Transactions">
-                    <div class="Transaction">
-                        <p>Forfait acheté</p>
-                        <p>prix$</p>
-                        <p>numéro de commande</p>
-                        <button>Accéder à la facture</button>
-                    </div>
-                    <button>Afficher plus</button>
-                </div> -->
+
                 <!-- ////////ADMIN//////// -->
                 @if(Auth::user()->role >5)
-                <a href="{{route('admin.evenements.index')}}">Les évènements</a>
-                <a href="{{route('admin.entreprises.index')}}">Voir les entreprises</a>
+                <div class="Bouton">
+                    <button><a href="{{route('admin.evenements.index')}}">Les évènements</a></button>
+                    <button><a href="{{route('admin.entreprises.index')}}">Voir les entreprises</a></button>
+                    {{-- <button><a href="{{route('favoris.delete', $favori)}}">Modifier</a></button> --}}
+                </div>
                 <!-- Route activité manquante -->
                 @endif
                     <!-- //////////////////////// -->
@@ -115,11 +111,11 @@ Tableau de bord admin
                             <h2>{{ $panier->forfait->nom_forfait }}</h2> - {{ $panier->forfait->categorie_forfait }}
                             {{ $panier->forfait->prix }}$
                         </p>
+                        <div class="Bouton">
+                            <button><a href="{{route('paniers.delete', $panier)}}">Supprimer</a></button>
+                        </div>
                         @endif
                         @endforeach
-                        <div class="Bouton">
-                            <button><a href="{{route('paniers.index', $panier)}}">Modifier</a></button>
-                        </div>
             </div>
             {{-- //////////////////////////////////////////////////// --}}
         </div>

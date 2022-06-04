@@ -14,7 +14,8 @@ class FavoriController extends Controller
      */
     public function index()
     {
-        //
+        $favoris = Favori::all();
+        return view('favoris.index', ['favoris'=>$favoris]);
     }
 
     /**
@@ -62,7 +63,7 @@ class FavoriController extends Controller
      */
     public function edit(Favori $favori)
     {
-        //
+        return view('favoris.edit', ['favori'=>$favori]);
     }
 
     /**
@@ -74,9 +75,21 @@ class FavoriController extends Controller
      */
     public function update(Request $request, Favori $favori)
     {
-        //
+        $favori->fill($request->all());
+        $favori->save();
+        return redirect()->route('favoris.show', $favori);
     }
 
+    /**
+     * Show the form for deleting the specified resource.
+     *
+     * @param  \App\Models\Favori$ $favori
+     * @return \Illuminate\Http\Response
+     */
+    public function delete(Favori $Favori)
+    {
+        return view('Favoris.delete', ['Favori'=>$Favori]);
+    }
     /**
      * Remove the specified resource from storage.
      *
@@ -85,6 +98,7 @@ class FavoriController extends Controller
      */
     public function destroy(Favori $favori)
     {
-        //
+        $favori->delete();
+        return redirect()->route('dashboard');
     }
 }

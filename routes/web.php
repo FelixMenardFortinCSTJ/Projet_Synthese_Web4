@@ -58,6 +58,7 @@ Route::get('/dashboard', function () {
 // })->middleware(['auth'])->name('dashboard');
 
 Route::get('/dashboard', [DashboardController::class,'dashboard'])->middleware(['auth'])->name('dashboard');
+Route::post('/dashboard', [DashboardController::class,'dashboard'])->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
 
@@ -101,6 +102,7 @@ Route::group(['prefix'=>'/forfaits', 'as'=>'forfaits.', 'controller'=>ForfaitCon
     Route::get('/{forfait}/delete', 'delete')->name('delete');
     Route::post('/{forfait}/delete', 'destroy')->name('destroy');
 });
+
 //mrc
 // Route::group(['prefix'=>'/mrcs', 'as'=>'mrcs.', 'controller'=>MrcController::class, 'where'=>['mrc'=>'[0-9]+']], function () {
 //     Route::get('/', 'index')->name('index');
@@ -236,6 +238,19 @@ Route::group(['prefix'=>'/paniers', 'as'=>'paniers.', 'controller'=>PanierContro
 
     Route::get('/{panier}/delete', 'delete')->name('delete');
     Route::post('/{panier}/delete', 'destroy')->name('destroy');
+});
+Route::group(['prefix'=>'/favoris', 'as'=>'favoris.', 'controller'=>FavoriController::class, 'where'=>['favori'=>'[0-9]+']], function () {
+    Route::get('/', 'index')->name('index');
+    Route::get('/{favori}', 'show')->name('show');
+
+    Route::get('/create', 'create')->name('create');
+    Route::post('/create', 'store')->name('store');
+
+    Route::get('/{favori}/edit', 'edit')->name('edit');
+    Route::post('/{favori}/edit', 'update')->name('update');
+
+    Route::get('/{favori}/delete', 'delete')->name('delete');
+    Route::post('/{favori}/delete', 'destroy')->name('destroy');
 });
 // Route::group(['prefix'=>'/paniers', 'as'=>'paniers.', 'controller'=>PanierController::class, 'where'=>['panier'=>'[0-9]+']], function () {
 //     Route::get('/', 'index')->name('index');

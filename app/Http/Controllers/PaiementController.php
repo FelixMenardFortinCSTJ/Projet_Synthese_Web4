@@ -79,6 +79,10 @@ class PaiementController extends Controller
         return redirect()->route('paiements.show', $paiement);
     }
 
+    public function delete(Paiement $paiement)
+    {
+        return view('paiements.delete', ['paiement'=>$paiement]);
+    }
     /**
      * Remove the specified resource from storage.
      *
@@ -87,6 +91,7 @@ class PaiementController extends Controller
      */
     public function destroy(Paiement $paiement)
     {
-        //
+        $paiement->delete();
+        return redirect()->route('dashboard');
     }
 }

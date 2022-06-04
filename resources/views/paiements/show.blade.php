@@ -24,8 +24,7 @@ Paiement
     </div>
 </div>
 <div class="options">
-    <a data-icon="calendar_view_month" href="{{route('paiements.index')}}">Retour à la liste</a>
-    <a data-icon="edit" href="{{route('paiements.edit', $paiement)}}">Modifier le mode de paiement</a>
-    <a data-icon="delete" href="{{route('paiements.delete', $paiement)}}">Supprimer le mode de paiement</a>
+    <button><a data-icon="edit" href="{{route('paiements.edit', $paiement)}}">Modifier</a></button>
+    <button><a href="{{route('dashboard')}}">Retour</a> </button>
 </div>
 @endsection
