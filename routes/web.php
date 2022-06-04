@@ -223,6 +223,20 @@ Route::group(['prefix'=>'/categories', 'as'=>'categories.', 'controller'=>Catego
     Route::get('/{categorie}/delete', 'delete')->name('delete');
     Route::post('/{categorie}/delete', 'destroy')->name('destroy');
 });
+
+Route::group(['prefix'=>'/paniers', 'as'=>'paniers.', 'controller'=>PanierController::class, 'where'=>['panier'=>'[0-9]+']], function () {
+    Route::get('/', 'index')->name('index');
+    Route::get('/{panier}', 'show')->name('show');
+
+    Route::get('/create', 'create')->name('create');
+    Route::post('/create', 'store')->name('store');
+
+    Route::get('/{panier}/edit', 'edit')->name('edit');
+    Route::post('/{panier}/edit', 'update')->name('update');
+
+    Route::get('/{panier}/delete', 'delete')->name('delete');
+    Route::post('/{panier}/delete', 'destroy')->name('destroy');
+});
 // Route::group(['prefix'=>'/paniers', 'as'=>'paniers.', 'controller'=>PanierController::class, 'where'=>['panier'=>'[0-9]+']], function () {
 //     Route::get('/', 'index')->name('index');
 //     Route::get('/{panier}', 'show')->name('show');

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Favori;
 use App\Models\Panier;
+use App\Models\Paiement;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
@@ -15,6 +16,7 @@ class DashboardController extends Controller
             'usager' => $usager,
             'paniers' => Panier::all(),
             'favoris' => Favori::all(),
+            'paiements' => Paiement::all(),
         ]);
     }
 }
